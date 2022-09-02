@@ -3,19 +3,22 @@
     src: local('MyFont'), url(./fonts/MyFont.woff) format('woff');
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
-  /* } */
+/* } */
 
-.home-panel{
+.home-panel {
     height: 100vh;
 }
-.sec-1,.sec-2{
+
+.sec-1,
+.sec-2 {
     height: 100vh;
 }
-.sec-1{
+
+.sec-1 {
     background-color: #a8e7eb;
 }
 
-.banner{
+.banner {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -31,37 +34,53 @@
     font-weight: 600;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color:#10939a;
+    color: #10939a;
 }
-.intro>h1{
+
+.intro>h1 {
     font-weight: 700;
     font-size: 4rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 2px;
 }
 
-.intro>h3{
+.intro>h3 {
     font-weight: 700;
     font-size: 2.5rem;
 }
 
-.indicator{
+.indicator {
     text-align: center;
     display: inline-flex;
     justify-content: center;
-    align-items: center;
-    /* background-color: #a8e7eb; */
+    /* align-items: center; */
     background-color: white;
     border-radius: 100px;
     margin-top: 3rem;
     width: 80px;
     height: 80px;
-    border : 5px solid #a8e7eb;;
-    -webkit-transform: rotate(45deg);  /* to support Safari and Android browser*/
-    -ms-transform: rotate(45deg);      /* to support IE 9*/
-    transform: rotate(45deg);
+    border: 5px solid #a8e7eb;
 }
 
-.indicator>svg{
-    font-size:1.5rem ;
+.indicator>svg {
+    font-weight: 600;
+    color: #10939a;
+    font-size: 1.5rem;
+    animation: 3s ease-in 1s infinite reverse both running slidein;
+}
+
+.indicator {
+    animation-name: shift;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shift {
+    0% {
+        padding-top: 5px
+    }
+
+    100% {
+        padding-top: 35px
+    }
 }
