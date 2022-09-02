@@ -1,0 +1,36 @@
+.navbar-light .bg-light{
+    background-color: transparent !important;
+}
+
+.nav-btn{
+    margin: 10px;
+    font-size: large;
+    font-weight: 500 !important;
+    border: 3px solid transparent;
+    transition: border-bottom-color all 2000ms;
+}
+
+.nav-btn:hover{
+    border-bottom-color:#0fb6bf;
+}
+
+.logo{
+    display: inline-block;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    width: 35px;
+    height: 40px;
+    color: white;
+    border-radius: 60px 10px 0px 10px;
+    background-image: linear-gradient(to right, #0fb6bf 15%, black 100%);
+}
+
+.after {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.navbar-brand{
+    padding-top: 0.5rem !important;
+}
