@@ -1,5 +1,6 @@
 .navbar{
     --bs-navbar-padding-y: 0 !important;
+    transition: all 0.5s ;
 }
 /* .bg-dark {
     --bs-bg-opacity: 1;

@@ -52,13 +52,13 @@ function About(){
                             <span className="summary">6 months of <span className="emphesize"> internship</span> experience.</span>
                             <br></br>
                             <Button download="Anuj's Resume" target='_blank' variant="primary" href={resume}  className="btn-cv" size="lg">
-                                <Icon.Download fontWeight={52} className="me-2" />Resume
+                                <Icon.Download className="me-2" />Resume
                             </Button>
                         </div>
                     </Col>
                 </Row>
             </Container>
-            <Container fluid={true}>
+            <Container fluid={false} className='mt-2'>
                 <div className="flexBox">
                     <div className="flexItem"><Icon.Windows /></div>
                     <div className="flexItem"><Icon.CodeSlash /></div>
