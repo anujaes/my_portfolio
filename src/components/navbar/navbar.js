@@ -5,7 +5,7 @@ import '../css/navbar.css'
 
 function NavigationBar() {
     return (
-        <Navbar className='fixed-top' expand="lg">
+        <Navbar expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <span className='logo'>A</span><span className='after'>nuj</span>
