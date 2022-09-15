@@ -1,6 +1,12 @@
-.navbar-light .bg-light{
-    background-color: transparent !important;
+.navbar{
+    --bs-navbar-padding-y: 0 !important;
 }
+/* .bg-dark {
+    --bs-bg-opacity: 1;
+    background-color: transparent;
+    background-image: linear-gradient(to right, #0fb6bf 15%, black 100%) !important;
+    background-image: linear-gradient(to right, black 15%, #0fb6bf 100%) !important;
+} */
 
 .nav-btn{
     margin: 10px;

@@ -6,8 +6,9 @@ import * as Icon from 'react-bootstrap-icons';
 import potrait from '../../images/keep1.png'
 import resume from '../../docs/resume.pdf'
 function About(){
+
     return (
-        <div className="about-container">
+        <div id="about" className="about-container">
             <Container>
                 <Row>
                     <Col lg={6} md={12} sm={12} className="potrait-container">

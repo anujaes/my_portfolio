@@ -1,11 +1,29 @@
+import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import '../css/navbar.css'
 
 function NavigationBar() {
+
+    const [transparent,setTransparent] =  useState(true)
+
+    const changeNavbarColor = () => {
+        if(window.scrollY>=100){
+            setTransparent(false);
+        }else{
+            setTransparent(true)
+        }
+    }
+
+    useEffect( () => {
+        changeNavbarColor();
+        window.addEventListener('scroll',changeNavbarColor)
+    })
+
     return (
-        <Navbar expand="lg">
+        <div>
+        <Navbar bg={transparent?'':'dark'} variant={transparent?'':'dark'} className='fixed-top' expand="lg">
             <Container>
                 <Navbar.Brand href="#home">
                     <span className='logo'>A</span><span className='after'>nuj</span>
@@ -23,6 +41,7 @@ function NavigationBar() {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+        </div>
     );
 }
 

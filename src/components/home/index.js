@@ -5,7 +5,7 @@ import '../css/home.css'
 
 function Home(){
     return(
-        <div className="home-panel">
+        <div id='home' className="home-panel">
             <Row className="m-0">
                 <Col className="sec-1"></Col>
                 <Col className="sec-2"></Col>
