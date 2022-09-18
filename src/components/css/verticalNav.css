@@ -1,0 +1,22 @@
+.vertical-navigation {
+    padding-top: 7rem;
+    top: 120px;
+    position: -webkit-sticky !important;
+    position: sticky !important;
+}
+
+.vertical-navigation .nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: black !important;
+}
+
+.vertical-navigation .nav-link:hover{
+    text-decoration: underline;
+}
+.vertical-navigation .nav-link.active {
+    color: #0fb6bf;
+    padding-left: 3rem;
+    transition: all 0.3s linear;
+}

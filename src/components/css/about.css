@@ -12,7 +12,8 @@
 }
 
 .potrait-container{
-    background-color: whitesmoke;
+    background-color: lightslategrey;
+    /* background-color: black; */
     display: inline-block;
     text-align: center;
 }

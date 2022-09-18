@@ -3,7 +3,7 @@ import '../css/about.css';
 import { Button, Col, Container, Row } from "react-bootstrap";
 import * as Icon from 'react-bootstrap-icons';
 
-import potrait from '../../images/keep1.png'
+import potrait from '../../images/potrait.png'
 import resume from '../../docs/resume.pdf'
 function About(){
 

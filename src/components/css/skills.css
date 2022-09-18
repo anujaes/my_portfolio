@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.card-container{
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-container>div>h5{
+    font-weight: 700 !important;
+}
+
+.card-container>div{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+}
+
+.card-container > div > div {
+    padding: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.ratings{
+    margin: 0.2rem; 
+    font-size: 1rem;
+}
+
+.CircularProgressbar .CircularProgressbar-text {
+    font-weight: 600;
+    font-size: 1.2rem !important;
+}

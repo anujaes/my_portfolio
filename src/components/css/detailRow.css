@@ -1,0 +1,50 @@
+
+.flex-container {
+    display: flex;
+    align-items: stretch;
+    /* background-color: #f1f1f1; */
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lightgray;
+}
+.flex-container:first-child{
+    flex-grow: 1;
+}
+
+.flex-container:last-child {
+    border-bottom: none;
+}
+
+.flex-icon span{
+    padding: 0.7rem;
+    display: block;
+    background-color: #3e64ff;
+    border-radius: 100px;
+    color: white;
+}
+
+.flex-details{
+    flex-grow: 8;
+    margin-left: 1rem;
+}
+
+.flex-details h6 {
+    margin-top: 5px;
+    color: #3e64ff;
+    font-weight: 700;
+}
+
+.flex-details h6:nth-child(3) {
+    margin-top: 1rem;
+    font-size: 18px;
+    color: black;
+}
+
+.flex-details h3 {
+    font-weight: 700;
+}
+.flex-details p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: grey;
+}
