@@ -16,9 +16,19 @@
     border: 3px solid transparent;
     transition: border-bottom-color all 2000ms;
 }
+.nav-btn::after{
+    content:" ";
+    width: 0%;
+    height: 2px;
+    display: block;
+    background-color: #0fb6bf;
+    text-align: center;
+}
 
-.nav-btn:hover{
-    border-bottom-color:#0fb6bf;
+.nav-btn.active:after,
+.nav-btn:hover:after{
+    width: 100%;
+    transition: 0.5s;
 }
 
 .logo{

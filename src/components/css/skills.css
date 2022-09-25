@@ -27,3 +27,22 @@
     font-weight: 600;
     font-size: 1.2rem !important;
 }
+
+.skill-flex-container{
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.skill-flex-container{
+    flex-grow: 10;
+}
+.skill-flex-container:nth-child(2){
+    flex-grow: 1;
+}
+
+.progress-bar{
+    background-color:#3e64ff !important;
+    font-weight: bold !important;
+    
+}

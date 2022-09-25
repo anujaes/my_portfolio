@@ -29,7 +29,8 @@ function Section(props) {
                         summary         = {item.summary}
                     />
                     :type==='skills' ?
-                        <SkillsRow 
+                        <SkillsRow
+                            key         =  {'ski'+index+ Date.now()}
                         />
                     :''
                 ))
