@@ -1,18 +1,20 @@
 import React                        from "react";
 import { Col, Row, Container }      from "react-bootstrap";
-import VerticalNav                  from "./molecules/verticalNav";
+import VerticalNav                  from "./atoms/verticalNav";
 import Section                      from "./molecules/section";
 import { educationRecords }         from "../../scripts/dataScripts/education.js";
 import { experienceRecords }        from "../../scripts/dataScripts/experience.js";
-import { skillRecords }              from "../../scripts/dataScripts/skillRatings";
+import { skillRecords }             from "../../scripts/dataScripts/skillRatings";
+import { certificationRecords }     from "../../scripts/dataScripts/certifications";
 import '../css/resume.css'
 
 function Resume() {
 
     const payloadData = {
-        academic    : educationRecords,
-        experience  : experienceRecords,
-        skills      : [skillRecords]
+        academic        : educationRecords,
+        experience      : experienceRecords,
+        skills          : [skillRecords],
+        certifications  : certificationRecords
     }
 
     return (

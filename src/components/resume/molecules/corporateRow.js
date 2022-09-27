@@ -1,6 +1,5 @@
 import React        from "react";
 import * as Icon    from "react-bootstrap-icons";
-import              '../../css/detailRow.css';
 
 function CorporateRow(props) {
 

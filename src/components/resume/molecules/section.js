@@ -2,6 +2,7 @@ import React                from "react";
 import AcademicRow          from "./academicRow.js";
 import CorporateRow         from "./corporateRow.js";
 import SkillsRow            from "./skillsRow.js";
+import CertificationRow     from "./certificationsRow.js";
 
 function Section(props) {
 
@@ -34,6 +35,15 @@ function Section(props) {
                             topSkills   = {payload[0].topSkills}
                             otherSkills = {payload[0].otherSkills}
                         />
+                    : type==='certifications' ?
+                    <CertificationRow
+                        key             = {'cert'+index+index+index+index}
+                        date            = {item.date}
+                        certifiedFrom   = {item.certifiedFrom}
+                        certificateName = {item.certificateName}
+                        summary         = {item.summary}
+                        previewLink     = {item.previewLink}
+                    />
                     :''
                 ))
             }

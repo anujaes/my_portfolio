@@ -1,7 +1,6 @@
 import React                                from "react";
 import { Col, ProgressBar, Row }            from "react-bootstrap";
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-// import { skillBar,topSkillRatings } from "../../../scripts/dataScripts/skillRatings";
 import '../../css/skills.css';
 import 'react-circular-progressbar/dist/styles.css';
 
