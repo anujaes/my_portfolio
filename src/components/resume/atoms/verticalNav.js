@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import { Nav} from "react-bootstrap";
-import * as Icon    from "react-bootstrap-icons";
-import '../../css/verticalNav.css'
+import React    from "react";
+import { Nav}   from "react-bootstrap";
+import          '../../css/verticalNav.css'
 
 function VerticalNav() {
 
