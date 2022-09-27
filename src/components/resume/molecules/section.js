@@ -4,33 +4,35 @@ import CorporateRow         from "./corporateRow.js";
 import SkillsRow            from "./skillsRow.js";
 
 function Section(props) {
-    
+
     const { type, payload} = props;
 
     return (
-        <div id={type} className="row-section">
+        <div key={type + Date.now()} id={type} className="row-section">
             <h2 className="heading">{type}</h2>
             {
-                payload[type].map((item,index) => (
-                    type==='academic' ?
+                payload.map( (item,index) => (
+                    type=== 'academic' ?
                     <AcademicRow
-                        key             = {'aca'+index + Date.now()}
+                        key             = {'aca'+index}
                         year            = {item.year}
                         course          = {item.course}
                         institute       = {item.institute}
                         summary         = {item.summary}
                     />
                     : type==='experience' ?
-                    <CorporateRow 
-                        Key             = {'corp'+index + Date.now()}
+                    <CorporateRow
+                        key             = {'corp'+index+index}
                         year            = {item.year}
                         designation     = {item.designation}
                         organization    = {item.organization}
                         summary         = {item.summary}
                     />
-                    :type==='skills' ?
+                    : type==='skills' ?
                         <SkillsRow
-                            key         =  {'ski'+index+ Date.now()}
+                            key         = {'ski'+index+index+index}
+                            topSkills   = {payload[0].topSkills}
+                            otherSkills = {payload[0].otherSkills}
                         />
                     :''
                 ))

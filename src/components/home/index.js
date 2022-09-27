@@ -14,9 +14,11 @@ function Home(){
                         <p>Hey! I AM</p>
                         <h1>Anuj Kumar Singh</h1>
                         <h3>I'm a web Developer</h3>
+                        <a href="#about">
                         <div className="indicator">
                             <Icon.ArrowDown />
                         </div>
+                        </a>
                     </div>
                 </div>
             </Row>

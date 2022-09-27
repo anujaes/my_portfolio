@@ -2,42 +2,36 @@ import React                        from "react";
 import { Col, Row, Container }      from "react-bootstrap";
 import VerticalNav                  from "./molecules/verticalNav";
 import Section                      from "./molecules/section";
+import { educationRecords }         from "../../scripts/dataScripts/education.js";
+import { experienceRecords }        from "../../scripts/dataScripts/experience.js";
+import { skillRecords }              from "../../scripts/dataScripts/skillRatings";
 import '../css/resume.css'
-
-const educationData     = require('../../scripts/dataScripts/education.js')
-const experienceData    = require('../../scripts/dataScripts/experience.js')
 
 function Resume() {
 
     const payloadData = {
-        academic    : educationData.educationRecords,
-        experience  : experienceData.experienceRecords,
-        skills      : experienceData.experienceRecords,
+        academic    : educationRecords,
+        experience  : experienceRecords,
+        skills      : [skillRecords]
     }
 
     return (
         <Container id='resume' className="resume-container mt-1">
             <Row>
                 <Col lg={3} md={6} sm={12}>
+                    {/* side vertical navigation bar */}
                     <VerticalNav />
                 </Col>
                 <Col lg={9} md={6} sm={12} className="resume-details">
-                    
-                    <Section
-                        key             = {'edu' + Date.now()}
-                        type            = 'academic'
-                        payload         = {payloadData}
-                    />
-                    <Section
-                        key             = {'exp'+Date.now()}
-                        type            = 'experience'
-                        payload         = {payloadData}
-                    />
-                    <Section
-                        key             = {'ski'+Date.now()}
-                        type            = 'skills'
-                        payload         = {payloadData}
-                    />
+                    {
+                        Object.keys(payloadData).map((dataType) => (
+                            <Section
+                                key             = {dataType + Date.now()}
+                                type            = {dataType}
+                                payload         = {payloadData[dataType]}
+                            />
+                        ) )
+                    }
                 </Col>
             </Row>
         </Container>
