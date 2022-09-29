@@ -16,7 +16,7 @@ function ProjectCard(props) {
                         <h2 className="mt-2">click to visit!</h2>
                     </div>
                 </a>
-                <Card.Body>
+                <Card.Body style={{textAlign:"center"}}>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text> {duration} </Card.Text>
                     <Card.Text> {summary} </Card.Text>

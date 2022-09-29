@@ -20,7 +20,8 @@
 
 .square > div{
     /* border: 2px solid blue; */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
     margin-top: 30px;
     width: 100%;
     height: 100%;
@@ -45,12 +46,14 @@
     z-index: -10;
 }
 
+.square > div > a > p,
 .square > div > p {
     margin-top: 35px;
     color: grey;
     font-weight: 500;
     font-size: 1.1rem;
 }
+
 .square > div > h4 {
     font-weight: 700;
     font-size: 1.4rem;

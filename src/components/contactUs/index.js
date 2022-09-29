@@ -32,14 +32,16 @@ function ContactUs() {
                     <div>
                         <div><Icon.EnvelopeFill width={size.width} height={size.height} /></div>
                         <h4>Mail</h4>
-                        <p>anuj.aes@gmail.com<br></br>anuj.mcmt@gmail.com</p>
+                        <p> anuj.aes@gmail.com </p>
                     </div>
                 </Col>
                 <Col lg={3} md={6} sm={12} className="square">
                     <div>
                         <div><Icon.Linkedin width={size.width} height={size.height} /></div>
                         <h4>Linkedin</h4>
-                        <p>www.linkedin.com/in/anuj-aes</p>
+                        <a href="https://www.linkedin.com/in/anuj-aes" target="_blank" rel="noreferrer">
+                            <p>www.linkedin.com/in/anuj-aes</p>
+                        </a>
                     </div>
                 </Col>
             </Row>

@@ -5,6 +5,7 @@ import NavigationBar 	from './components/navbar/navbar';
 import Projects 		from './components/projects';
 import Resume 			from './components/resume';
 import ContactUs 		from './components/contactUs';
+import Footer from 		'./components/footer';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 			<Resume />
 			<Projects />
 			<ContactUs />
+			<Footer />
 		</div>
 	);
 }

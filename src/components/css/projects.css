@@ -36,3 +36,35 @@
 .card img{
     border-radius: 0 !important;
 }
+
+/* activity-panel */
+.activity-panel{
+    background-image:url(../../images/ribbon.jpg) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 100px !important;
+    min-height: 350px;
+    display: flex;
+}
+.activity-panel>div{
+    text-align: center;
+    background-color: #3e65ff75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.activity-panel>div>h1{
+    color: aliceblue;
+    font-weight: 900;
+    font-size: 40px;
+}
+.activity-panel>div>p{
+    margin-top: 20px;
+    width: 70%;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
