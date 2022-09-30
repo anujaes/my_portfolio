@@ -32,7 +32,7 @@ function Projects() {
             </Row>
             <Row className="activity-panel">
                 <div>
-                    <h1>I'm open for immidiate join!</h1>
+                    <h1>I'm open for immediate join!</h1>
                     <p>I am willing to join an organization which offers me opportunities to learn and innovate in the cutting edges - technologies via utilizing my knowledge & passion and help me grow in both organizational and personal perspective.</p>
                     <Button style={{borderRadius:"100px",width:"120px",height:"50px",backgroundColor:"#3e64ff",fontWeight:"bold"}}  href="#contact"  >HIRE ME</Button>
                 </div>
