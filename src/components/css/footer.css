@@ -13,7 +13,7 @@ footer{
 
 .footer-link {
     list-style: none;
-    padding-left: 0;
+    /* padding-left: 0; */
 }
 .footer-link li{
     margin-top: 15px;
@@ -38,15 +38,17 @@ footer{
     margin-right: 5px;
 }
 
-.footer-col{
-    padding-left: 50px;
-}
-
 .footer-col {
+    padding-left: 0px !important;
+    padding-right: 50px !important;
     font-size: 1rem;
     margin-bottom: 1rem;
     color: rgba(255,255,255,0.7);
     font-weight: 500;
+}
+
+.footer-col >p{
+    text-align: justify;
 }
 
 .footer-social{

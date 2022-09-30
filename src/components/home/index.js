@@ -1,6 +1,8 @@
-import React from 'react';
-import * as Icon from 'react-bootstrap-icons';
-import { Col, Row } from "react-bootstrap";
+import React                from 'react';
+import * as Icon            from 'react-bootstrap-icons';
+import { Col, Row }         from "react-bootstrap";
+import TypeWriterEffect     from 'react-typewriter-effect';
+
 import '../css/home.css'
 
 function Home(){
@@ -11,9 +13,25 @@ function Home(){
                 <Col className="sec-2"></Col>
                 <div className="banner">
                     <div className="intro">
-                        <p>Hey! I AM</p>
+                        <p>Hey! I am</p>
                         <h1>Anuj Kumar Singh</h1>
-                        <h3>I'm a web Developer</h3>
+                        <TypeWriterEffect
+                                textStyle={{
+                                display:"inline"
+                                }}
+                                scrollArea={document.querySelector('#typing-word')}
+                                startDelay={1000}
+                                cursorColor="#3F3D56"
+                                multiTextLoop = {true}
+                                multiText={[
+                                '<Javascript /> developer.',
+                                '<React /> developer.',
+                                '<NodeJS /> developer.',
+                                '<Full-Stack /> developer.',
+                                ]}
+                                multiTextDelay={1000}
+                                typeSpeed={150}
+                            />
                         <a href="#about">
                         <div className="indicator">
                             <Icon.ArrowDown />

@@ -17,10 +17,9 @@ function About(){
                     <Col lg={6} md={12} sm={12} className="details-container">
                         <div className="m-5">
                             <h1 className="about-heading">About Me</h1>
-                            <p>I am willing to join an organization which offers me opportunities to learn
-                                and innovate in the cutting edges - technologies via utilizing my
-                                knowledge & passion and help me grow in both organizational and
-                                personal perspective.
+                            <p>I am an MCA graduate, open for immediate joining as a Full Stack Developer
+                                in an organization that helps me grow and learn. I look forward to joining a
+                                team that moves ahead together, supporting and motivating one another.
                             </p>
                             <ul className="info">
                                 <li>

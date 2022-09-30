@@ -15,24 +15,26 @@ function Footer(params) {
                     <Col className="footer-col" lg={3} md={6} sm={12}>
                         <h2 className="footer-heading">About</h2>
                         <p>
-                            Type the about us statement here.
+                        I am an MCA graduate, open for immediate joining as a Full Stack Developer
+                        in an organization that helps me grow and learn. I look forward to joining a
+                        team that moves ahead together, supporting and motivating one another.
                         </p>
                     </Col>
                     <Col className="footer-col" lg={3} md={6} sm={12}>
-                        <h2 className="footer-heading">Links</h2>
+                        <h2 className="footer-heading" style={{marginLeft:"32px"}}>Links</h2>
                         <ul className="footer-link">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#resume">Resume</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#home">Go to - Home </a></li>
+                            <li><a href="#about">Go to - About </a></li>
+                            <li><a href="#resume">Go to - Resume </a></li>
+                            <li><a href="#contact">Go to - Contact </a></li>
                         </ul>
                     </Col>
                     <Col className="footer-col" lg={3} md={6} sm={12}>
-                        <h2 className="footer-heading">Social</h2>
+                        <h2 className="footer-heading" style={{marginLeft:"32px"}}>Social</h2>
                         <ul className="footer-link">
                             <li>
                                 <div className="footer-social">
-                                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/littleanuj/"><Icon.Facebook  height={logo.height} width={logo.width}/></a> 
+                                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/littleanuj/"><Icon.Facebook  height={logo.height} width={logo.width}/></a>
                                 </div>
                             </li>
                             <li>

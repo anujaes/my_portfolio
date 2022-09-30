@@ -1,9 +1,5 @@
-/* @font-face {
-    font-family: 'MyFont';
-    src: local('MyFont'), url(./fonts/MyFont.woff) format('woff');
-    /* other formats include: 'woff2', 'truetype, 'opentype',
-                              'embedded-opentype', and 'svg' */
-/* } */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .home-panel {
     height: 100vh;
@@ -30,30 +26,23 @@
 
 .intro>p {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    letter-spacing: 5px;
+    font-weight: bold;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    color: #10939a;
+    color: #3e64ff;
+    font-size: large;
 }
 
 .intro>h1 {
     font-weight: 700;
     font-size: 4rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 2px;
-}
-
-.intro>h3 {
-    font-weight: 700;
-    font-size: 2.5rem;
 }
 
 .indicator {
     text-align: center;
     display: inline-flex;
     justify-content: center;
-    /* align-items: center; */
     background-color: white;
     border-radius: 100px;
     margin-top: 3rem;
@@ -64,7 +53,8 @@
 
 .indicator>svg {
     font-weight: 600;
-    color: #10939a;
+    /* color: #10939a; */
+    color: #3e64ff;
     font-size: 1.5rem;
     animation: 3s ease-in 1s infinite reverse both running slidein;
 }
@@ -83,4 +73,15 @@
     100% {
         padding-top: 35px
     }
+}
+.react-typewriter-text,
+.react-typewriter-text-wrap::before {
+    content: 'I\'m a ' ;
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.react-typewriter-text{
+    color : #3e64ff;
 }
