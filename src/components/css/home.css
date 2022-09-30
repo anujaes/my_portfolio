@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 .home-panel {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sec-1,
 .sec-2 {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sec-1 {
-    background-color: #a8e7eb;
+    background-color: #cbd6ff;
 }
 
 .banner {
@@ -48,7 +48,7 @@
     margin-top: 3rem;
     width: 80px;
     height: 80px;
-    border: 5px solid #a8e7eb;
+    border: 5px solid #cbd6ff;
     }
 
 .indicator>svg {

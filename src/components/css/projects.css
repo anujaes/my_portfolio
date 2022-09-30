@@ -44,7 +44,7 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 100px !important;
-    min-height: 350px;
+    /* min-height: 350px; */
     display: flex;
 }
 .activity-panel>div{
@@ -54,6 +54,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 70px 20px;
 }
 
 .activity-panel>div>h1{

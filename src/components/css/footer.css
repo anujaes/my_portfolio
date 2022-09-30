@@ -1,6 +1,6 @@
 footer{
     background-color: black;
-    height: 400px;
+    min-height: 400px;
 }
 
 .footer-heading{
@@ -34,8 +34,7 @@ footer{
 }
 
 .footer-link>li>a:hover::before{
-    width: 20px;
-    margin-right: 5px;
+    width: 15px;
 }
 
 .footer-col {

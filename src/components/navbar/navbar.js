@@ -23,7 +23,12 @@ function NavigationBar() {
 
     return (
         <div>
-        <Navbar bg={transparent?'':'dark'} variant={transparent?'':'dark'} className='fixed-top' expand="lg">
+        <Navbar
+            bg          = {transparent?'':'white'}
+            variant     = {transparent?'':'light'}
+            className   = {transparent?'fixed-top':'fixed-top card-effect'}
+            expand      = "lg"
+        >
             <Container>
                 <Navbar.Brand href="#home">
                     <span className='logo'>A</span><span className='after'>nuj</span>

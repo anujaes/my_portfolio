@@ -1,7 +1,15 @@
 .contact-container{
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 100px;
     text-align: center;
+}
+
+.contact-container > div {
+    margin-bottom: 50px;
+}
+.square{
+    margin-bottom: 20px;
+    height: 375;
 }
 .contact-heading{
     font-weight: 700;

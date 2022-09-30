@@ -23,10 +23,10 @@ function Footer(params) {
                     <Col className="footer-col" lg={3} md={6} sm={12}>
                         <h2 className="footer-heading" style={{marginLeft:"32px"}}>Links</h2>
                         <ul className="footer-link">
-                            <li><a href="#home">Go to - Home </a></li>
-                            <li><a href="#about">Go to - About </a></li>
-                            <li><a href="#resume">Go to - Resume </a></li>
-                            <li><a href="#contact">Go to - Contact </a></li>
+                            <li><a href="#home"><Icon.ChevronRight width={20} height={20} />Home </a></li>
+                            <li><a href="#about"><Icon.ChevronRight width={20} height={20} />About </a></li>
+                            <li><a href="#resume"><Icon.ChevronRight width={20} height={20} />Resume </a></li>
+                            <li><a href="#contact"><Icon.ChevronRight width={20} height={20} />Contact </a></li>
                         </ul>
                     </Col>
                     <Col className="footer-col" lg={3} md={6} sm={12}>
