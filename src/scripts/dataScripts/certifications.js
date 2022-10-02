@@ -8,6 +8,14 @@ exports.certificationRecords =[
         previewLink     : 'https://drive.google.com/file/d/1v1PEvv5z57rrJYG-sTaeuZPtjJvs6BZ7/view?usp=sharing'
     },
     {
+        date            : '2 OCT, 2022',
+        certifiedFrom   : 'freeCodeCamp.org',
+        certificateName : 'Responsive Web Design',
+        summary         : `As part of this certification, I buil the following projects and got all automated test suites to pass:
+                            Build a Survey Form, Build a Tribute Page, Build a Technical Documentation Page, Build a Product Landing Page, Build a Personal Portfolio Webpage.`,
+        previewLink     : 'https://freecodecamp.org/certification/anujaes/responsive-web-design'
+    },
+    {
         date            : '16 DEC, 2021',
         certifiedFrom   : 'Udemy - Online Learning Platform',
         certificateName : 'The Complete 2021 PHP Full Stack Web Developer Bootcamp',
@@ -16,7 +24,7 @@ exports.certificationRecords =[
                             technologies like HTML, CSS, Javacript, Bootstrap. As well as backend development techonologies like PHP,
                             Mysql are also the part of this course with web basics like XML, JSON,
                             REST API along with the knowledge of project deployment on web.`,
-        previewLink     : 'https://drive.google.com/file/d/1QdLdEeDGKQCEKgfmQB5lUlM9tCWAuIjc/view?usp=sharing'
+        previewLink     : 'https://www.udemy.com/certificate/UC-e12f4f9c-568d-4d59-b7e0-07b395aa08d9/'
     },
     {
         date            : 'JAN 2021 - APR 2021',
@@ -24,6 +32,6 @@ exports.certificationRecords =[
         certificateName : 'Programming in Java',
         summary         : `I successfully completed this 12 weeks course on the behalf of my
                             elective course in MCA degree program along with the score of 77% percentile.`,
-        previewLink     : 'https://drive.google.com/file/d/1RwBckrvueVfAp2V8wOuiOZMzusf4YI8j/view?usp=sharing'
+        previewLink     : 'https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL21CS03S24530257100126'
     }
 ]
