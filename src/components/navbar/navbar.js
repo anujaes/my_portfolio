@@ -9,16 +9,17 @@ function NavigationBar() {
     const [transparent,setTransparent] =  useState(true)
 
     const changeNavbarColor = () => {
-        if(window.scrollY>=100){
+        if(window.scrollY>=100) {
             setTransparent(false);
         }else{
             setTransparent(true)
         }
     }
 
+    window.addEventListener('scroll',changeNavbarColor)
+
     useEffect( () => {
         changeNavbarColor();
-        window.addEventListener('scroll',changeNavbarColor)
     })
 
     return (
