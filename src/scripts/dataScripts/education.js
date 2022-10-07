@@ -15,6 +15,6 @@ exports.educationRecords = [
         year            : '2012 - 2013',
         course          : 'Intermediate',
         institute       : 'Govt. Queens Inter College, Varanasi UP India',
-        summary         : 'I have completed my BCA from Microtek College Of Management & Technology which is affiliated to VBSPU state University, with an overall percentage 74%.',
+        summary         : 'I have done my schooling from Govt Queens Inter college with PCM stream.'
     }
 ];

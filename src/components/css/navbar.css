@@ -3,6 +3,16 @@
     transition: all 0.5s ;
 }
 
+@media screen and (max-width:993px) {
+    .navbar{
+        background-color: white !important;
+        text-align: center;
+    }
+    #basic-navbar-nav > .me-5{
+        margin-right: 0 !important;
+    }
+}
+
 .card-effect{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 6px 0px;
 }
