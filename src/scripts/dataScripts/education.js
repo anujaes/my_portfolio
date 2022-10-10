@@ -15,6 +15,6 @@ exports.educationRecords = [
         year            : '2012 - 2013',
         course          : 'Intermediate',
         institute       : 'Govt. Queens Inter College, Varanasi UP India',
-        summary         : 'I have done my schooling from Govt Queens Inter college with PCM stream.'
+        summary         : 'I have done my schooling from Govt Queens Inter College Varanasi with PCM stream.'
     }
 ];

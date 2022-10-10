@@ -64,8 +64,8 @@ function About(){
                     <div className="flexItem"><Icon.Google /></div>
                     <div className="flexItem"><Icon.Github /></div>
                     <div className="flexItem"><Icon.Linkedin /></div>
-                    <div className="flexItem"><Icon.BootstrapFill /></div>
                     <div className="flexItem"><Icon.TerminalFill /></div>
+                    <div className="flexItem"><Icon.Slack /></div>
                 </div>
             </Container>
         </div>

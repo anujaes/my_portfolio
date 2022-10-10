@@ -15,28 +15,28 @@ function ContactUs() {
                 <h3 className="sub-heading">I would love to here from you!</h3>
                 <p className="log mb-3 mt-2">You can track me through the following!</p>
                 <Col lg={3} md={6} sm={12} className="square">
-                    <div>
+                    <div className="p-2">
                         <div><Icon.Building width={size.width} height={size.height} /></div>
                         <h4>Address</h4>
                         <p>SA-4/7 Daulatpur<br></br>Varanasi UP India ZIP - 221002</p>
                     </div>
                 </Col>
                 <Col lg={3} md={6} sm={12} className="square">
-                    <div>
+                    <div className="p-2">
                         <div><Icon.TelephoneFill width={size.width} height={size.height} /></div>
                         <h4>Contact</h4>
                         <p>+91 9307565775</p>
                     </div>
                 </Col>
                 <Col lg={3} md={6} sm={12} className="square">
-                    <div>
+                    <div className="p-2">
                         <div><Icon.EnvelopeFill width={size.width} height={size.height} /></div>
                         <h4>Mail</h4>
                         <p> anuj.aes@gmail.com </p>
                     </div>
                 </Col>
                 <Col lg={3} md={6} sm={12} className="square">
-                    <div>
+                    <div className="p-2">
                         <div><Icon.Linkedin width={size.width} height={size.height} /></div>
                         <h4>Linkedin</h4>
                         <a href="https://www.linkedin.com/in/anuj-aes" target="_blank" rel="noreferrer">
