@@ -8,7 +8,7 @@ exports.projectRecords = [
     },
     {
         name        : 'PR Technology — Computer Shop Management',
-        duration    : 'DEC. 2019 - FEB. 2019',
+        duration    : 'FEB. 2019 - DEC. 2019',
         technologies: 'HTML, CSS, Bootstrap, Javascript',
         summary     : 'This poject was developed to manage the services and customer complaints online. I was responsible to develop the front end of this project',
         link        : '',
