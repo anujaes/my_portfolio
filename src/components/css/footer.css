@@ -13,12 +13,12 @@ footer{
 
 .footer-link {
     list-style: none;
-    /* padding-left: 0; */
+    padding-left: 1.8rem;
 }
 
 .footer-link li{
     margin-top: 15px;
-    margin-left: 13px;
+    /* margin-left: 13px; */
 }
 
 .footer-link li a{
@@ -26,19 +26,15 @@ footer{
     text-decoration: none;
 }
 
-.footer-link li a::before{
-    content:' ';
+.footer-link li a{
     width: 0px;
     height: 2px;
-    display: inline-block;
-    background-color:rgba(255,255,255,0.7);
     vertical-align: middle;
     transition: 0.5s ease;
-    margin-right: -13px;
 }
 
-.footer-link>li>a:hover::before{
-    width: 15px;
+.footer-link>li>a:hover{
+    margin-left: 15px;
 }
 
 .footer-col {
@@ -54,26 +50,14 @@ footer{
     text-align: justify;
 }
 
-/* .footer-social{ */
-    /* width: 45px; */
-    /* height: 45px; */
-    /* border-radius: 100px; */
-    /* background-color:rgba(255,255,255,0.7); */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* flex-direction: row; */
-/* } */
-
 .footer-social a svg {
     width: 30px;
     height: 30px;
     margin-bottom:12px;
-    border-radius: 7px;
+    color: whitesmoke;
 }
 
-
 .footer-social a svg:hover {
-    color:rgb(131, 171, 51);
+    color: greenyellow;
     transition: 0.5s ease;
 }

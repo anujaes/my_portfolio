@@ -70,6 +70,16 @@
     text-align: justify;
 }
 
+.major-points{
+    color: grey;
+    padding-left: 1rem;
+    list-style:square ;
+}
+
+.major-points>li{
+    margin-bottom: 3px;
+}
+
 /*  */
 .link-icon{
     color: darkblue;

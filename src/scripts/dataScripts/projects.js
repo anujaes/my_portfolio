@@ -11,13 +11,13 @@ exports.projectRecords = [
         duration    : 'FEB. 2019 - DEC. 2019',
         technologies: 'HTML, CSS, Bootstrap, Javascript',
         summary     : 'This poject was developed to manage the services and customer complaints online. I was responsible to develop the front end of this project',
-        link        : '',
+        link        : '#',
     },
     {
         name        : 'Location Based Book Sharing System',
         duration    : 'SEP. 2021 - NOV. 2021 ',
         technologies: 'HTML, CSS, Bootstrap, Javascript',
         summary     : 'Location Based Book Sharing Application is a web-based application designed to facilitate borrowing and lending of books.',
-        link        : '',
+        link        : '#',
     }
 ]

@@ -4,7 +4,6 @@ import * as Icon    from "react-bootstrap-icons";
 function CorporateRow(props) {
 
     return (
-
         <div className="flex-container">
             <div className="flex-icon"><span><Icon.Briefcase width={30} height={30} /></span></div>
             <div className="flex-details">
@@ -12,6 +11,13 @@ function CorporateRow(props) {
                 <h3>{props.designation}</h3>
                 <h6>{props.organization}</h6>
                 <p> {props.summary}</p>
+                <ul className="major-points">
+                    {
+                        props.keyPoints.map( (elem,index) => (
+                            <li key={'KP'+index}>{elem}</li>
+                        ))
+                    }
+                </ul>
             </div>
         </div>
     )
