@@ -4,7 +4,8 @@ exports.projectRecords = [
         duration    : 'SEP. 2020 - NOV. 2020',
         technologies: 'PHP, MySQL, HTML, CSS, Bootstrap, Javascript',
         summary     : 'This is my first live project which I developed for my hotsel. Manage records of the borders, hostel rooms and other managerial activity related to the hostel.',
-        link        : 'http://www.tezu.ernet.in/hostels/patkai/',
+        // link        : 'http://www.tezu.ernet.in/hostels/patkai/',
+        link        : '#'
     },
     {
         name        : 'PR Technology — Computer Shop Management',
