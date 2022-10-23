@@ -38,6 +38,7 @@
     display: block;
     background-color: #3e64ff;
     text-align: center;
+    margin: auto;
 }
 
 .nav-btn.active:after,

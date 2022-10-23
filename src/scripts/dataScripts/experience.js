@@ -2,7 +2,7 @@ exports.experienceRecords = [
     {
         year            : 'FEB 2022 - AUG 2022',
         designation     : 'Full Stack Developer Trainee',
-        organization    : 'Antares Tech Noida, UP India - Intersnhip',
+        organization    : 'Antares Tech Noida, UP India - Internship',
         summary         : 'I participated in a live Antares project for an enterprise SaaS (Software as a Service) company in the agriculture industry based in Missouri, USA as a full-stack developer.',
         keyPoints       : [
                             'Worked on MERN stack project which is a market analysis and scoring system which generates agricultural reports.',

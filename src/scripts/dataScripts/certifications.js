@@ -2,7 +2,7 @@ exports.certificationRecords =[
     {
         date            : '7 FEB, 2022 - 5 AUG, 2022',
         certifiedFrom   : 'Antares Tech (Terracode Systems Private Limited)',
-        certificateName : 'Certificate Of Intership',
+        certificateName : 'Certificate Of Internship',
         summary         : `I participated in a live Antares project for an enterprise SaaS (Software as a Service) 
                             company in the agriculture industry based in Missouri, USA as a full-stack developer.`,
         previewLink     : 'https://drive.google.com/file/d/1v1PEvv5z57rrJYG-sTaeuZPtjJvs6BZ7/view?usp=sharing'
