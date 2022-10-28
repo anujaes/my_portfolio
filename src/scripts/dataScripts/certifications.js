@@ -27,6 +27,13 @@ exports.certificationRecords =[
         previewLink     : 'https://www.udemy.com/certificate/UC-e12f4f9c-568d-4d59-b7e0-07b395aa08d9/'
     },
     {
+        date            : '19 OCT, 2022 - 19 OCT, 2023 ',
+        certifiedFrom   : 'Cutshort.io',
+        certificateName : 'Javascript Assessment',
+        summary         : `Adavance proficiency in javascript`,
+        previewLink     : 'https://cutshort.io/certificate/74044'
+    },
+    {
         date            : 'JAN 2021 - APR 2021',
         certifiedFrom   : 'NPTEL Online Certification - MHRD, Govt of India',
         certificateName : 'Programming in Java',
