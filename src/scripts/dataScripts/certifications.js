@@ -8,6 +8,14 @@ exports.certificationRecords =[
         previewLink     : 'https://drive.google.com/file/d/1v1PEvv5z57rrJYG-sTaeuZPtjJvs6BZ7/view?usp=sharing'
     },
     {
+        date            : '1 NOV, 2022',
+        certifiedFrom   : 'Udemy - Online Learning Platform',
+        certificateName : 'The Complete 2022 Web Development Bootcamp',
+        summary         : `As the part of this certification I learned MongoDB, ExpressJs, ReactJS, NodeJS, Redux.
+                            Also completed some projects like, KeeperApp, User Subscriber App using MailchimP API etc.`,
+        previewLink     : 'https://www.udemy.com/certificate/UC-583337f1-cc82-4970-9857-a72dad8b854f/?utm_medium=email&utm_campaign=email&utm_source=sendgrid.com'
+    },
+    {
         date            : '2 OCT, 2022',
         certifiedFrom   : 'freeCodeCamp.org',
         certificateName : 'Responsive Web Design',
