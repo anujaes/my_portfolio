@@ -7,7 +7,6 @@
     font-weight: 700;
     letter-spacing: 1px;
     text-align: center;
-    font-family: "Poppins", Arial, sans-serif;
     font-size: 50px;
 }
 
@@ -44,7 +43,6 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 100px !important;
-    /* min-height: 350px; */
     display: flex;
 }
 .activity-panel>div{
