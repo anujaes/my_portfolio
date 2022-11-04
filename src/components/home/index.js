@@ -19,18 +19,18 @@ function Home(){
                                 textStyle={{
                                 display:"inline"
                                 }}
-                                scrollArea={document.querySelector('#typing-word')}
-                                startDelay={1000}
-                                cursorColor="#3F3D56"
-                                multiTextLoop = {true}
-                                multiText={[
-                                '<Javascript /> developer.',
-                                '<React /> developer.',
-                                '<NodeJS /> developer.',
-                                '<Full-Stack /> developer.',
-                                ]}
-                                multiTextDelay={1000}
-                                typeSpeed={150}
+                                scrollArea      = {document.querySelector('#typing-word')}
+                                startDelay      = {1000}
+                                cursorColor     = "#3F3D56"
+                                multiTextLoop   = {true}
+                                multiText       = {[
+                                                        '<Javascript /> developer.',
+                                                        '<React /> developer.',
+                                                        '<NodeJS /> developer.',
+                                                        '<Full-Stack /> developer.',
+                                                    ]}
+                                multiTextDelay  = {1000}
+                                typeSpeed       = {150}
                             />
                         <a href="#about">
                         <div className="indicator">

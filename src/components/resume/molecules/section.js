@@ -7,6 +7,7 @@ import CertificationRow     from "./certificationsRow.js";
 function Section(props) {
 
     const { type, payload} = props;
+
     function conditioalRendering(item,index,type) {
         const components = {
             academic        :  <AcademicRow
@@ -44,7 +45,7 @@ function Section(props) {
     }
 
     return (
-        <div key={type + Date.now()} id={type} className="row-section">
+        <div key={type + Date.now()} id={type} className="row-section scrollspy">
             <h2 className="heading">{type}</h2>
             {
                 payload.map( (item,index) => (

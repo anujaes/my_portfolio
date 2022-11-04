@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
 .about-container{
     min-height:100vh;
 }
@@ -7,13 +5,11 @@
 .details-container,
 .potrait-container{
     height: 100%;
-    font-family: "Poppins", Arial, sans-serif;
     padding-top:3rem;
 }
 
 .potrait-container{
     background-color: lightslategrey;
-    /* background-color: black; */
     display: inline-block;
     text-align: center;
 }

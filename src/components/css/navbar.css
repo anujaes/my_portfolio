@@ -17,13 +17,6 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 6px 0px;
 }
 
-/* .bg-dark {
-    --bs-bg-opacity: 1;
-    background-color: transparent;
-    background-image: linear-gradient(to right, #0fb6bf 15%, black 100%) !important;
-    background-image: linear-gradient(to right, black 15%, #0fb6bf 100%) !important;
-} */
-
 .nav-btn{
     margin: 10px;
     font-size: large;

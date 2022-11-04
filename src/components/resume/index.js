@@ -1,4 +1,5 @@
-import React                        from "react";
+import '../css/resume.css'
+import React,{useEffect}            from "react";
 import { Col, Row, Container }      from "react-bootstrap";
 import VerticalNav                  from "./atoms/verticalNav";
 import Section                      from "./molecules/section";
@@ -6,7 +7,6 @@ import { educationRecords }         from "../../scripts/dataScripts/education.js
 import { experienceRecords }        from "../../scripts/dataScripts/experience.js";
 import { skillRecords }             from "../../scripts/dataScripts/skillRatings";
 import { certificationRecords }     from "../../scripts/dataScripts/certifications";
-import '../css/resume.css'
 
 function Resume() {
 
@@ -15,7 +15,7 @@ function Resume() {
         experience      : experienceRecords,
         skills          : [skillRecords],
         certifications  : certificationRecords
-    }
+    }   
 
     return (
         <Container id='resume' className="resume-container mt-1">
