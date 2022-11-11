@@ -85,6 +85,8 @@ footer{
 
 .footer-image>img{
     width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.492) 0%,#3e65ff3b  100%);
+    border-radius: 20px 5px 20px 5px;
 }
 
 .abstract{
