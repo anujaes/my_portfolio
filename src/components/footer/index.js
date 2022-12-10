@@ -58,7 +58,7 @@ function Footer(params) {
                                     Disclaimer, this portfolio is designed using ReactJs, React-Bootstrap and React-Bootstrap-Icons.
                                     And this portfolio template is inspired from 'ColorLib'. Developed By Anuj Kumar Singh.
                                     <br></br><br></br>
-                                    <em>{'Last updated on 04 November 2022'}</em>
+                                    <em>{'Last updated on 10 December 2022'}</em>
                                 </p>
                             </Col>
                         </Row>

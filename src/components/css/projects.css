@@ -43,11 +43,10 @@
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 100px !important;
-    display: flex;
 }
 .activity-panel>div{
     text-align: center;
-    background-color: #3e65ff75;
+    /* background-color: #3e65ff75; */
     display: flex;
     justify-content: center;
     align-items: center;

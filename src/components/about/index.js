@@ -17,8 +17,13 @@ function About(){
                     <Col lg={6} md={12} sm={12} className="details-container">
                         <div className="m-5">
                             <h1 className="about-heading">About Me</h1>
-                            <p>I am an MCA graduate, open for immediate joining as a Full Stack Developer
+                            {/* <p>I am an MCA graduate, open for immediate joining as a Full Stack Developer
                                 in an organization that helps me grow and learn. I look forward to joining a
+                                team that moves ahead together, supporting and motivating one another.
+                            </p> */}
+                            <p>
+                                I am an MCA graduate and am currently working for <b>Antino Labs</b> Gurugram, Haryana.
+                                Antino is my first step into the IT industry where I am learning and growing with a good technical
                                 team that moves ahead together, supporting and motivating one another.
                             </p>
                             <ul className="info">
@@ -48,7 +53,8 @@ function About(){
                                 </li>
                             </ul>
 
-                            <span className="summary">6 months of <span className="emphesize"> internship</span> experience.</span>
+                            {/* <span className="summary">6 months of <span className="emphesize"> internship</span> experience.</span> */}
+                            <span className="summary">Currently working as a <span className="emphesize">full time</span> employee.</span>
                             <br></br>
                             <Button download="Anuj's Resume" target='_blank' variant="primary" href={resume}  className="btn-cv" size="lg">
                                 <Icon.Download className="me-2" />Resume

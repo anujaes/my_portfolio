@@ -1,5 +1,12 @@
 exports.experienceRecords = [
     {
+        year            : 'DEC 2022 - current',
+        designation     : 'Associate Software Developer',
+        organization    : 'Antino Labs, Gurugram India - Full Time',
+        summary         : 'I am working as a NodeJS Developer in the company.',
+        keyPoints       : []
+    },
+    {
         year            : 'FEB 2022 - AUG 2022',
         designation     : 'Full Stack Developer Trainee',
         organization    : 'Antares Tech Noida, UP India - Internship',
