@@ -3,23 +3,18 @@
 }
 
 .details-container,
-.potrait-container{
+.portrait-container{
     height: 100%;
     padding-top:3rem;
 }
 
-.potrait-container{
-    background-color: lightslategrey;
+.portrait-container{
     display: inline-block;
     text-align: center;
 }
 
-.potrait-container>img{
+.portrait-container>img{
     width: 100%;
-}
-
-.about-heading{
-    font-weight: 700;
 }
 
 .details-container > div > p{
@@ -36,7 +31,7 @@
 }
 
 .info>li{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 .info li span:first-child{
@@ -57,7 +52,7 @@
 .summary{
     font-size: 1.2rem;
     display: inline-block;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -68,24 +63,19 @@
 
 .btn-cv{
     border-radius: 100px !important;
+    background-color: #3e64ff !important;
+}
+
+.btn-cv:hover{
+    color: white;
 }
 
 .flexBox {
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
 }
 
-.flexItem{
-    width: 18rem;
-    margin: 10px;
-    text-align: center;
-    line-height: 75px;
-    font-size: 2rem;
-    margin-top: 2rem;
-}
-
-.flexItem > svg{
-    width:1em;
-    height:1em;
+.flexBox > svg{
+    font-size: 2.5rem;
+    margin: 0.7rem auto;
 }

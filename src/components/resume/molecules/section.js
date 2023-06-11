@@ -18,7 +18,7 @@ function Section(props) {
                                     summary     = {item.summary}
                                 />,
             experience      :   <CorporateRow
-                                    key             = {'corp'+index+index}
+                                    key             = {'corp'+index}
                                     year            = {item.year}
                                     designation     = {item.designation}
                                     organization    = {item.organization}
@@ -27,12 +27,12 @@ function Section(props) {
                                 />,
             skills          :
                                 <SkillsRow
-                                    key             = {'ski'+index+index+index}
+                                    key             = {'ski'+index}
                                     topSkills       = {item.topSkills}
                                     otherSkills     = {item.otherSkills}
                                 />,
             certifications  :   <CertificationRow
-                                    key             = {'cert'+index+index+index+index}
+                                    key             = {'cert'+index}
                                     date            = {item.date}
                                     certifiedFrom   = {item.certifiedFrom}
                                     certificateName = {item.certificateName}

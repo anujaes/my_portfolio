@@ -4,13 +4,9 @@
     position    : -webkit-sticky !important;
     position    : sticky !important;
 }
-
-.vertical-navigation .nav-link {
-    text-decoration : none;
-    font-size       : 1rem;
-    font-weight     : 700;
+/* .vertical-navigation .nav-link {
     color           : black !important;
-}
+} */
 
 .vertical-navigation .nav-link::before {
     content         : "";
@@ -26,5 +22,10 @@
 .vertical-navigation .nav-link:hover:before{
     width       : 20px;
     transition  : 0.5s;
+}
+
+.menu-txt > span{
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 

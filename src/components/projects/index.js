@@ -1,7 +1,8 @@
 import React                    from "react";
-import { Row, Container, Button }       from "react-bootstrap";
 import ProjectCard              from "./molucules/projectCard";
 import { projectRecords }       from "../../scripts/dataScripts/projects";
+import { Grid, Typography }     from "@mui/material";
+import {Container,Box}          from "@mui/material";
 import '../css/projects.css'
 
 function Projects() {
@@ -13,9 +14,11 @@ function Projects() {
     const images = importAll(require.context('../../images/project/', false, /\.(png|jpe?g|svg)$/));
 
     return (
-        <Container fluid={true} id='projects' className="projects-container">
-            <Row>
-                <h1 className='projects-heading mt-2 mb-5'>My Projects</h1>
+        <Container disableGutters id='projects' maxWidth='xlg'>
+            <Grid container spacing={1}>
+                <Grid item xs={12} sm={12} md={12} lg={12} sx={{mb:2}}>
+                    <Typography variant="h3" textAlign='center' fontWeight={800} sx={{ mb:2, mt:1}}>My Projects</Typography>
+                </Grid>
                 {
                     projectRecords.map ( (item,index) => (
                         <ProjectCard
@@ -29,8 +32,8 @@ function Projects() {
                         />
                     ))
                 }
-            </Row>
-            <Row className="activity-panel">
+            </Grid>
+            <Box className="activity-panel">
                 {/* <div>
                     <h1>I'm open To immediate join!</h1>
                     <p>I am willing to join an organization which offers me opportunities to learn and innovate in the cutting edges - technologies via utilizing my knowledge & passion and help me grow in both organizational and personal perspective.</p>
@@ -40,7 +43,7 @@ function Projects() {
                     <h1>I'm open to learn new technologies!</h1>
                     <p>I am willing to join an organization which offers me opportunities to learn and innovate in the cutting edges - technologies via utilizing my knowledge & passion and help me grow in both organizational and personal perspective.</p>
                 </div>
-            </Row>
+            </Box>
         </Container>
     )
 }

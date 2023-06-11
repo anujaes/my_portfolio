@@ -1,6 +1,6 @@
 exports.projectRecords = [
     {
-        name        : 'Patkai Men’s Hostel — Hostel Management [Live]',
+        name        : 'Patkai Men’s Hostel — Hostel Management',
         duration    : 'SEP. 2020 - NOV. 2020',
         technologies: 'PHP, MySQL, HTML, CSS, Bootstrap, Javascript',
         summary     : 'This is my first live project which I developed for my hotsel. Manage records of the borders, hostel rooms and other managerial activity related to the hostel.',

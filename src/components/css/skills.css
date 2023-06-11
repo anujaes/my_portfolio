@@ -43,3 +43,14 @@
     font-weight: bold !important;
 
 }
+
+
+/* MUI overwritting */
+.css-5xe99f-MuiLinearProgress-bar1 {
+    border-radius: 100px;
+    background-color: #3e64ff !important;
+}
+
+.css-15st7f7-MuiLinearProgress-root {
+    background-color: #3e65ff33 !important;
+}

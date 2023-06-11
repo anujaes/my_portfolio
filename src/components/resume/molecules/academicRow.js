@@ -1,19 +1,22 @@
+import { Box }      from "@mui/material";
 import React        from "react";
-import * as Icon    from "react-bootstrap-icons";
+import SchoolIcon   from '@mui/icons-material/School';
 
 function AcademicRow(props) {
 
     return (
 
-        <div className="flex-container">
-            <div className="flex-icon"><span><Icon.Mortarboard width={30} height={30} /></span></div>
-            <div className="flex-details">
+        <Box className="flex-container">
+            <Box className="flex-icon">
+                <span><SchoolIcon fontSize="medium" /></span>
+            </Box>
+            <Box className="flex-details">
                 <h6>{props.year}</h6>
                 <h3>{props.course}</h3>
                 <h6>{props.institute}</h6>
                 <p> {props.summary}</p>
-            </div>
-        </div>
+            </Box>
+        </Box>
     )
 }
 

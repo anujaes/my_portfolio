@@ -3,14 +3,14 @@
     min-height: 100vh;
 }
 
-.projects-heading{
+/* .projects-heading{
     font-weight: 700;
     letter-spacing: 1px;
     text-align: center;
     font-size: 50px;
-}
+} */
 
-.img-hover{
+/* .img-hover{
     display: none;
     background-color: rgba(0, 0, 255, 0.7);
     width: 100%;
@@ -26,14 +26,24 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+} */
 
-.card {
+/* .card {
     min-height: 447px;
     border-radius: 0 !important;
 }
 .card img{
     border-radius: 0 !important;
+} */
+
+.projects-cards{
+    transition: ease 0.2s !important;
+}
+
+.projects-cards:hover{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    transform   :scale(1.025);
+    cursor      : pointer;
 }
 
 /* activity-panel */

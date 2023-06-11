@@ -2,15 +2,16 @@
     min-height: 100vh;
     padding-top: 100px;
     text-align: center;
+    background-image: url(../../images/peals.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .contact-container > div {
     margin-bottom: 50px;
 }
-.square{
-    margin-bottom: 20px;
-    height: 375;
-}
+
 .contact-heading{
     font-weight: 700;
     letter-spacing: 1px;
@@ -25,41 +26,23 @@
     font-weight: 500;
 }
 
-.square > div{
+.square {
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-    margin-top: 30px;
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: white;
+    padding: 1.2rem;
 }
 
-.square > div > div{
-    margin-top: 50px;
-    display: inline-block;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100px;
-    height:100px;
+.square > span{
     background-color:#3e64ff;
+    padding: 1rem;
     color: white;
-    z-index: -10;
+    border-radius: 100px;
 }
 
-.square > div > a > p,
-.square > div > p {
-    margin-top: 35px;
-    color: grey;
-    font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.square > div > h4 {
-    font-weight: 700;
-    font-size: 1.4rem;
-    margin-top: 30px;
+.box-form{
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

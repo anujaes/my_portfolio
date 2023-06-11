@@ -1,29 +1,49 @@
-import React                from "react";
-import { Col,Card }         from "react-bootstrap";
-import * as Icon            from "react-bootstrap-icons";
+import { Grid, Link }         from "@mui/material";
+import React            from "react";
+import Card             from '@mui/material/Card';
+// import CardActions   from '@mui/material/CardActions';
+import CardContent      from '@mui/material/CardContent';
+import CardMedia        from '@mui/material/CardMedia';
+import {Typography}     from "@mui/material";
+// import {Button}      from "@mui/material";
 
 function ProjectCard(props) {
 
-    const {name, duration, technologies, summary, link,image} = props;
+    const {name, duration, technologies, summary, link, image} = props;
 
     return (
-        <Col lg={4} md={6} sm={12} className="pt-3" >
-            <Card>
-            <a className="img-link" target="noreferrer" href={link||'#'}>
-                <Card.Img  variant="top" src={image} />
-                    <div className="img-hover">
-                        <Icon.Link45deg height={50} width={50}/>
-                        <h2 className="mt-2">click to visit!</h2>
-                    </div>
-                </a>
-                <Card.Body style={{textAlign:"center"}}>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text> {duration} </Card.Text>
-                    <Card.Text> {summary} </Card.Text>
-                    <Card.Text> {technologies} </Card.Text>
-                </Card.Body>
+        <Grid item lg={4} md={6} sm={12} xs={12}
+            sx={{display:'flex', justifyContent:'center'}}
+        >
+            <Card sx={{width:'85%'}} className="projects-cards">
+                <Link href={link} underline="none" sx={{textDecoration:'none', color:'black'}}>
+                    <CardMedia
+                        component   = "img"
+                        alt         = {name}
+                        height      = "250"
+                        image       = {image}
+                    />
+                    <CardContent sx={{textAlign:'center'}}>
+                        <Typography gutterBottom variant="h6" component="div">
+                            {name}
+                        </Typography>
+                        <Typography fontWeight='bold' gutterBottom variant="caption" color="text.secondary">
+                            {duration}
+                        </Typography>
+                        <Typography variant="body1" color="text.secondary">
+                            {summary}
+                        </Typography>
+                        <Typography fontWeight='bold' variant="caption" color="text.secondary">
+                            {technologies}
+                        </Typography>
+                    </CardContent>
+                    {/* <CardActions> */}
+                        {/* <Button size="small">Share</Button> */}
+                        {/* <Button size="small">Learn More</Button> */}
+                    {/* </CardActions> */}
+                </Link>
             </Card>
-        </Col>
+        </Grid>
     )
 }
 

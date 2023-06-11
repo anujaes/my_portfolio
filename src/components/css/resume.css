@@ -1,6 +1,6 @@
 
 .heading {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 30px;
     margin-bottom: 30px;
     color: #3e64ff;
@@ -12,12 +12,16 @@
     padding-top: 7rem;
 }
 
+.left-navigation-section{
+    background-image: url(../../images//waving2.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
 /* resume section styling */
 
 .flex-container {
     display: flex;
     align-items: stretch;
-    /* background-color: #f1f1f1; */
     margin-top: 2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid lightgray;
@@ -32,7 +36,7 @@
 
 .flex-icon span{
     padding: 0.7rem;
-    display: block;
+    display: inline-flex;
     background-color: #3e64ff;
     border-radius: 100px;
     color: white;
@@ -44,19 +48,21 @@
 }
 
 .flex-details h6 {
-    margin-top: 5px;
+    margin-top: 0px;
+    margin-bottom: 0;
     color: #3e64ff;
-    font-weight: 700;
+    font-size: medium;
 }
 
 .flex-details h6:nth-child(3) {
-    margin-top: 1rem;
     font-size: 18px;
-    color: black;
+    color: grey;
+    font-weight: 500;
 }
 
 .flex-details h3 {
-    font-weight: 700;
+    margin: 0;
+    font-size: 1.4rem;
 }
 .flex-details p{
     font-size: 1rem;
@@ -78,11 +84,13 @@
 /*  */
 .link-icon{
     color: darkblue;
+    padding-left: 0.1rem;
 }
 
 .link-icon:hover{
     color: orangered;
     transition: 0.2s ease;
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+    padding-left: 0rem;
+    /* -ms-transform: rotate(90deg);
+    transform: rotate(90deg); */
 }

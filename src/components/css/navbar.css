@@ -1,28 +1,13 @@
-.navbar{
-    --bs-navbar-padding-y: 0 !important;
-    transition: all 0.5s ;
-}
-
-@media screen and (max-width:993px) {
-    .navbar{
-        background-color: white !important;
-        text-align: center;
-    }
-    #basic-navbar-nav > .me-5{
-        margin-right: 0 !important;
-    }
-}
-
 .card-effect{
     box-shadow: rgba(60, 64, 67, 0.3) 0px 3px 6px 0px;
 }
 
 .nav-btn{
-    margin: 10px;
-    font-size: large;
-    font-weight: 500 !important;
-    border: 3px solid transparent;
-    transition: border-bottom-color all 2000ms;
+    margin          : 10px;
+    font-size       : large;
+    font-weight     : 500 !important;
+    border          : 3px solid transparent;
+    transition      : border-bottom-color all 2000ms;
 }
 .nav-btn::after{
     content:" ";
