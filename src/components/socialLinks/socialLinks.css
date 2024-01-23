@@ -1,0 +1,9 @@
+.social-links{
+    margin-right: 1rem;
+    color: black;
+    font-size: 1.8rem !important;
+}
+
+.social-links:hover{
+    color: grey;
+}

@@ -11,18 +11,18 @@ import MenuItem     from '@mui/material/MenuItem';
 import Person4Icon  from '@mui/icons-material/Person4';
 import { Link }     from '@mui/material';
 
-import '../css/navbar.css'
+import './navbar.css'
 
 function NavigationBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [transparent,setTransparent]  =  React.useState(false);
 
     const pages = [
-        { name : 'Home',     link : '#home' },
-        { name : 'About',    link : '#about' },
-        { name : 'Resume',   link : '#resume' },
-        { name : 'Project',  link : '#projects' },
-        { name : 'Contact',  link : '#contact' }
+        // { name : 'Home',        link : '#home' },
+        { name : 'About',       link : '#about' },
+        { name : 'Resume',      link : '#experience' },
+        { name : 'Project',     link : '#projects' },
+        // { name : 'Contact',     link : '#contact' }
     ];
 
     const handleOpenNavMenu = (event) => {
@@ -50,9 +50,10 @@ function NavigationBar() {
 
     return (
         <AppBar position="sticky"
+        // <AppBar position='static'
             sx={{
-                backgroundColor : transparent ? "transparent" : "white",
-                boxShadow       : transparent ? "none" : 'null',
+                backgroundColor : transparent ? "transparent" : "transparent", // "#ffffff75",
+                boxShadow       : transparent ? "none" : 'none',
                 color           : "grey",
             }}
         >
