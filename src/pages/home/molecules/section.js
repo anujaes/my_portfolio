@@ -66,7 +66,7 @@ function Section(props) {
 
     return (
         <Box key={type + Date.now()} id={type} paddingTop={15}>
-            {/* TODO - FOR MOBILE VIEW */}
+            {/* TODO - FOR MOBILE VIEW  we ned to fix the mobile view*/}
             {/* <Typography variant="h5" marginY={1.1} fontWeight={500} color={"grey"}>
                 {type.charAt(0).toUpperCase() + type.slice(1)}
             </Typography> */}
