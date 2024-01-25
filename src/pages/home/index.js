@@ -16,6 +16,7 @@ import {
 }                               from "@mui/material";
 import TypeWriterEffect         from 'react-typewriter-effect';
 import '../../css/home.css';
+import ProfilePicture from "../../components/profilePicture/profilePicture";
 
 
 const payloadData = {
@@ -34,16 +35,31 @@ function About() {
                 <Grid container maxWidth='lg'>
                     <Grid
                         item
-                        xlg     = {6}
-                        lg      = {6}
-                        md      = {6}
-                        sm      = {12}
-                        xs      = {12}
-                        padding = {5}
-                        display = {"flex"}
-                        flexDirection = {"column"}
+                        xlg             = {6}
+                        lg              = {6}
+                        md              = {6}
+                        sm              = {12}
+                        xs              = {12}
+                        padding         = {5}
+                        display         = {"flex"}
+                        justifyContent  = {"center"}
+                        flexDirection   = {"column"}
+                        minHeight       = "100vh"
+                        sx              = {{
+                                            alignItems : {
+                                                xs : "center",
+                                                sm : "center",
+                                                md : "flex-start",
+                                                lg : "flex-start",
+                                                xl : 'flex-start'
+                                            },
+                                            textAlign : {xs:"center",sm:"center", md:"left" }
+                                        }}
                     >
-                        <Typography variant="h3" fontWeight={700} marginTop={10}>
+                        {/* profile picture */}
+                        <ProfilePicture display={{xs:'flex', sm:'flex', md:'none', lg:"none"}} />
+
+                        <Typography variant="h3" fontWeight={700} marginTop={2}>
                             Anuj Kr. Singh
                         </Typography>
                         <Typography variant="h6" fontWeight={500}>
@@ -65,11 +81,11 @@ function About() {
                                                     fontSize    : 15,
                                                     fontWeight  : 500,
                                                     fontFamily  : 'inherit',
-                                                    color       : '#3e64ff',
+                                                    color       : '#ca292d',
                                                 }}
                             scrollArea      = {document.querySelector('#typing-word')}
                             startDelay      = {1000}
-                            cursorColor     = "#3F3D56"
+                            cursorColor     = "#ca292d"
                             multiTextLoop   = {true}
                             multiText       = {[
                                                     '<Javascript /> developer.',

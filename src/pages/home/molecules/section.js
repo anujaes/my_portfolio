@@ -4,8 +4,8 @@ import Experience           from "../../../components/experience/experience.js";
 import SkillsRow            from "../../../components/skills/skillsRow.js";
 import Certifications       from "../../../components/certifications/certifications.js";
 import Introduction         from "../../../components/introduction/introduction.js";
-import Projects from "../../../components/projects/projects.js";
-import { Box } from "@mui/material";
+import Projects             from "../../../components/projects/projects.js";
+import { Box, Typography }  from "@mui/material";
 
 function Section(props) {
 
@@ -67,9 +67,15 @@ function Section(props) {
     return (
         <Box key={type + Date.now()} id={type} paddingTop={15}>
             {/* TODO - FOR MOBILE VIEW  we ned to fix the mobile view*/}
-            {/* <Typography variant="h5" marginY={1.1} fontWeight={500} color={"grey"}>
+            <Typography
+                variant     = "h5"
+                marginY     = {1.1}
+                fontWeight  = {500}
+                color       = {"#ca292d"}
+                sx={{display : { sm: 'block', md: 'none' }}}
+            >
                 {type.charAt(0).toUpperCase() + type.slice(1)}
-            </Typography> */}
+            </Typography>
             {
                 payload.map( (item,index) => (
                     conditionalRendering(item, index, type)
