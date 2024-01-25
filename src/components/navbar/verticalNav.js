@@ -42,7 +42,7 @@ export const endPoints = [
 function VerticalNav() {
 
     return (
-        <MenuList className='vertical-navigation'>
+        <MenuList className='vertical-navigation' sx={{display : { xs: 'none', sm:'none', md:'block' }}}>
             {
                 endPoints.map((item, index) => (
                     <Link key={'VNB' + index} underline='none' href={item.href} color={"black"} >

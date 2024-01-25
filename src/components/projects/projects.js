@@ -35,7 +35,15 @@ function Projects(props) {
                         />
                     </ImageListItem>
                 </Grid>
-                <Grid item xlg={8} lg={8} md={8} sm={12} xs={12}>
+                <Grid
+                    item
+                    xlg = {8}
+                    lg  = {8}
+                    md  = {8}
+                    sm  = {12}
+                    xs  = {12}
+                    sx  = {{padding : { xs:'1rem', sm:'1rem', md: '0', lg:'0px', xlg:'0px' }}}
+                >
                     <Typography fontSize={16} fontWeight={500}>{props.name}</Typography>
                     <Typography fontSize={12} fontWeight={600} marginRight={1} > {props.duration} </Typography>
                     <Typography p={0} marginY={0.5} fontSize={13}>{props.summary}</Typography>

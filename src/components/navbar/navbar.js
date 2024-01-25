@@ -10,12 +10,13 @@ import Container    from '@mui/material/Container';
 import MenuItem     from '@mui/material/MenuItem';
 import Person4Icon  from '@mui/icons-material/Person4';
 import { Link }     from '@mui/material';
-
+import { ImageListItem }     from '@mui/material';
+import logo from '../../images/logo192.png'
 import './navbar.css'
 
 function NavigationBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [transparent,setTransparent]  =  React.useState(false);
+    // const [transparent,setTransparent]  =  React.useState(false);
 
     const pages = [
         // { name : 'Home',        link : '#home' },
@@ -33,34 +34,41 @@ function NavigationBar() {
         setAnchorElNav(null);
     };
 
-    const changeNavbarColor = () => {
-        if(window.scrollY>=100) {
-            setTransparent(false);
-        }else{
-            setTransparent(true)
-        }
-    }
+    // const changeNavbarColor = () => {
+    //     if(window.scrollY>=100) {
+    //         setTransparent(false);
+    //     }else{
+    //         setTransparent(true)
+    //     }
+    // }
 
-    window.addEventListener('scroll',changeNavbarColor)
+    // window.addEventListener('scroll',changeNavbarColor)
 
-    React.useEffect( () => {
-        changeNavbarColor();
-    })
+    // React.useEffect( () => {
+    //     changeNavbarColor();
+    // })
 
 
     return (
         <AppBar position="sticky"
         // <AppBar position='static'
             sx={{
-                backgroundColor : transparent ? "transparent" : "transparent", // "#ffffff75",
-                boxShadow       : transparent ? "none" : 'none',
+                // backgroundColor : transparent ? "transparent" : "transparent", // "#ffffff75",
+                // backgroundColor : "#dee4ea",
+                boxShadow       : 'none',
                 color           : "grey",
+                backgroundImage : "linear-gradient(147deg, #dee4ea 0%, #eff2f6 74%)"
             }}
         >
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Toolbar sx={{color:"black"}} >
                     {/* logo with Ttile */}
-                    <Person4Icon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} />
+                    {/* <Person4Icon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} /> */}
+                        <img
+                            alt     = "project"
+                            src     = {logo}
+                            style   = {{width:35}}
+                        />
                     <Box sx={{flexGrow:2 }}>
                         <Typography
                             noWrap
@@ -68,7 +76,7 @@ function NavigationBar() {
                             component   = "a"
                             href        = "/"
                             sx          = {{
-                                            mr              : 2,
+                                            ml              : 1.5,
                                             display         : { xs: 'flex', md: 'flex' },
                                             // fontFamily      : 'monospace',
                                             fontWeight      : 700,
@@ -118,7 +126,7 @@ function NavigationBar() {
                             {pages.map((page,index) => (
                                 <Link key={'NBL'+index} href={page.link}>
                                 <MenuItem key={page.name} sx={{color:"black"}}>
-                                        <Typography onClick={()=>{}} textAlign="center">{page.name}</Typography>
+                                        <Typography fontSize={"small"} onClick={()=>{}} textAlign="center">{page.name}</Typography>
                                 </MenuItem>
                                 </Link>
                             ))}
@@ -130,58 +138,3 @@ function NavigationBar() {
     );
 }
 export default NavigationBar;
-
-// import { useEffect, useState } from 'react';
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import '../css/navbar.css'
-
-// function NavigationBar() {
-
-//     const [transparent,setTransparent] =  useState(true)
-
-//     const changeNavbarColor = () => {
-//         if(window.scrollY>=100) {
-//             setTransparent(false);
-//         }else{
-//             setTransparent(true)
-//         }
-//     }
-
-//     window.addEventListener('scroll',changeNavbarColor)
-
-//     useEffect( () => {
-//         changeNavbarColor();
-//     })
-
-//     return (
-//         <div>
-//         <Navbar
-//             bg          = {transparent?'':'white'}
-//             variant     = {transparent?'':'light'}
-//             className   = {transparent?'fixed-top':'fixed-top card-effect'}
-//             expand      = "lg"
-//         >
-//             <Container>
-//                 <Navbar.Brand href="#home">
-//                     {/* <span className='logo'>A</span><span className='after'>nuj</span> */}
-//                     <span className='logo'>N</span><span className='after'>ame</span>
-//                 </Navbar.Brand>
-//                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//                 <Navbar.Collapse id="basic-navbar-nav">
-//                     <Nav className="ms-auto me-5">
-//                         <Nav.Link className='px-4 pb-1 nav-btn' href="#home">    Home</Nav.Link>
-//                         <Nav.Link className='px-4 pb-1 nav-btn' href="#about">   About</Nav.Link>
-//                         <Nav.Link className='px-4 pb-1 nav-btn' href="#resume">  Resume</Nav.Link>
-//                         <Nav.Link className='px-4 pb-1 nav-btn' href="#projects">Project</Nav.Link>
-//                         <Nav.Link className='px-4 pb-1 nav-btn' href="#contact"> Contact</Nav.Link>
-//                     </Nav>
-//                 </Navbar.Collapse>
-//             </Container>
-//         </Navbar>
-//         </div>
-//     );
-// }
-
-// export default NavigationBar;
