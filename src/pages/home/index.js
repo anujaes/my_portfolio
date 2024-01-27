@@ -6,7 +6,7 @@ import { skillRecords }         from "../../scripts/skillRatings";
 import { certificationRecords } from "../../scripts/certifications";
 import { experienceRecords }    from "../../scripts/experience";
 import { aboutStatements }      from "../../scripts/about";
-import { projectRecords }       from "../../scripts/projects";
+import projectRecords       from "../../scripts/projects";
 import SocialLinks              from "../../components/socialLinks/socialLinks";
 import {
     Container,
@@ -111,6 +111,7 @@ function About() {
                         md          = {6}
                         sm          = {12}
                         xs          = {12}
+                        id          = "details-body"
                     >
                         {/* TODO ADD IT INTO SECTION */}
                         <Box>
@@ -124,6 +125,7 @@ function About() {
                                 ) )
                             }
                         </Box>
+                        {/* footer statement */}
                         <Box marginBottom={10} className="row-section">
                             <Typography fontSize={15}>
                                 Loosely designed in Figma and coded in Visual Studio Code by yours truly.

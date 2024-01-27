@@ -1,9 +1,10 @@
 import React from "react";
 import { Chip, Grid, ImageListItem, Link, Typography } from "@mui/material";
+import { OpenInNew } from "@mui/icons-material";
+
 
 
 function Projects(props) {
-
 
     return (
         <Link
@@ -16,7 +17,7 @@ function Projects(props) {
                 container
                 marginBottom    = {2}
                 sx              = {{padding : "1rem 0rem 1rem 0rem"}}
-                className       = "glass-look-hover"
+                className       = "glass-look-hover glass-look"
             >
                 <Grid
                     item
@@ -44,7 +45,7 @@ function Projects(props) {
                     xs  = {12}
                     sx  = {{padding : { xs:'1rem', sm:'1rem', md: '0', lg:'0px', xlg:'0px' }}}
                 >
-                    <Typography fontSize={16} fontWeight={500}>{props.name}</Typography>
+                    <Typography fontSize={16} fontWeight={500}>{props.name} <OpenInNew className="open-in-new" /></Typography>
                     <Typography fontSize={12} fontWeight={600} marginRight={1} > {props.duration} </Typography>
                     <Typography p={0} marginY={0.5} fontSize={13}>{props.summary}</Typography>
                     {

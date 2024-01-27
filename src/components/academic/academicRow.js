@@ -14,6 +14,7 @@ function AcademicRow(props) {
                     fontSize    = {"small"}
                     fontWeight  = {600}
                     marginRight = {2}
+                    marginTop   = {0.4}
                 >
                     {props.year}
                 </Typography>

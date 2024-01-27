@@ -15,13 +15,20 @@
     height: 100vh;
     overflow-y: auto;
     /* overflow-y: hidden; */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
     scroll-behavior: smooth;
 }
 
 .details-container::-webkit-scrollbar {
-    display: none;  /* Safari and Chrome */
+    width: 5px;
+}
+
+.details-container::-webkit-scrollbar-thumb{
+    background-color: lightgrey;
+    border-radius: 10px;
 }
 
 .portrait-container {
@@ -34,65 +41,31 @@
     width: 60%;
 }
 
-.glass-look{
+.glass-look {
     /* background-color: rgba(218, 215, 215, 0.134); */
-    background-color: #dee4ea54 ;
+    background-color: #dee4ea54;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 10px;
 }
 
 .glass-look-hover:hover {
-    background-color            : #dee4ea ;
-    -webkit-backdrop-filter     : blur(5px);
-    backdrop-filter             : blur(5px);
-    border-radius               : 10px;
-    cursor                      : pointer;
+    background-color: #dee4ea;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
-.info {
-    list-style  : none;
-    padding     : 0;
+.open-in-new {
+    margin-left: 2px;
+    font-size:1.2rem !important;
+    padding-top:2px !important;
+    transition: 250ms !important;
 }
 
-.info li span:first-child {
-    display: inline-block;
-    width: 130px;
-    font-family: 'Source Code Pro', monospace !important;
-    font-weight: bold;
-}
 
-.info li span:nth-child(2) {
-    /* color: grey;
-    font-size: 1rem;
-    font-weight: 500; */
-    font-family: 'Source Code Pro', monospace !important;
-}
-
-.summary {
-    display: inline-block;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-    font-family: 'Source Code Pro', monospace !important;
-}
-
-.emphesize {
-    font-weight: bold;
-    font-family: 'Source Code Pro', monospace !important;
-}
-
-.btn-cv {
-    border-radius: 100px !important;
-    background-color: #181818 !important;
-    font-family: 'Source Code Pro', monospace !important;
-}
-
-.flexBox {
-    display: flex;
-    justify-content: space-between;
-}
-
-.flexBox>svg {
-    font-size: 2.5rem;
-    margin: 0.7rem auto;
+.open-in-new:hover {
+    margin-left: 5px;
+    padding-top:0px !important;
 }
