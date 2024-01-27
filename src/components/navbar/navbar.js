@@ -8,10 +8,10 @@ import Menu         from '@mui/material/Menu';
 import MenuIcon     from '@mui/icons-material/Menu';
 import Container    from '@mui/material/Container';
 import MenuItem     from '@mui/material/MenuItem';
-import Person4Icon  from '@mui/icons-material/Person4';
 import { Link }     from '@mui/material';
-import { ImageListItem }     from '@mui/material';
-import logo from '../../images/logo192.png'
+import logo         from '../../images/logo192.png'
+import { SaveAlt }  from '@mui/icons-material';
+import resumeLink   from '../../docs/resume.pdf'
 import './navbar.css'
 
 function NavigationBar() {
@@ -19,11 +19,9 @@ function NavigationBar() {
     // const [transparent,setTransparent]  =  React.useState(false);
 
     const pages = [
-        // { name : 'Home',        link : '#home' },
         { name : 'About',       link : '#about' },
         { name : 'Resume',      link : '#experience' },
         { name : 'Project',     link : '#projects' },
-        // { name : 'Contact',     link : '#contact' }
     ];
 
     const handleOpenNavMenu = (event) => {
@@ -93,13 +91,25 @@ function NavigationBar() {
                         {pages.map((page) => (
                             <Link
                                 key     = {page.name}
-                                sx      = {{ my: 2, display: 'block', px:2, color:"black", textDecoration:"none" }}
+                                sx      = {{ display: 'block', px:2, color:"black", textDecoration:"none" }}
                                 href    = {page.link}
                                 className='nav-btn'
                             >
                                 {page.name}
                             </Link>
                         ))}
+                        <Link
+                                key         = "CV"
+                                sx          = {{ display:'block',pl:2, color:"black", textDecoration:"none" }}
+                                href        = {resumeLink}
+                                className   = 'nav-btn'
+                                target      = '_blank'
+                                rel         = 'noreferrer'
+                            >
+                                <span style = {{display:'flex', alignItems:"center"}}>
+                                    <SaveAlt/>
+                                </span>
+                            </Link>
                     </Box>
                     {/* menu list on small screen */}
                     <Box sx={{ flexGrow:3,justifyContent:"flex-end", display: { xs: 'flex', md: 'none', sm:"flex" } }}>

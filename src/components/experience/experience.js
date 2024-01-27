@@ -1,6 +1,12 @@
-import React, { useEffect } from "react";
-import { Chip, Grid, Link, List, ListItemText, Typography } from "@mui/material";
-import { OpenInNew } from "@mui/icons-material";
+import React            from "react";
+import { OpenInNew }    from "@mui/icons-material";
+import {
+        Chip,
+        Grid,
+        Link,
+        List,
+        ListItemText,
+        Typography }    from "@mui/material";
 
 function Experience(props) {
 
@@ -12,7 +18,8 @@ function Experience(props) {
     //             console.log("in viewport");
     //         }
     //     }
-    // },[])
+    // },
+    // [])
 
     return (
         <Link
