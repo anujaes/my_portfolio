@@ -1,11 +1,18 @@
-exports.projectRecords = [
+import fds          from '../images/project/fds.png'
+import pmh          from '../images/project/pmh.jpg'
+import prtech       from '../images/project/prtech.jpg'
+import templafine   from '../images/project/templafine.jpg'
+
+const projectRecords = [
     {
         name        : 'Templafine',
         duration    : 'SEP. 2020 - NOV. 2020',
         summary     : 'This is my first live project which I developed for my hostel. Manage records of the borders, hostel rooms and other managerial activity related to the hostel.',
         link        : 'https://templafine.web.app/',
         technologies: ["PHP", "MySQL", "HTML", "CSS", "Bootstrap", "Javascript"],
-        thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942551/templafine_uuh9l4.png"
+        // thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942551/templafine_uuh9l4.png"
+        thumbnail   : templafine
+
     },
     {
         name        : 'Patkai Men’s Hostel — Hostel Management',
@@ -13,7 +20,9 @@ exports.projectRecords = [
         summary     : 'This is my first live project which I developed for my hostel. Manage records of the borders, hostel rooms and other managerial activity related to the hostel.',
         link        : '#',
         technologies: ["PHP", "MySQL", "HTML", "CSS", "Bootstrap", "Javascript"],
-        thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942739/project_1_bcsnrk.jpg"
+        // thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942739/project_1_bcsnrk.jpg"
+        thumbnail   : pmh
+
     },
     {
         name        : 'PR Technology — Computer Shop Management',
@@ -21,7 +30,8 @@ exports.projectRecords = [
         technologies: ['HTML', 'CSS', 'Bootstrap', 'Javascript'],
         summary     : 'This project was developed to manage the services and customer complaints online. I was responsible to develop the front end of this project',
         link        : '#',
-        thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942745/project_2_fhdcac.jpg"
+        // thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942745/project_2_fhdcac.jpg"
+        thumbnail   : prtech
     },
     {
         name        : 'Location Based Book Sharing System',
@@ -29,6 +39,10 @@ exports.projectRecords = [
         technologies: ['HTML', 'CSS', 'Bootstrap', 'Javascript'],
         summary     : 'Location Based Book Sharing Application is a web-based application designed to facilitate borrowing and lending of books.',
         link        : '#',
-        thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942749/project_3_cghgst.png"
+        // thumbnail   : "https://res.cloudinary.com/dmpgiqqyf/image/upload/v1705942749/project_3_cghgst.png"
+        thumbnail   : fds
+
     }
 ]
+
+export default projectRecords;

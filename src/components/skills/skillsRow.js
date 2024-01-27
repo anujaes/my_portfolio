@@ -1,16 +1,28 @@
-import React                from "react";
+import React, { useEffect }                from "react";
 import { Grid, Typography } from "@mui/material";
 import { Chip }             from "@mui/material";
 
 function SkillsRow(props) {
+
+    // useEffect(()=>{
+    //     window.document.getElementById("details-body").onscroll = () => {
+    //         const top = document.getElementById("skills").getBoundingClientRect().top;
+    //         const bottom = document.getElementById("skills").getBoundingClientRect().bottom;
+    //         console.log(top, bottom, window.innerHeight)
+    //         if ( top <= window.innerHeight-400 && bottom >= window.innerHeight-400 ) {
+    //             console.log("in skills viewport");
+    //         }
+    //     }
+    // },[])
 
     const keys = Object.keys(props);
 
     return (
         <Grid
             container
-            sx              =  {{ padding: "1.5rem 1rem 1rem 1rem" }}
-            className       = "glass-look"
+            sx          =  {{ padding: "1.5rem 1rem 1rem 1rem" }}
+            className   = "glass-look"
+            id          = "skills"
         >
             {
                 keys.map((item, index) => (
