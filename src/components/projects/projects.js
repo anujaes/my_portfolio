@@ -47,7 +47,7 @@ function Projects(props) {
                 >
                     <Typography fontSize={16} fontWeight={500}>{props.name} <OpenInNew className="open-in-new" /></Typography>
                     <Typography fontSize={12} fontWeight={600} marginRight={1} > {props.duration} </Typography>
-                    <Typography p={0} marginY={0.5} fontSize={13}>{props.summary}</Typography>
+                    <Typography paddingRight={1} marginY={0.5} fontSize={13}>{props.summary}</Typography>
                     {
                         props.technologies.map((item, index)=>(
                             <Chip
