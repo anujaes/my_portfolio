@@ -32,7 +32,7 @@ function About() {
     return (
         <div className="about-container" style={{marginTop:'-65px'}}>
             <Container maxWidth='lg' >
-                <Grid container maxWidth='lg'>
+                <Grid container maxWidth='lg' className = "details-container">
                     <Grid
                         item
                         xlg             = {6}
@@ -44,7 +44,7 @@ function About() {
                         display         = {"flex"}
                         justifyContent  = {"center"}
                         flexDirection   = {"column"}
-                        minHeight       = "100vh"
+                        height          = "100vh"
                         sx              = {{
                                             alignItems : {
                                                 xs : "center",
@@ -53,7 +53,15 @@ function About() {
                                                 lg : "flex-start",
                                                 xl : 'flex-start'
                                             },
-                                            textAlign : {xs:"center",sm:"center", md:"left" }
+                                            textAlign : {xs:"center",sm:"center", md:"left" },
+                                            position  : {
+                                                            xs: "static !important",
+                                                            sm: "static !important",
+                                                            md: "sticky !important",
+                                                            lg: "sticky !important",
+                                                            xlg:"sticky !important"
+                                                        },
+                                            top: "0 !important", /* required */
                                         }}
                     >
                         {/* profile picture */}
@@ -105,7 +113,7 @@ function About() {
                     </Grid >
                     <Grid
                         item
-                        className   = "details-container"
+                        // className   = "details-container"
                         xlg         = {6}
                         lg          = {6}
                         md          = {6}

@@ -41,6 +41,7 @@ function Section(props) {
                                     database        = {item.database}
                                     tools           = {item.tools}
                                     languages       = {item.languages}
+                                    technologies    = {item.technologies}
                                 />,
             certifications  :   <Certifications
                                     key             = {'cert'+index}

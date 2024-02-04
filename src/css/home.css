@@ -1,3 +1,7 @@
+/* h1,h2,h3,h4,h5,h6,p,li,ul, svg{
+    color: white !important;
+} */
+
 .row-section {
     padding-top: 7.5rem !important;
 }
@@ -8,6 +12,7 @@
     background-image: linear-gradient(147deg, #f9fcff  0%, #dee4ea  74%); */
     background-color: #f9fcff;
     background-image: linear-gradient(147deg, #dee4ea 0%, #f9fcff 74%);
+    /* background: linear-gradient(109.6deg,#000 11.2%,#03282c 91.1%) */
 }
 
 /* .portrait-container{ */
