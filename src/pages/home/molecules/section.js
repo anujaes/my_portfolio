@@ -36,6 +36,7 @@ function Section(props) {
                                 />,
             skills          :   <SkillsRow
                                     key             = {'ski'+index}
+                                    events          = {item.events}
                                     backend         = {item.backend}
                                     frontend        = {item.frontend}
                                     database        = {item.database}
