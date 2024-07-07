@@ -4,9 +4,18 @@ import templafine   from '../images/project/templafine.jpg'
 import swh          from '../images/project/swh.jpg'
 import trading      from '../images/project/trading.jpg'
 import varta        from '../images/project/varta.jpg'
+import yoga         from '../images/project/yoga.jpeg'
 
 
 const projectRecords = [
+    {
+        name        : 'E-Learning Yoga Therapy',
+        duration    : 'FEB 2024 - Present',
+        summary     : 'An online yoga session application that integrates WhatsApp for direct communication, utilizes a chatbot service for personalized user interaction, and includes a comprehensive support system managed through CRM panels on WhatsApp.',
+        link        : 'https://habit.yoga/',
+        technologies: ["NodeJS/ExpressJS", "PostgresSQL", 'Apache Kakfa', "Redis", 'AWS', "RabitMQ", 'WatsApp API', 'cognito', 'tusc'],
+        thumbnail   : yoga
+    },
     {
         name        : 'Trading Plus',
         duration    : 'FEB 2023 - JAN 2024',

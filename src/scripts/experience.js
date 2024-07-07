@@ -1,7 +1,7 @@
 exports.experienceRecords = [
     {
         year            : 'DEC 2022 - Present',
-        designation     : 'Associate Software Developer . Backend App.',
+        designation     : 'Software Developer . Backend App.',
         organization    : 'Antino Labs, Gurugram India',
         summary         : 'I joined this organization in 2022 as an Associate Software Developer having extensive knowledge & experience of NodeJS. I am trained to build and maintain excellent node applications with clean code. I have good experience in MongoDB and NodeJS. Additionally I have a good knowledge in react, react-redux and I hold the ability to write well-documented, scalable code and have experience in working with third-party dependencies and debugging conflicts.',
         keyPoints       : [
