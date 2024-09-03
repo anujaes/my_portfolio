@@ -52,21 +52,21 @@ function NavigationBar() {
         // <AppBar position='static'
             sx={{
                 // backgroundColor : transparent ? "transparent" : "transparent", // "#ffffff75",
-                // backgroundColor : "#dee4ea",
+                backgroundColor : "#31363F",
                 boxShadow       : 'none',
                 color           : "grey",
-                backgroundImage : "linear-gradient(147deg, #dee4ea 0%, #eff2f6 74%)"
+                // backgroundImage : "linear-gradient(147deg, #dee4ea 0%, #eff2f6 74%)"
             }}
         >
             <Container maxWidth="lg">
                 <Toolbar sx={{color:"black"}} >
                     {/* logo with Ttile */}
                     {/* <Person4Icon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} /> */}
-                        <img
+                        {/* <img
                             alt     = "project"
                             src     = {logo}
                             style   = {{width:35}}
-                        />
+                        /> */}
                     <Box sx={{flexGrow:2 }}>
                         <Typography
                             noWrap
@@ -79,7 +79,7 @@ function NavigationBar() {
                                             // fontFamily      : 'monospace',
                                             fontWeight      : 700,
                                             letterSpacing   : '.1rem',
-                                            color           : 'inherit',
+                                            color           : '#76ABAE',
                                             textDecoration  : 'none',
                                         }}
                         >
@@ -91,7 +91,7 @@ function NavigationBar() {
                         {pages.map((page) => (
                             <Link
                                 key     = {page.name}
-                                sx      = {{ display: 'block', px:2, color:"black", textDecoration:"none" }}
+                                sx      = {{ display: 'block', px:2, color:"#EEEEEE", textDecoration:"none" }}
                                 href    = {page.link}
                                 className='nav-btn'
                             >
@@ -100,7 +100,7 @@ function NavigationBar() {
                         ))}
                         <Link
                                 key         = "CV"
-                                sx          = {{ display:'block',pl:2, color:"black", textDecoration:"none" }}
+                                sx          = {{ display:'block',pl:2, color:"#EEEEEE", textDecoration:"none" }}
                                 href        = {resumeLink}
                                 className   = 'nav-btn'
                                 target      = '_blank'

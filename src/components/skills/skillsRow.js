@@ -43,7 +43,7 @@ function SkillsRow(props) {
                                     <Chip
                                         key     = {'tch' + index}
                                         label   = {item}
-                                        sx      = {{ marginY:0.3, marginRight :0.6, fontWeight: 500 }}
+                                        sx      = {{ marginY:0.3, marginRight :0.6, fontWeight: 500, color:"#222831", backgroundColor:"#76ABAE" }}
                                     />
                                 ))
                             }

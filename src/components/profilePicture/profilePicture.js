@@ -1,5 +1,5 @@
 import { Box, ImageListItem }   from "@mui/material";
-import profile                  from "../../images/potrait_profile.png"
+import profile                  from "../../images/potrait_profile.jpg"
 
 function ProfilePicture(props) {
     return (

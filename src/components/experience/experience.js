@@ -83,7 +83,7 @@ function Experience(props) {
                             <Chip
                                 key     = {'tch'+index}
                                 label   = {item}
-                                sx      = {{margin:0.3, fontWeight:500}}
+                                sx      = {{margin:0.3, fontWeight:500, color:"#222831", backgroundColor:"#76ABAE"}}
                             />
                         ))
                     }

@@ -1,12 +1,14 @@
 .social-links{
     margin-right: 1rem;
-    color: black;
+    /* color: black; */
+    color: #76ABAE;
     font-size: 2rem !important;
     padding: 0.1rem;
 }
 
 .social-links:hover{
-    /* color: grey; */
-    color : #ca292d;
+    color: #EEEEEE;
+    /* color : #ca292d; */
+
     padding: 0rem;
 }

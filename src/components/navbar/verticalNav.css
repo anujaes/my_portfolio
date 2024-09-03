@@ -13,7 +13,8 @@
     content             : "";
     width               : 20px;
     display             : inline-block;
-    background-color    : black;
+    /* background-color    : black; */
+    background-color    : #76ABAE;
     height              : 2px;
     vertical-align      : middle;
     margin-right        : 5px;

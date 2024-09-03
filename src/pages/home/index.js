@@ -68,7 +68,7 @@ function About() {
                         <ProfilePicture display={{xs:'flex', sm:'flex', md:'none', lg:"none"}} />
 
                         <Typography variant="h3" fontWeight={700} marginTop={2}>
-                            Anuj Kr. Singh
+                            Nikita Agarwal
                         </Typography>
                         <Typography variant="h6" fontWeight={500}>
                             Experienced Javascript Developer
@@ -89,7 +89,7 @@ function About() {
                                                     fontSize    : 15,
                                                     fontWeight  : 500,
                                                     fontFamily  : 'inherit',
-                                                    color       : '#ca292d',
+                                                    color       : '#76ABAE',
                                                 }}
                             scrollArea      = {document.querySelector('#typing-word')}
                             startDelay      = {1000}

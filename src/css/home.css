@@ -10,8 +10,9 @@
     min-height: 100vh;
     /* background-color: #f9fcff;
     background-image: linear-gradient(147deg, #f9fcff  0%, #dee4ea  74%); */
-    background-color: #f9fcff;
-    background-image: linear-gradient(147deg, #dee4ea 0%, #f9fcff 74%);
+    /* background-color: #f9fcff; */
+    background-color: #31363F;
+    /* background-image: linear-gradient(147deg, #dee4ea 0%, #f9fcff 74%); */
     /* background: linear-gradient(109.6deg,#000 11.2%,#03282c 91.1%) */
 }
 
@@ -25,6 +26,7 @@
     scrollbar-width: none;
     /* Firefox */
     scroll-behavior: smooth;
+    color: #EEEEEE;
 }
 
 .details-container::-webkit-scrollbar {
@@ -48,14 +50,14 @@
 
 .glass-look {
     /* background-color: rgba(218, 215, 215, 0.134); */
-    background-color: #dee4ea54;
+    background-color: #64666754;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 10px;
 }
 
 .glass-look-hover:hover {
-    background-color: #dee4ea;
+    background-color: #222831;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 10px;

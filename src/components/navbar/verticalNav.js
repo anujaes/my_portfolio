@@ -45,9 +45,9 @@ function VerticalNav() {
         <MenuList className='vertical-navigation' sx={{display : { xs: 'none', sm:'none', md:'block' }}}>
             {
                 endPoints.map((item, index) => (
-                    <Link key={'VNB' + index} underline='none' href={item.href} color={"black"} >
-                        <MenuItem className='nav-link' color='black '>
-                            <ListItemIcon sx={{color:"black"}}> {item.icon} </ListItemIcon>
+                    <Link key={'VNB' + index} underline='none' href={item.href} color={"#EEEEEE"} >
+                        <MenuItem className='nav-link' color='#EEEEEE'>
+                            <ListItemIcon sx={{color:"#76ABAE"}}> {item.icon} </ListItemIcon>
                             <ListItemText className='menu-txt'>{item.name}</ListItemText>
                         </MenuItem>
                     </Link>

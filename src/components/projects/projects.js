@@ -32,7 +32,7 @@ function Projects(props) {
                         <img
                             alt     = "project"
                             src     = {props.thumbnail}
-                            style   = {{border : "3px solid lightgrey", borderRadius:"7px"}}
+                            style   = {{border : "3px solid grey", borderRadius:"7px"}}
                         />
                     </ImageListItem>
                 </Grid>
@@ -45,15 +45,15 @@ function Projects(props) {
                     xs  = {12}
                     sx  = {{padding : { xs:'1rem', sm:'1rem', md: '0', lg:'0px', xlg:'0px' }}}
                 >
-                    <Typography fontSize={16} fontWeight={500}>{props.name} <OpenInNew className="open-in-new" /></Typography>
-                    <Typography fontSize={12} fontWeight={600} marginRight={1} > {props.duration} </Typography>
+                    <Typography fontSize={16} fontWeight={500} >{props.name} <OpenInNew className="open-in-new" /></Typography>
+                    <Typography fontSize={12} fontWeight={600} color={"#76ABAE"} marginRight={1} > {props.duration} </Typography>
                     <Typography paddingRight={1} marginY={0.5} fontSize={13}>{props.summary}</Typography>
                     {
                         props.technologies.map((item, index)=>(
                             <Chip
                                 key     = {'p_tch'+index}
                                 label   = {item}
-                                sx      = {{margin:0.3, fontWeight:500, fontSize:12}}
+                                sx      = {{margin:0.3, fontWeight:500, fontSize:12, color:"#222831", backgroundColor:"#76ABAE"}}
                             />
                         ))
                     }
