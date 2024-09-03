@@ -18,7 +18,6 @@ import TypeWriterEffect         from 'react-typewriter-effect';
 import '../../css/home.css';
 import ProfilePicture from "../../components/profilePicture/profilePicture";
 
-
 const payloadData = {
     about           : aboutStatements,
     experience      : experienceRecords,
