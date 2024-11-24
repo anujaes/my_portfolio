@@ -9,8 +9,8 @@ function ProfilePicture(props) {
             alignItems      = {"center"}
             width           = {"100%"}
             sx              = {{
-                                paddingTop      : {xs:10, sm:10, md:0, lg:0},
-                                paddingBottom   : {xs:3, sm:10, md:5, lg:5},
+                                paddingTop      : {xs:10, sm:10, md:0, lg:0, xlg:0},
+                                paddingBottom   : {xs:3, sm:10, md:3, lg:3},
                                 display         : props.display
                             }}
         >
@@ -20,7 +20,7 @@ function ProfilePicture(props) {
                     src     = {profile}
                     style   = {{
                                 borderRadius : "1000px",
-                                width        : '210px',
+                                width        : '200px',
                                 boxShadow    : "rgba(0, 0, 0, 0.24) 0px 3px 8px"
                             }}
                 />
