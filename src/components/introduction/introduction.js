@@ -7,7 +7,7 @@ function Introduction(props) {
             <ProfilePicture display={{xs:'none', sm:'none', md:'flex', lg:"flex", xl:"flex"}} />
             {
                 props.payload.map((item,index)=>(
-                    <Typography key={'stm' + index} fontSize={15} marginBottom={1}>
+                    <Typography key={'stm' + index} fontSize={15} marginBottom={1} textAlign='justify'>
                         {item}
                     </Typography>
                 ))
