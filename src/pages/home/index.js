@@ -17,6 +17,7 @@ import {
 import TypeWriterEffect         from 'react-typewriter-effect';
 import '../../css/home.css';
 import ProfilePicture from "../../components/profilePicture/profilePicture";
+import {motion} from "motion/react";
 
 const payloadData = {
     about           : aboutStatements,
@@ -65,45 +66,50 @@ function About() {
                     >
                         {/* profile picture */}
                         <ProfilePicture display={{xs:'flex', sm:'flex', md:'none', lg:"none"}} />
-
-                        <Typography variant="h3" fontWeight={700} marginTop={2}>
-                            Anuj Kr. Singh
-                        </Typography>
-                        <Typography variant="h6" fontWeight={500}>
-                            Experienced Javascript Developer
-                        </Typography>
-
-                        <Typography
-                            // variant="p"
-                            fontWeight  = {500}
-                            maxWidth    = {350}
-                            marginTop   = {3}
-                            display     = {"flex"}
-                            fontSize    = {15}
+                        <motion.div
+                            initial     = {{ opacity: 0,x: -50, }}
+                            animate     = {{ opacity: 1,x: 0,}}
+                            transition  = {{ duration: 0.3, ease:"linear" }}
                         >
-                            I build exceptional and accessible digital experiences for the web. I can work as a
-                        </Typography>
-                        <TypeWriterEffect
-                            textStyle       = {{
-                                                    fontSize    : 15,
-                                                    fontWeight  : 500,
-                                                    fontFamily  : 'inherit',
-                                                    color       : '#ca292d',
-                                                }}
-                            scrollArea      = {document.querySelector('#typing-word')}
-                            startDelay      = {1000}
-                            cursorColor     = "#ca292d"
-                            multiTextLoop   = {true}
-                            multiText       = {[
-                                                    '<Javascript /> developer.',
-                                                    '<NodeJS /> developer.',
-                                                    '<React /> developer.',
-                                                    '<MERN_Stack /> developer.',
-                                                ]}
-                            multiTextDelay  = {1000}
-                            typeSpeed       = {150}
-                        />
+                            <Typography variant="h3" fontWeight={700} marginTop={2}>
+                                Anuj Kr. Singh
+                            </Typography>
+                            <Typography variant="h6" fontWeight={500}>
+                                Experienced Javascript Developer
+                            </Typography>
+                            
 
+                            <Typography
+                                // variant="p"
+                                fontWeight  = {500}
+                                maxWidth    = {350}
+                                marginTop   = {3}
+                                display     = {"flex"}
+                                fontSize    = {15}
+                            >
+                                I build exceptional and accessible digital experiences for the web. I can work as a
+                            </Typography>
+                            <TypeWriterEffect
+                                textStyle       = {{
+                                                        fontSize    : 15,
+                                                        fontWeight  : 500,
+                                                        fontFamily  : 'inherit',
+                                                        color       : '#ca292d',
+                                                    }}
+                                scrollArea      = {document.querySelector('#typing-word')}
+                                startDelay      = {1000}
+                                cursorColor     = "#ca292d"
+                                multiTextLoop   = {true}
+                                multiText       = {[
+                                                        '<Javascript /> developer.',
+                                                        '<NodeJS /> developer.',
+                                                        '<React /> developer.',
+                                                        '<MERN_Stack /> developer.',
+                                                    ]}
+                                multiTextDelay  = {1000}
+                                typeSpeed       = {150}
+                            />
+                        </motion.div>
                         {/* Navigation bar */}
                         <VerticalNav />
 
