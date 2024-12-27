@@ -1,8 +1,18 @@
-import { Box, ImageListItem }   from "@mui/material";
+import { Box, duration, ImageListItem }   from "@mui/material";
 import profile                  from "../../images/potrait_profile.png"
+import {motion}                 from "motion/react";
 
 function ProfilePicture(props) {
     return (
+        <motion.div 
+            initial     = {{ scale: 0 }}
+            animate     = {{ scale: 1  }}
+            transition  = {{ 
+                duration: 0.7, 
+                ease:"linear",
+                scale:{ type: "spring", bounce: 0.5, delay: 0.3,}
+            }}
+        >
         <Box
             display         = {"flex"}
             justifyContent  = {"center"}
@@ -26,6 +36,7 @@ function ProfilePicture(props) {
                 />
             </ImageListItem>
         </Box>
+        </motion.div>
     )
 }
 
