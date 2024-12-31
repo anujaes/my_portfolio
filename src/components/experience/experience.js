@@ -1,5 +1,5 @@
 import React            from "react";
-import { OpenInNew, Scale }    from "@mui/icons-material";
+import { OpenInNew }    from "@mui/icons-material";
 import {
         Chip,
         Grid,
@@ -84,6 +84,7 @@ function Experience(props) {
                                         scale: { type: "spring", visualDuration: 0.7, bounce: 0.3 },
                                     }}
                                     style = {{display: "inline-flex"}}
+                                    key={'expe' + index}
                                 >
                                     <Chip
                                         key     = {'tch'+index}

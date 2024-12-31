@@ -1,8 +1,8 @@
 import React from "react";
 import { Facebook, GitHub, Google, LinkedIn } from "@mui/icons-material";
-import { Box, duration } from "@mui/material";
+import { Box } from "@mui/material";
 import './socialLinks.css';
-import { delay, motion } from "framer-motion"; // Ensure you're using framer-motion
+import { motion } from "framer-motion"; // Ensure you're using framer-motion
 
 function SocialLinks() {
     const links = [
