@@ -1,4 +1,4 @@
-import { Box, duration, ImageListItem }   from "@mui/material";
+import { Box, ImageListItem }   from "@mui/material";
 import profile                  from "../../images/potrait_profile.png"
 import {motion}                 from "motion/react";
 
