@@ -64,6 +64,7 @@ function Projects(props) {
                                         scale: { type: "spring", visualDuration: 0.7, bounce: 0.3 },
                                     }}
                                     style = {{display: "inline-flex"}}
+                                    key={"proj_" + index}
                                 >
                                 <Chip
                                     key     = {'p_tch'+index}

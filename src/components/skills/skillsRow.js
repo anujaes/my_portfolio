@@ -54,6 +54,7 @@ function SkillsRow(props) {
                                             scale: { type: "spring", visualDuration: 0.7, bounce: 0.3 },
                                         }}
                                         style = {{display: "inline-flex"}}
+                                        key={'SUB_skill_CHP_'+index}
                                     >
                                         <Chip
                                             key     = {'tch' + index}
