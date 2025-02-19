@@ -32,17 +32,23 @@ function Experience(props) {
                     className       = "glass-look-hover glass-look"
                     id              = "experience"
                 >
-                    <Grid item xlg={3} lg={3} md={4} sm={12} xs={12}>
+                    <Grid item xlg={2} lg={2} md={4} sm={12} xs={12} paddingRight={"100px"}>
+                        <img 
+                            src     = {props.logo} 
+                            alt     = "company_logo" 
+                            style   = {{width:'85px'}}
+                            loading = "lazy"
+                        />
+                    </Grid>
+                    <Grid item xlg={9} lg={9} md={9} sm={12} xs={12}>
                         <Typography
                             fontSize    = {"small"}
                             fontWeight  = {600}
-                            marginRight = {1}
-                            marginTop   = {0.4}
+                            marginRight = {0}
+                            marginTop   = {0}
                         >
                             {props.year}
                         </Typography>
-                    </Grid>
-                    <Grid item xlg={9} lg={9} md={8} sm={12} xs={12}>
                         <Typography
                             display     = {"flex"}
                             alignItems  = {"center"}
@@ -58,6 +64,30 @@ function Experience(props) {
                         >
                             {props.organization}
                         </Typography>
+                        <Typography
+                            pt       = {0}
+                            m        = {0}
+                            fontSize = {13}
+                        >
+                            {props.majors}
+                        </Typography>
+                    </Grid>
+                    <Grid item xlg={12} lg={12} md={12} sm={12} xs={12}>
+                        {/* <Typography
+                            display     = {"flex"}
+                            alignItems  = {"center"}
+                            fontSize    = {16}
+                            fontWeight  = {500}
+                        >
+                            {props.designation} <OpenInNew className="open-in-new" />
+                        </Typography>
+                        <Typography
+                            p        = {0}
+                            m        = {0}
+                            fontSize = {15}
+                        >
+                            {props.organization}
+                        </Typography> */}
                         <Typography p={0} marginY={1} fontSize={14}>{props.summary}</Typography>
 
                         {/* bullet points */}

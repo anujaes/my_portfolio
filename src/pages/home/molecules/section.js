@@ -33,6 +33,8 @@ function Section(props) {
                                     keyPoints       = {item.keyPoints}
                                     technologies    = {item.technologies}
                                     url             = {item.url}
+                                    logo            = {item.logo}
+                                    majors          = {item.majors}
                                 />,
             skills          :   <SkillsRow
                                     key             = {'ski'+index}
