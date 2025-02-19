@@ -1,19 +1,26 @@
-exports.experienceRecords = [
+import antares  from '../images/companies/antares.jpg';
+import antino   from '../images/companies/antino.png';
+
+export const experienceRecords = [
     {
         year            : 'DEC 2022 - Present',
         designation     : 'Software Developer . Backend App.',
+        majors          : "NodeJS | NestJS | System Design | TS | JS",
         organization    : 'Antino Labs, Gurugram India',
+        logo            : antino,
         summary         : 'I joined this organization in 2022 as an Associate Software Developer having extensive knowledge & experience of NodeJS. I am trained to build and maintain excellent node applications with clean code. I have good experience in MongoDB and NodeJS. Additionally I have a good knowledge in react, react-redux and I hold the ability to write well-documented, scalable code and have experience in working with third-party dependencies and debugging conflicts.',
         keyPoints       : [
                             `I Initially worked on a micro services architecture based project which is a derivatives research and analysis trading platform primarily for options trading.`,
                             `Build project as a solution for a petroleum and fuel business to increase the customer retention by providing coupons and offers to the user on any future trades.`
                         ],
-        technologies    : ['Nodejs/ExpressJS', 'MongoDB', 'Socket.IO', 'Redis', 'AWS-S3', 'Bull-MQ', 'AWS-S3', 'Payment Gateways' ],
+        technologies    : ['Nodejs/ExpressJS', 'SQL/NoSQL', 'Socket.IO', 'Redis', 'AWS', 'Google Cloud', 'Event-Driven', 'Payment Gateways', 'System Design' ],
         url             : "https://www.antino.com/"
     },
     {
+        logo            : antares,
         year            : 'FEB 2022 - AUG 2022',
         designation     : 'Full Stack Developer Trainee . MERN Stack',
+        majors          : "TypeScript | Javascript | NoSQL",
         organization    : 'Antares Tech Noida, UP India',
         summary         : 'I participated in a live Antares project for an enterprise SaaS (Software as a Service) company in the agriculture industry based in Missouri, USA as a full-stack developer.',
         keyPoints       : [
