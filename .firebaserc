@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "ejsanuj"
-  }
+    "default": "ejsanuj",
+    "nikita_portfolio": "nikitaagarwal"
+  },
+  "targets": {},
+  "etags": {}
 }
