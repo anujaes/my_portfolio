@@ -35,20 +35,22 @@ function Section(props) {
                                     url             = {item.url}
                                 />,
             skills          :   <SkillsRow
-                                    key             = {'ski'+index}
-                                    events          = {item.events}
-                                    backend         = {item.backend}
-                                    frontend        = {item.frontend}
-                                    database        = {item.database}
-                                    tools           = {item.tools}
-                                    languages       = {item.languages}
-                                    technologies    = {item.technologies}
+                                    key                             = {'ski'+index}
+                                    dataEngineering                 = {item.dataEngineering}
+                                    cloudTechnologies               = {item.cloudTechnologies}
+                                    programmingLanguages            = {item.programmingLanguages}
+                                    databases                       = {item.databases}
+                                    toolsAndPlatforms               = {item.toolsAndPlatforms}
+                                    dataAnalysisAndVisualization    = {item.dataAnalysisAndVisualization}
+                                    webDevelopment                  = {item.webDevelopment}
+                                    healthcareCompliance            = {item.healthcareCompliance}
+                                    timeSeriesAnalysis              = {item.timeSeriesAnalysis}
                                 />,
             certifications  :   <Certifications
                                     key             = {'cert'+index}
                                     date            = {item.date}
-                                    certifiedFrom   = {item.certifiedFrom}
-                                    certificateName = {item.certificateName}
+                                    certifiedFrom    = {item.certifiedFrom}
+                                    certificateName  = {item.certificateName}
                                     summary         = {item.summary}
                                     previewLink     = {item.previewLink}
                                 />,

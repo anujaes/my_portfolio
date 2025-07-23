@@ -15,6 +15,7 @@ function SkillsRow(props) {
     //     }
     // },[])
 
+    console.log("props >>> ", props)
     const keys = Object.keys(props);
 
     return (
@@ -34,7 +35,7 @@ function SkillsRow(props) {
                                 marginRight = {1}
                                 marginTop   ={1.4}
                             >
-                                {item.charAt(0).toUpperCase() + item.slice(1)}
+                                {convertToTitle(item)}
                             </Typography>
                         </Grid>
                         <Grid item xlg={9} lg={9} md={8} sm={12} xs={12}>
@@ -43,7 +44,7 @@ function SkillsRow(props) {
                                     <Chip
                                         key     = {'tch' + index}
                                         label   = {item}
-                                        sx      = {{ marginY:0.3, marginRight :0.6, fontWeight: 500, color:"#222831", backgroundColor:"#76ABAE" }}
+                                        sx      = {{ marginY:0.3, marginRight :0.8, fontWeight: 500, color:"#222831", backgroundColor:"#76ABAE" }}
                                     />
                                 ))
                             }
@@ -55,4 +56,14 @@ function SkillsRow(props) {
     )
 }
 
+function convertToTitle(text) {
+    // Insert space before each capital letter, then capitalize each word
+    return text
+      .replace(/([A-Z])/g, ' $1')        // insert space before capital letters
+      .replace(/^./, str => str.toUpperCase()) // capitalize first letter
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  }
+  
 export default SkillsRow;

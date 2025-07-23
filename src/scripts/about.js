@@ -1,10 +1,10 @@
+
 exports.aboutStatements = [
     {
         statements: [
-            `In 2017, I decided to try my hand at creating a standalone project for an academy and put my head first into the concept of coding and web development. I’ve had the privilege of building web applications for a small business and a start-up as a freelancer.`,
-            `Fast-forward to today, currently I'm working as an Associate Software Developer and my main focus these days is building products and leading projects for our clients at Antino Labs.`,
-            `In my free time, I explore new technologies by doing the certified courses. I also passionately build the projects as a part of my learning so that I can bring my certifications into practical knowledge.`,
-            `When I’m not at the computer, I usually read literature books, travel to explore nature and hang out with friends.`
+            `With over two years of experience as a Software Engineer specializing in Data Engineering and Cloud Analytics, I have developed a strong expertise in creating scalable ETL/ELT pipelines using technologies like Apache Airflow, DBT, and Snowflake.`, 
+            `My work at TrieDatum has involved integrating complex healthcare data to enhance clinical reporting and ensure compliance with HIPAA standards. I have successfully optimized data workflows, achieving significant performance improvements and maintaining high pipeline reliability.`,
+            `My technical skills include proficiency in AWS services, Python, SQL, and data visualization tools such as Power BI and Tableau. I am passionate about continuous learning and applying new technologies to build innovative solutions. Beyond my professional life, I enjoy exploring new tech advancements and contributing to impactful projects.`
         ],
     }
 ]

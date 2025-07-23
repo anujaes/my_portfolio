@@ -22,12 +22,12 @@ function Experience(props) {
     // [])
 
     return (
-        <Link
-            target  = "_blank"
-            rel     = "noreferrer"
-            href    = {props.url}
-            sx      = {{ textDecoration: "none", color:"inherit"}}
-        >
+        // <Link
+        //     target  = "_blank"
+        //     rel     = "noreferrer"
+        //     href    = {props.url}
+        //     sx      = {{ textDecoration: "none", color:"inherit"}}
+        // >
             <Grid
                 container
                 marginBottom    = {2}
@@ -52,7 +52,15 @@ function Experience(props) {
                         fontSize    = {16}
                         fontWeight  = {500}
                     >
-                        {props.designation} <OpenInNew className="open-in-new" />
+                        {props.designation} 
+                        <Link
+                            target  = "_blank"
+                            rel     = "noreferrer"
+                            href    = {props.url}
+                            sx      = {{ textDecoration: "none", color:"inherit"}}
+                        >
+                            <OpenInNew className="open-in-new" />
+                        </Link>
                     </Typography>
                     <Typography
                         p        = {0}
@@ -89,7 +97,7 @@ function Experience(props) {
                     }
                 </Grid>
             </Grid>
-        </Link>
+        // </Link>
     )
 }
 

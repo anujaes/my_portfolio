@@ -9,7 +9,7 @@ import MenuIcon     from '@mui/icons-material/Menu';
 import Container    from '@mui/material/Container';
 import MenuItem     from '@mui/material/MenuItem';
 import { Link }     from '@mui/material';
-import logo         from '../../images/logo192.png'
+// import logo         from '../../images/logo192.png'
 import { SaveAlt }  from '@mui/icons-material';
 import resumeLink   from '../../docs/resume.pdf'
 import './navbar.css'

@@ -71,7 +71,7 @@ function About() {
                             Nikita Agarwal
                         </Typography>
                         <Typography variant="h6" fontWeight={500}>
-                            Experienced Javascript Developer
+                            Software Engineer
                         </Typography>
 
                         <Typography
@@ -82,7 +82,7 @@ function About() {
                             display     = {"flex"}
                             fontSize    = {15}
                         >
-                            I build exceptional and accessible digital experiences for the web. I can work as a
+                            I build exceptional and accessible digital experiences for the web. I have worked in
                         </Typography>
                         <TypeWriterEffect
                             textStyle       = {{
@@ -90,16 +90,17 @@ function About() {
                                                     fontWeight  : 500,
                                                     fontFamily  : 'inherit',
                                                     color       : '#76ABAE',
+                                                    display :"inline-flex"
                                                 }}
                             scrollArea      = {document.querySelector('#typing-word')}
                             startDelay      = {1000}
                             cursorColor     = "#ca292d"
                             multiTextLoop   = {true}
                             multiText       = {[
-                                                    '<Javascript /> developer.',
-                                                    '<NodeJS /> developer.',
-                                                    '<React /> developer.',
-                                                    '<MERN_Stack /> developer.',
+                                                    'Snowflake.',
+                                                    'Apache Airflow.',
+                                                    'Python.',
+                                                    'DBT (Data Build Tool).',
                                                 ]}
                             multiTextDelay  = {1000}
                             typeSpeed       = {150}
