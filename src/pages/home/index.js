@@ -82,7 +82,7 @@ function About() {
                             display     = {"flex"}
                             fontSize    = {15}
                         >
-                            I build exceptional and accessible digital experiences for the web. I have worked in
+                            I build scalable data pipelines that transform raw data into actionable insights. I have worked in
                         </Typography>
                         <TypeWriterEffect
                             textStyle       = {{

@@ -16,10 +16,10 @@ function SocialLinks() {
             </a>
             {/* <a target="_blank" rel="noreferrer" href="https://www.facebook.com/littleanuj/">
                 <Facebook fontSize="large" className="social-links" />
-            </a>
-            <a target="_blank" rel="noreferrer" href="mailto:anuj.aes@gmail.com">
+            </a>*/}
+            <a target="_blank" rel="noreferrer" href="mailto:nikita.agarwal208@gmail.com">
                 <Google fontSize="large" className="social-links" />
-            </a> */}
+            </a>
         </Box>
     )
 }
