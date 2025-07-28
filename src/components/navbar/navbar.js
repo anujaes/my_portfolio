@@ -65,9 +65,9 @@ function NavigationBar() {
                         <img
                             alt     = "project"
                             src     = {logo}
-                            style   = {{width:60}}
+                            style   = {{width:100}}
                         />
-                    <Box sx={{flexGrow:2 }}>
+                    {/* <Box sx={{flexGrow:2 }}>
                         <Typography
                             noWrap
                             variant     = "h6"
@@ -85,7 +85,7 @@ function NavigationBar() {
                         >
                             PORTFOLIO
                         </Typography>
-                    </Box>
+                    </Box> */}
                     {/* Menu items */}
                     <Box sx={{ flexGrow:3, justifyContent:"flex-end", display: { xs: 'none', md: 'flex', sm:"none" } }}>
                         {pages.map((page) => (

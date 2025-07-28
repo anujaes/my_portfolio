@@ -19,7 +19,7 @@ exports.experienceRecords = [
             'Collaborated with frontend and UX teams to optimize video playback performance and ensure cross-browser compatibility across multiple devices.'
         ],
         technologies: ['React', 'JavaScript APIs', 'React Hooks'],
-        url: "https://www.antares.com/"
+        url: "https://antares-tech.com/"
     },
     {
         year: 'MAY 2018 - JUN 2018',
