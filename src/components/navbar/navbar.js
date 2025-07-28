@@ -9,7 +9,7 @@ import MenuIcon     from '@mui/icons-material/Menu';
 import Container    from '@mui/material/Container';
 import MenuItem     from '@mui/material/MenuItem';
 import { Link }     from '@mui/material';
-// import logo         from '../../images/logo192.png'
+import logo         from '../../images/logo192.png'
 import { SaveAlt }  from '@mui/icons-material';
 import resumeLink   from '../../docs/resume.pdf'
 import './navbar.css'
@@ -62,11 +62,11 @@ function NavigationBar() {
                 <Toolbar sx={{color:"black"}} >
                     {/* logo with Ttile */}
                     {/* <Person4Icon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} /> */}
-                        {/* <img
+                        <img
                             alt     = "project"
                             src     = {logo}
-                            style   = {{width:35}}
-                        /> */}
+                            style   = {{width:60}}
+                        />
                     <Box sx={{flexGrow:2 }}>
                         <Typography
                             noWrap
