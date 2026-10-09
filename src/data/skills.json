@@ -67,7 +67,8 @@
       "Cognito",
       "tus.io",
       "Payment Gateways",
-      "WhatsApp API"
+      "WhatsApp API",
+      "OpenTelemetry"
     ]
   }
 ]

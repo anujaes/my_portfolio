@@ -1,5 +1,42 @@
 [
   {
+    "id": "habuild",
+    "role": "SDE-2 Backend Engineer",
+    "organization": {
+      "name": "Habuild",
+      "location": "Nagpur, Maharashtra, India",
+      "url": "https://habuild.in/",
+      "logo": "images/companies/habuild.png"
+    },
+    "start": "2025-03",
+    "end": null,
+    "focus": [
+      "Distributed Systems",
+      "Event-Driven",
+      "Kafka",
+      "System Design"
+    ],
+    "summary": "Building distributed backend systems for Habuild's WhatsApp automation platform, processing ~1.4M webhook events during peak traffic across 40+ multi-tenant servers.",
+    "highlights": [
+      "Architected and scaled a high-throughput event-driven messaging platform using Kafka, RabbitMQ, AWS SQS, Redis, and Firebase Firestore, enabling reliable real-time communication and automation.",
+      "Designed and implemented a configurable rule engine supporting high-performance keyword matching, attribute-based targeting, branching workflows, and dynamic response generation.",
+      "Led the migration of the chatbot platform into the primary chat service with zero-downtime deployment, optimizing Kafka consumers, improving scalability, and simplifying platform operations.",
+      "Developed Elasticsearch-powered search infrastructure with advanced filtering and indexing strategies, significantly improving chat discovery and operational efficiency.",
+      "Enhanced platform reliability by implementing a pluggable fallback queue and Dead Letter Queue (DLQ) using AWS SQS for Kafka message processing, alongside distributed caching, OpenTelemetry-based observability, and feature-flag-driven deployments.",
+      "Designed backend systems supporting 40+ multi-tenant WhatsApp Business servers, enabling configurable automation, seamless platform scaling, and safe incremental feature rollouts."
+    ],
+    "technologies": [
+      "Apache Kafka",
+      "RabbitMQ",
+      "AWS SQS",
+      "Amazon CloudFront",
+      "Redis",
+      "Firebase Firestore",
+      "Elasticsearch",
+      "OpenTelemetry"
+    ]
+  },
+  {
     "id": "antino",
     "role": "Software Developer . Backend App.",
     "organization": {
@@ -9,7 +46,19 @@
       "logo": "images/companies/antino.png"
     },
     "start": "2022-12",
-    "end": null,
+    "end": "2025-03",
+    "roles": [
+      {
+        "title": "Software Developer",
+        "start": "2024-05",
+        "end": "2025-03"
+      },
+      {
+        "title": "Associate Software Developer",
+        "start": "2022-12",
+        "end": "2024-06"
+      }
+    ],
     "focus": [
       "NodeJS",
       "NestJS",
@@ -39,7 +88,7 @@
     "role": "Full Stack Developer Trainee . MERN Stack",
     "organization": {
       "name": "Antares Tech",
-      "location": "Noida, UP India",
+      "location": "Remote",
       "url": "https://antares-tech.com/",
       "logo": "images/companies/antares.jpg"
     },
@@ -50,7 +99,7 @@
       "Javascript",
       "NoSQL"
     ],
-    "summary": "I participated in a live Antares project for an enterprise SaaS (Software as a Service) company in the agriculture industry based in Missouri, USA as a full-stack developer.",
+    "summary": "I participated in a live Antares project for an enterprise SaaS (Software as a Service) company in the agriculture industry based in Missouri, USA as a full-stack developer. My contribution to the project fulfills all the stated criteria and has been completed to the satisfaction of Project Management.",
     "highlights": [
       "Worked on MERN-stack project which is a market analysis and scoring system which generates agriculture business related reports.",
       "I implemented usage manager which is used to track user activity and help find weekly active users, reports created etc."

@@ -13,3 +13,10 @@ export function formatPeriod(start, end) {
     if (end === undefined) return formatDate(start);
     return `${formatDate(start)} - ${end === null ? PRESENT_LABEL : formatDate(end)}`;
 }
+
+// "2022-12", "2024-06" -> "2022 – 2024"; same year -> "2024"; end null -> "2024 – Present"
+export function formatYearRange(start, end) {
+    const from = start.slice(0, 4);
+    const to   = end === null ? PRESENT_LABEL : end?.slice(0, 4);
+    return !to || to === from ? from : `${from} – ${to}`;
+}

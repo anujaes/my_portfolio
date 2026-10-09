@@ -1,5 +1,6 @@
 import { OpenInNew }            from "@mui/icons-material";
 import {
+    Box,
     Grid,
     Link,
     List,
@@ -8,7 +9,30 @@ import {
 import TechChips                from "../common/TechChips";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { asset }                from "../../utils/assets";
-import { formatPeriod }         from "../../utils/format";
+import { formatPeriod, formatYearRange } from "../../utils/format";
+import { COLORS }               from "../../constants/theme";
+
+// Promotions within one company: earlier titles muted, latest emphasised.
+// roles are listed newest first in the JSON; shown oldest -> newest.
+function RoleProgression({ roles }) {
+    const ordered = [...roles].reverse();
+    const latest  = ordered.length - 1;
+
+    // each arrow stays attached to the title after it, so wrapped lines start with "→"
+    return ordered.map((role, index) => (
+        <Box component="span" key={role.title} whiteSpace="nowrap">
+            {index > 0 && <Box component="span" color={COLORS.accent} marginRight={0.75} aria-hidden="true">→</Box>}
+            <Box
+                component   = "span"
+                color       = {index === latest ? 'inherit' : 'text.secondary'}
+                fontWeight  = {index === latest ? 500 : 400}
+                title       = {formatPeriod(role.start, role.end)}
+            >
+                {role.title} ({formatYearRange(role.start, role.end)})
+            </Box>
+        </Box>
+    ));
+}
 
 function ExperienceCard({ item }) {
     const { organization } = item;
@@ -49,6 +73,11 @@ function ExperienceCard({ item }) {
                     </Typography>
                 </Grid>
                 <Grid item xlg={12} lg={12} md={12} sm={12} xs={12}>
+                    {item.roles && (
+                        <Typography display={"flex"} flexWrap={"wrap"} columnGap={0.75} marginTop={1} fontSize={13}>
+                            <RoleProgression roles={item.roles} />
+                        </Typography>
+                    )}
                     <Typography p={0} marginY={1} fontSize={14}>{item.summary}</Typography>
                     <List sx={{ listStyleType: 'disc' }}>
                         {item.highlights.map((point) => (
