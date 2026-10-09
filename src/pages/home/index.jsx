@@ -9,17 +9,22 @@ import Section                  from "./molecules/section";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { SLIDE_IN }             from "../../constants/animation";
 import { COLORS }               from "../../constants/theme";
+import { SCROLL_CONTAINER_ID }  from "../../constants/layout";
+import { useScrollSpy }         from "../../hooks/useScrollSpy";
+import { useScrollToHash }      from "../../hooks/useScrollToHash";
 import '../../css/home.css';
 
 function Home() {
     const profile  = usePortfolioStore((s) => s.profile);
     const sections = usePortfolioStore((s) => s.sections);
     const footer   = usePortfolioStore((s) => s.site.footer);
+    useScrollSpy();
+    useScrollToHash();
 
     return (
-        <div className="about-container" style={{ marginTop: '-65px' }}>
-            <Container maxWidth='lg'>
-                <Grid container maxWidth='lg' className="details-container">
+        <main className="about-container">
+            <Container maxWidth='lg' sx={{ height: '100%' }}>
+                <Grid container maxWidth='lg' className="details-container" id={SCROLL_CONTAINER_ID}>
                     <Grid
                         item
                         xlg             = {6}
@@ -31,7 +36,7 @@ function Home() {
                         display         = {"flex"}
                         justifyContent  = {"center"}
                         flexDirection   = {"column"}
-                        height          = "100vh"
+                        height          = "100%"
                         sx              = {{
                                             alignItems : { xs: "center", sm: "center", md: "flex-start" },
                                             textAlign  : { xs: "center", sm: "center", md: "left" },
@@ -77,7 +82,7 @@ function Home() {
                     </Grid>
                 </Grid>
             </Container>
-        </div>
+        </main>
     );
 }
 

@@ -1,19 +1,18 @@
-.nav-btn{
-    font-weight     : 500 !important;
-    transition      : border-bottom-color all 2000ms;
+.nav-btn {
+    font-weight: 500 !important;
 }
-.nav-btn::after{
-    content:" ";
+
+.nav-btn::after {
+    content: " ";
     width: 0%;
     height: 2px;
     display: block;
     background-color: #ca292d;
-    text-align: center;
     margin: auto;
 }
 
-.nav-btn.active:after,
-.nav-btn:hover:after{
+.nav-btn.active::after,
+.nav-btn:hover::after {
     width: 100%;
     transition: 0.5s;
 }

@@ -6,7 +6,7 @@ import projects from '../data/projects.json';
 import skills from '../data/skills.json';
 import education from '../data/education.json';
 import certifications from '../data/certifications.json';
-import { filterVisible } from '../utils/data';
+import { filterVisible, pickByIds } from '../utils/data';
 
 const sections = filterVisible(site.sections);
 
@@ -15,7 +15,8 @@ export const usePortfolioStore = create((set) => ({
     site,
     profile,
     sections,
-    navItems: sections.filter((s) => s.nav),
+    navItems: sections.filter((s) => s.nav),          // side navigation
+    navbarItems: pickByIds(sections, site.navbar), // top bar (desktop)
     experience: filterVisible(experience),
     projects: filterVisible(projects),
     skills: filterVisible(skills),
@@ -24,8 +25,5 @@ export const usePortfolioStore = create((set) => ({
 
     // shared UI state
     activeSection: null,
-    mobileMenuOpen: false,
     setActiveSection: (id) => set({ activeSection: id }),
-    toggleMobileMenu: () => set((s) => ({ mobileMenuOpen: !s.mobileMenuOpen })),
-    closeMobileMenu: () => set({ mobileMenuOpen: false }),
 }));

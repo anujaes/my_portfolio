@@ -3,3 +3,9 @@
 * {
     font-family:"Poppins", Arial, sans-serif !important;
 }
+.App {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}

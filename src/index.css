@@ -1,36 +1,6 @@
-html {
-  scroll-behavior: smooth !important;
-  font-family: 'Source Code Pro', monospace !important;
-}
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: ease-in-out 1s;
-}
-
-.flx-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flx-center-col{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.grey{
-  background-color: grey !important;
-}
-
-.green{
-  background-color: green !important;
-}
-
-.yellow{
-  background-color: yellow !important;
 }

@@ -1,146 +1,134 @@
-import * as React   from 'react';
-import AppBar       from '@mui/material/AppBar';
-import Box          from '@mui/material/Box';
-import Toolbar      from '@mui/material/Toolbar';
-import IconButton   from '@mui/material/IconButton';
-import Typography   from '@mui/material/Typography';
-import Menu         from '@mui/material/Menu';
-import MenuIcon     from '@mui/icons-material/Menu';
-import Container    from '@mui/material/Container';
-import MenuItem     from '@mui/material/MenuItem';
-import { Link }     from '@mui/material';
-import { SaveAlt }  from '@mui/icons-material';
+import { useState }         from 'react';
+import {
+    AppBar,
+    Box,
+    Container,
+    IconButton,
+    Link,
+    Menu,
+    MenuItem,
+    Toolbar,
+    Typography }            from '@mui/material';
+import MenuIcon             from '@mui/icons-material/Menu';
+import { SaveAlt }          from '@mui/icons-material';
 import { usePortfolioStore } from '../../store/usePortfolioStore';
-import { asset }    from '../../utils/assets';
-import './navbar.css'
+import { asset }            from '../../utils/assets';
+import { scrollToTop }      from '../../utils/scroll';
+import './navbar.css';
 
 function NavigationBar() {
-    const { logo, resume } = usePortfolioStore((s) => s.profile);
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    // const [transparent,setTransparent]  =  React.useState(false);
+    const { logo, resume, name } = usePortfolioStore((s) => s.profile);
+    const navbarItems   = usePortfolioStore((s) => s.navbarItems);
+    const sections      = usePortfolioStore((s) => s.sections);
+    const activeSection = usePortfolioStore((s) => s.activeSection);
+    const [menuAnchor, setMenuAnchor] = useState(null);
 
-    const pages = [
-        { name : 'About',       link : '#about' },
-        { name : 'Resume',      link : '#experience' },
-        { name : 'Project',     link : '#projects' },
-    ];
+    const closeMenu = () => setMenuAnchor(null);
 
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
+    const handleLogoClick = (event) => {
+        event.preventDefault();
+        scrollToTop();
     };
-
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-
-    // const changeNavbarColor = () => {
-    //     if(window.scrollY>=100) {
-    //         setTransparent(false);
-    //     }else{
-    //         setTransparent(true)
-    //     }
-    // }
-
-    // window.addEventListener('scroll',changeNavbarColor)
-
-    // React.useEffect( () => {
-    //     changeNavbarColor();
-    // })
-
 
     return (
-        <AppBar position="sticky"
-        // <AppBar position='static'
-            sx={{
-                // backgroundColor : transparent ? "transparent" : "transparent", // "#ffffff75",
-                // backgroundColor : "#dee4ea",
-                boxShadow       : 'none',
-                color           : "grey",
-                backgroundImage : "linear-gradient(147deg, #dee4ea 0%, #eff2f6 74%)"
-            }}
+        <AppBar
+            position = "static"
+            sx       = {{
+                            boxShadow       : 'none',
+                            color           : "grey",
+                            backgroundImage : "linear-gradient(147deg, #dee4ea 0%, #eff2f6 74%)",
+                        }}
         >
             <Container maxWidth="lg">
-                <Toolbar sx={{color:"black"}} >
-                    {/* logo with Ttile */}
-                    {/* <Person4Icon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} /> */}
-                        <img
-                            alt     = "project"
-                            src     = {asset(logo)}
-                            style   = {{width:35}}
-                        />
-                    <Box sx={{flexGrow:2 }}>
+                <Toolbar sx={{ color: "black" }}>
+                    {/* logo with title, scrolls back to the top */}
+                    <Link
+                        href        = "#top"
+                        onClick     = {handleLogoClick}
+                        underline   = "none"
+                        color       = "inherit"
+                        aria-label  = {`${name}, back to top`}
+                        sx          = {{ display: 'flex', alignItems: 'center', flexGrow: 2 }}
+                    >
+                        <img alt="" src={asset(logo)} style={{ width: 35 }} />
                         <Typography
                             noWrap
-                            variant     = "h6"
-                            component   = "a"
-                            href        = "/"
-                            sx          = {{
-                                            ml              : 1.5,
-                                            display         : { xs: 'flex', md: 'flex' },
-                                            // fontFamily      : 'monospace',
-                                            fontWeight      : 700,
-                                            letterSpacing   : '.1rem',
-                                            color           : 'inherit',
-                                            textDecoration  : 'none',
-                                        }}
+                            variant = "h6"
+                            sx      = {{ ml: 1.5, fontWeight: 700, letterSpacing: '.1rem' }}
                         >
                             PORTFOLIO
                         </Typography>
-                    </Box>
-                    {/* Menu items */}
-                    <Box sx={{ flexGrow:3, justifyContent:"flex-end", display: { xs: 'none', md: 'flex', sm:"none" } }}>
-                        {pages.map((page) => (
+                    </Link>
+
+                    {/* desktop links */}
+                    <Box component="nav" aria-label="Main" sx={{ flexGrow: 3, justifyContent: "flex-end", display: { xs: 'none', md: 'flex' } }}>
+                        {navbarItems.map((item) => (
                             <Link
-                                key     = {page.name}
-                                sx      = {{ display: 'block', px:2, color:"black", textDecoration:"none" }}
-                                href    = {page.link}
-                                className='nav-btn'
+                                key             = {item.id}
+                                href            = {`#${item.id}`}
+                                className       = {`nav-btn ${activeSection === item.id ? 'active' : ''}`}
+                                aria-current    = {activeSection === item.id ? 'true' : undefined}
+                                sx              = {{ display: 'block', px: 2, color: "black", textDecoration: "none" }}
                             >
-                                {page.name}
+                                {item.label}
                             </Link>
                         ))}
                         <Link
-                                key         = "CV"
-                                sx          = {{ display:'block',pl:2, color:"black", textDecoration:"none" }}
-                                href        = {asset(resume)}
-                                className   = 'nav-btn'
-                                target      = '_blank'
-                                rel         = 'noreferrer'
-                            >
-                                <span style = {{display:'flex', alignItems:"center"}}>
-                                    <SaveAlt/>
-                                </span>
-                            </Link>
+                            href        = {asset(resume)}
+                            target      = '_blank'
+                            rel         = 'noreferrer'
+                            className   = 'nav-btn'
+                            aria-label  = 'Download résumé'
+                            title       = 'Download résumé'
+                            sx          = {{ display: 'flex', alignItems: 'center', pl: 2, color: "black" }}
+                        >
+                            <SaveAlt />
+                        </Link>
                     </Box>
-                    {/* menu list on small screen */}
-                    <Box sx={{ flexGrow:3,justifyContent:"flex-end", display: { xs: 'flex', md: 'none', sm:"flex" } }}>
+
+                    {/* mobile menu: lists every section, since the side nav is hidden */}
+                    <Box sx={{ flexGrow: 3, justifyContent: "flex-end", display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size            = "large"
-                            aria-label      = "account of current user"
-                            aria-controls   = "menu-appbar"
+                            aria-label      = "Open navigation menu"
+                            aria-controls   = "mobile-menu"
                             aria-haspopup   = "true"
-                            onClick         = {handleOpenNavMenu}
+                            aria-expanded   = {Boolean(menuAnchor)}
+                            onClick         = {(event) => setMenuAnchor(event.currentTarget)}
                             color           = "inherit"
                         >
                             <MenuIcon />
                         </IconButton>
                         <Menu
-                            // keepMounted
-                            id              = "menu-appbar"
-                            anchorEl        = {anchorElNav}
-                            open            = {Boolean(anchorElNav)}
-                            onClose         = {handleCloseNavMenu}
-                            anchorOrigin    = {{ vertical : 'bottom', horizontal  : 'left' }}
-                            transformOrigin = {{ vertical : 'top', horizontal  : 'left' }}
-                            sx              = {{ display : { xs: 'block', md: 'none' } }}
+                            id              = "mobile-menu"
+                            anchorEl        = {menuAnchor}
+                            open            = {Boolean(menuAnchor)}
+                            onClose         = {closeMenu}
+                            anchorOrigin    = {{ vertical: 'bottom', horizontal: 'left' }}
+                            transformOrigin = {{ vertical: 'top', horizontal: 'left' }}
                         >
-                            {pages.map((page,index) => (
-                                <Link key={'NBL'+index} href={page.link}>
-                                <MenuItem key={page.name} sx={{color:"black"}}>
-                                        <Typography fontSize={"small"} onClick={()=>{}} textAlign="center">{page.name}</Typography>
+                            {sections.map((item) => (
+                                <MenuItem
+                                    key         = {item.id}
+                                    component   = "a"
+                                    href        = {`#${item.id}`}
+                                    onClick     = {closeMenu}
+                                    selected    = {activeSection === item.id}
+                                    sx          = {{ fontSize: 'small', color: 'black' }}
+                                >
+                                    {item.label}
                                 </MenuItem>
-                                </Link>
                             ))}
+                            <MenuItem
+                                component   = "a"
+                                href        = {asset(resume)}
+                                target      = "_blank"
+                                rel         = "noreferrer"
+                                onClick     = {closeMenu}
+                                sx          = {{ fontSize: 'small', color: 'black' }}
+                            >
+                                Download résumé
+                            </MenuItem>
                         </Menu>
                     </Box>
                 </Toolbar>
@@ -148,4 +136,5 @@ function NavigationBar() {
         </AppBar>
     );
 }
+
 export default NavigationBar;

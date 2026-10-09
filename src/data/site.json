@@ -43,5 +43,10 @@
       "visible": true
     }
   ],
+  "navbar": [
+    "about",
+    "experience",
+    "projects"
+  ],
   "footer": "Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with **React.js** and **Material UI,** deployed on **firebase**. All text is set in the Roboto typeface."
 }
