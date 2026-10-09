@@ -1,22 +1,12 @@
 import './App.css';
-import About 			from './pages/home';
-// import Home 			from './components/home';
-import NavigationBar 	from './components/navbar/navbar';
-// import Projects 		from './components/projects';
-// import Resume 			from './components/resume';
-// import ContactUs 		from './components/contactUs';
-// import Footer 			from './components/footer';
+import Home          from './pages/home';
+import NavigationBar from './components/navbar/navbar';
 
 function App() {
 	return (
 		<div className="App">
 			<NavigationBar />
-			{/* <Home /> */}
-			<About />
-			{/* <Resume /> */}
-			{/* <Projects /> */}
-			{/* <ContactUs /> */}
-			{/* <Footer /> */}
+			<Home />
 		</div>
 	);
 }

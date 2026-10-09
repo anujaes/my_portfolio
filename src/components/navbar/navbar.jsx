@@ -9,12 +9,13 @@ import MenuIcon     from '@mui/icons-material/Menu';
 import Container    from '@mui/material/Container';
 import MenuItem     from '@mui/material/MenuItem';
 import { Link }     from '@mui/material';
-import logo         from '../../images/logo192.png'
 import { SaveAlt }  from '@mui/icons-material';
-import resumeLink   from '../../docs/resume.pdf'
+import { usePortfolioStore } from '../../store/usePortfolioStore';
+import { asset }    from '../../utils/assets';
 import './navbar.css'
 
 function NavigationBar() {
+    const { logo, resume } = usePortfolioStore((s) => s.profile);
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     // const [transparent,setTransparent]  =  React.useState(false);
 
@@ -64,7 +65,7 @@ function NavigationBar() {
                     {/* <Person4Icon sx={{ display: { xs: 'flex', md: 'flex' }, mr: 1 }} /> */}
                         <img
                             alt     = "project"
-                            src     = {logo}
+                            src     = {asset(logo)}
                             style   = {{width:35}}
                         />
                     <Box sx={{flexGrow:2 }}>
@@ -101,7 +102,7 @@ function NavigationBar() {
                         <Link
                                 key         = "CV"
                                 sx          = {{ display:'block',pl:2, color:"black", textDecoration:"none" }}
-                                href        = {resumeLink}
+                                href        = {asset(resume)}
                                 className   = 'nav-btn'
                                 target      = '_blank'
                                 rel         = 'noreferrer'

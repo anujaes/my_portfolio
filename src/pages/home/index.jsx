@@ -1,38 +1,25 @@
-import React                    from "react";
-import VerticalNav              from "../../components/navbar/verticalNav";
-import Section                  from "./molecules/section";
-import { educationRecords }     from "../../scripts/education";
-import { skillRecords }         from "../../scripts/skillRatings";
-import { certificationRecords } from "../../scripts/certifications";
-import { experienceRecords }    from "../../scripts/experience";
-import { aboutStatements }      from "../../scripts/about";
-import projectRecords       from "../../scripts/projects";
-import SocialLinks              from "../../components/socialLinks/socialLinks";
-import {
-    Container,
-    Grid,
-    Typography,
-    Box
-}                               from "@mui/material";
+import { Container, Grid, Typography, Box } from "@mui/material";
 import TypeWriterEffect         from 'react-typewriter-effect';
+import { motion }               from "motion/react";
+import VerticalNav              from "../../components/navbar/verticalNav";
+import SocialLinks              from "../../components/socialLinks/socialLinks";
+import ProfilePicture           from "../../components/profilePicture/profilePicture";
+import RichText                 from "../../components/common/RichText";
+import Section                  from "./molecules/section";
+import { usePortfolioStore }    from "../../store/usePortfolioStore";
+import { SLIDE_IN }             from "../../constants/animation";
+import { COLORS }               from "../../constants/theme";
 import '../../css/home.css';
-import ProfilePicture from "../../components/profilePicture/profilePicture";
-import {motion} from "motion/react";
 
-const payloadData = {
-    about           : aboutStatements,
-    experience      : experienceRecords,
-    skills          : [skillRecords],
-    certifications  : certificationRecords,
-    academic        : educationRecords,
-    projects        : projectRecords,
-}
+function Home() {
+    const profile  = usePortfolioStore((s) => s.profile);
+    const sections = usePortfolioStore((s) => s.sections);
+    const footer   = usePortfolioStore((s) => s.site.footer);
 
-function About() {
     return (
-        <div className="about-container" style={{marginTop:'-65px'}}>
-            <Container maxWidth='lg' >
-                <Grid container maxWidth='lg' className = "details-container">
+        <div className="about-container" style={{ marginTop: '-65px' }}>
+            <Container maxWidth='lg'>
+                <Grid container maxWidth='lg' className="details-container">
                     <Grid
                         item
                         xlg             = {6}
@@ -46,111 +33,52 @@ function About() {
                         flexDirection   = {"column"}
                         height          = "100vh"
                         sx              = {{
-                                            alignItems : {
-                                                xs : "center",
-                                                sm : "center",
-                                                md : "flex-start",
-                                                lg : "flex-start",
-                                                xl : 'flex-start'
-                                            },
-                                            textAlign : {xs:"center",sm:"center", md:"left" },
-                                            position  : {
-                                                            xs: "static !important",
-                                                            sm: "static !important",
-                                                            md: "sticky !important",
-                                                            lg: "sticky !important",
-                                                            xlg:"sticky !important"
-                                                        },
-                                            top: "0 !important", /* required */
+                                            alignItems : { xs: "center", sm: "center", md: "flex-start" },
+                                            textAlign  : { xs: "center", sm: "center", md: "left" },
+                                            position   : { xs: "static !important", sm: "static !important", md: "sticky !important" },
+                                            top        : "0 !important",
                                         }}
                     >
-                        {/* profile picture */}
-                        <ProfilePicture display={{xs:'flex', sm:'flex', md:'none', lg:"none"}} />
-                        <motion.div
-                            initial     = {{ opacity: 0,x: -50, }}
-                            animate     = {{ opacity: 1,x: 0,}}
-                            transition  = {{ duration: 0.3, ease:"linear" }}
-                        >
+                        <ProfilePicture display={{ xs: 'flex', sm: 'flex', md: 'none' }} />
+                        <motion.div {...SLIDE_IN}>
                             <Typography variant="h3" fontWeight={700} marginTop={2}>
-                                Anuj Kr. Singh
+                                {profile.name}
                             </Typography>
                             <Typography variant="h6" fontWeight={500}>
-                                Experienced Javascript Developer
+                                {profile.title}
                             </Typography>
-                            
-
-                            <Typography
-                                // variant="p"
-                                fontWeight  = {500}
-                                maxWidth    = {350}
-                                marginTop   = {3}
-                                display     = {"flex"}
-                                fontSize    = {15}
-                            >
-                                I build exceptional and accessible digital experiences for the web. I can work as a
+                            <Typography fontWeight={500} maxWidth={350} marginTop={3} display={"flex"} fontSize={15}>
+                                {profile.intro}
                             </Typography>
                             <TypeWriterEffect
-                                textStyle       = {{
-                                                        fontSize    : 15,
-                                                        fontWeight  : 500,
-                                                        fontFamily  : 'inherit',
-                                                        color       : '#ca292d',
-                                                    }}
-                                scrollArea      = {document.querySelector('#typing-word')}
+                                textStyle       = {{ fontSize: 15, fontWeight: 500, fontFamily: 'inherit', color: COLORS.accent }}
                                 startDelay      = {1000}
-                                cursorColor     = "#ca292d"
+                                cursorColor     = {COLORS.accent}
                                 multiTextLoop   = {true}
-                                multiText       = {[
-                                                        '<Javascript /> developer.',
-                                                        '<NodeJS /> developer.',
-                                                        '<React /> developer.',
-                                                        '<MERN_Stack /> developer.',
-                                                    ]}
+                                multiText       = {profile.typewriter}
                                 multiTextDelay  = {1000}
                                 typeSpeed       = {150}
                             />
                         </motion.div>
-                        {/* Navigation bar */}
                         <VerticalNav />
-
-                        {/* social media links */}
                         <SocialLinks />
-                    </Grid >
-                    <Grid
-                        item
-                        // className   = "details-container"
-                        xlg         = {6}
-                        lg          = {6}
-                        md          = {6}
-                        sm          = {12}
-                        xs          = {12}
-                        id          = "details-body"
-                    >
-                        {/* TODO ADD IT INTO SECTION */}
+                    </Grid>
+                    <Grid item xlg={6} lg={6} md={6} sm={12} xs={12} id="details-body">
                         <Box>
-                            {
-                                Object.keys(payloadData).map((dataType) => (
-                                    <Section
-                                        key     = {dataType + Date.now()}
-                                        type    = {dataType}
-                                        payload = {payloadData[dataType]}
-                                    />
-                                ) )
-                            }
+                            {sections.map((section) => (
+                                <Section key={section.id} section={section} />
+                            ))}
                         </Box>
-                        {/* footer statement */}
                         <Box marginBottom={10} className="row-section">
                             <Typography fontSize={15}>
-                                Loosely designed in Figma and coded in Visual Studio Code by yours truly.
-                                Built with <b>React.js</b> and <b>Material UI,</b> deployed on <b>firebase</b>.
-                                All text is set in the Roboto typeface.
+                                <RichText text={footer} />
                             </Typography>
                         </Box>
                     </Grid>
                 </Grid>
             </Container>
         </div>
-    )
+    );
 }
 
-export default About;
+export default Home;

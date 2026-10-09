@@ -1,0 +1,53 @@
+[
+  {
+    "id": "certificate-of-internship",
+    "name": "Certificate Of Internship",
+    "issuer": "Antares Tech (Terracode Systems Private Limited)",
+    "start": "2022-02-07",
+    "end": "2022-08-05",
+    "summary": "I participated in a live Antares project for an enterprise SaaS (Software as a Service) company in the agriculture industry based in Missouri, USA as a full-stack developer.",
+    "url": "https://drive.google.com/file/d/1v1PEvv5z57rrJYG-sTaeuZPtjJvs6BZ7/view?usp=sharing"
+  },
+  {
+    "id": "complete-2022-web-development-bootcamp",
+    "name": "Complete 2022 Web Development Bootcamp",
+    "issuer": "Udemy - Online Learning Platform",
+    "start": "2022-11-01",
+    "summary": "As the part of this certification I learned MongoDB, ExpressJs, ReactJS, NodeJS, Redux. Also completed some projects like, KeeperApp, User Subscriber App using Mailchimp API etc.",
+    "url": "https://www.udemy.com/certificate/UC-583337f1-cc82-4970-9857-a72dad8b854f/?utm_medium=email&utm_campaign=email&utm_source=sendgrid.com"
+  },
+  {
+    "id": "responsive-web-design",
+    "name": "Responsive Web Design",
+    "issuer": "freeCodeCamp.org",
+    "start": "2022-10-02",
+    "summary": "As part of this certification, I built the following projects and got all automated test suites to pass: Build a Survey Form, Build a Tribute Page, Build a Technical Documentation Page, Build a Product Landing Page, Build a Personal Portfolio Webpage.",
+    "url": "https://freecodecamp.org/certification/anujaes/responsive-web-design"
+  },
+  {
+    "id": "the-complete-2021-php-full-stack-web-developer-bootcamp",
+    "name": "The Complete 2021 PHP Full Stack Web Developer Bootcamp",
+    "issuer": "Udemy - Online Learning Platform",
+    "start": "2021-12-16",
+    "summary": "I completed this course to learn fullstack php web development. This course comprises various skills that are, frontend web development technologies like HTML, CSS, Javascript, Bootstrap. As well as backend development technologies like PHP, Mysql are also the part of this course with web basics like XML, JSON, REST API along with the knowledge of project deployment on web.",
+    "url": "https://www.udemy.com/certificate/UC-e12f4f9c-568d-4d59-b7e0-07b395aa08d9/"
+  },
+  {
+    "id": "javascript-assessment",
+    "name": "Javascript Assessment",
+    "issuer": "Cutshort.io",
+    "start": "2022-10-19",
+    "end": "2023-10-19",
+    "summary": "Advanced proficiency in javascript",
+    "url": "https://cutshort.io/certificate/74044"
+  },
+  {
+    "id": "programming-in-java",
+    "name": "Programming in Java",
+    "issuer": "NPTEL Online Certification - MHRD, Govt of India",
+    "start": "2021-01",
+    "end": "2021-04",
+    "summary": "I successfully completed this 12 weeks course on the behalf of my elective course in MCA degree program along with the score of 77% percentile.",
+    "url": "https://archive.nptel.ac.in/noc/Ecertificate/?q=NPTEL21CS03S24530257100126"
+  }
+]

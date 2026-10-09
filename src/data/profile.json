@@ -1,0 +1,37 @@
+{
+  "name": "Anuj Kr. Singh",
+  "title": "Experienced Javascript Developer",
+  "intro": "I build exceptional and accessible digital experiences for the web. I can work as a",
+  "typewriter": [
+    "<Javascript /> developer.",
+    "<NodeJS /> developer.",
+    "<React /> developer.",
+    "<MERN_Stack /> developer."
+  ],
+  "portrait": "images/potrait_profile.png",
+  "logo": "images/logo192.png",
+  "resume": "docs/resume.pdf",
+  "about": [
+    "In 2017, I embarked on my journey into coding and web development by creating a standalone project for an academy. This marked the beginning of my passion for technology. Since then, I’ve had the opportunity to build web applications for a small business and a start-up as a freelancer.",
+    "Fast-forward to today, I’m working as a Software Developer at Antino Labs, where I focus on developing products and leading projects for our clients.",
+    "In my spare time, I enjoy exploring new technologies through certified courses. I also dedicate time to building projects to apply and enhance the skills gained during my learning journey.",
+    "When I’m away from my desk, you’ll often find me reading literature, traveling to explore nature, or spending quality time with friends."
+  ],
+  "socials": [
+    {
+      "label": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/anuj-aes/"
+    },
+    {
+      "label": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/anujaes"
+    },
+    {
+      "label": "Email",
+      "icon": "email",
+      "url": "mailto:anuj.aes@gmail.com"
+    }
+  ]
+}

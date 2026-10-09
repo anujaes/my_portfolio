@@ -1,43 +1,30 @@
-import React from "react";
-import { Facebook, GitHub, Google, LinkedIn } from "@mui/icons-material";
-import { Box } from "@mui/material";
+import { Box }                  from "@mui/material";
+import { motion }               from "motion/react";
+import Icon                     from "../common/Icon";
+import { usePortfolioStore }    from "../../store/usePortfolioStore";
+import { POP_IN }               from "../../constants/animation";
+import { linkTargetProps }      from "../../utils/url";
 import './socialLinks.css';
-import { motion } from "motion/react";
 
 function SocialLinks() {
-    const links = [
-        {
-            href: "https://www.linkedin.com/in/anuj-aes/",
-            Icon: LinkedIn,
-        },
-        {
-            href: "https://github.com/anujaes",
-            Icon: GitHub,
-        },
-        {
-            href: "https://www.facebook.com/littleanuj/",
-            Icon: Facebook,
-        },
-        {
-            href: "mailto:anuj.aes@gmail.com",
-            Icon: Google,
-        },
-    ];
+    const socials = usePortfolioStore((s) => s.profile.socials);
 
     return (
         <Box marginTop={10} display={"flex"}>
-            {links.map((link, index) => (
+            {socials.map((link) => (
                 <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{
-                        duration: 0.8,
-                        scale: { type: "spring", bounce: 0.5, delay: 1.2 },
-                    }}
+                    key         = {link.label}
+                    initial     = {POP_IN.initial}
+                    animate     = {POP_IN.animate}
+                    transition  = {{ duration: 0.8, scale: { type: "spring", bounce: 0.5, delay: 1.2 } }}
                 >
-                    <a target="_blank" rel="noreferrer" href={link.href}>
-                        <link.Icon fontSize="large" className="social-links" />
+                    <a
+                        href        = {link.url}
+                        aria-label  = {link.label}
+                        title       = {link.label}
+                        {...linkTargetProps(link.url)}
+                    >
+                        <Icon name={link.icon} fontSize="large" className="social-links" />
                     </a>
                 </motion.div>
             ))}

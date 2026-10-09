@@ -1,0 +1,70 @@
+[
+  {
+    "id": "antino",
+    "role": "Software Developer . Backend App.",
+    "organization": {
+      "name": "Antino Labs",
+      "location": "Gurugram India",
+      "url": "https://www.antino.com/",
+      "logo": "images/companies/antino.png"
+    },
+    "start": "2022-12",
+    "end": null,
+    "focus": [
+      "NodeJS",
+      "NestJS",
+      "System Design",
+      "TS",
+      "JS"
+    ],
+    "summary": "I joined this organization in 2022 as an Associate Software Developer having extensive knowledge & experience of NodeJS. I am trained to build and maintain excellent node applications with clean code. I have good experience in MongoDB and NodeJS. Additionally I have a good knowledge in react, react-redux and I hold the ability to write well-documented, scalable code and have experience in working with third-party dependencies and debugging conflicts.",
+    "highlights": [
+      "I Initially worked on a micro services architecture based project which is a derivatives research and analysis trading platform primarily for options trading.",
+      "Built a project as a solution for a petroleum and fuel business to increase the customer retention by providing coupons and offers to the user on any future trades."
+    ],
+    "technologies": [
+      "Nodejs/ExpressJS",
+      "SQL/NoSQL",
+      "Socket.IO",
+      "Redis",
+      "AWS",
+      "Google Cloud",
+      "Event-Driven",
+      "Payment Gateways",
+      "System Design"
+    ]
+  },
+  {
+    "id": "antares",
+    "role": "Full Stack Developer Trainee . MERN Stack",
+    "organization": {
+      "name": "Antares Tech",
+      "location": "Noida, UP India",
+      "url": "https://antares-tech.com/",
+      "logo": "images/companies/antares.jpg"
+    },
+    "start": "2022-02",
+    "end": "2022-08",
+    "focus": [
+      "TypeScript",
+      "Javascript",
+      "NoSQL"
+    ],
+    "summary": "I participated in a live Antares project for an enterprise SaaS (Software as a Service) company in the agriculture industry based in Missouri, USA as a full-stack developer.",
+    "highlights": [
+      "Worked on MERN-stack project which is a market analysis and scoring system which generates agriculture business related reports.",
+      "I implemented usage manager which is used to track user activity and help find weekly active users, reports created etc."
+    ],
+    "technologies": [
+      "Nodejs/ExpressJS",
+      "MongoDB",
+      "ReactJS",
+      "Redux",
+      "NPM",
+      "AWS-S3",
+      "VMs",
+      "Linux",
+      "Jira Board"
+    ]
+  }
+]
