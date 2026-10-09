@@ -1,0 +1,110 @@
+[
+  {
+    "id": "e-learning-yoga-therapy",
+    "name": "E-Learning Yoga Therapy",
+    "start": "2024-02",
+    "end": null,
+    "summary": "An online yoga session application that integrates WhatsApp for direct communication, utilizes a chatbot service for personalized user interaction, and includes a comprehensive support system managed through CRM panels on WhatsApp.",
+    "url": "https://habit.yoga/",
+    "thumbnail": "images/project/yoga.jpeg",
+    "technologies": [
+      "NodeJS/ExpressJS",
+      "PostgreSQL",
+      "Apache Kafka",
+      "Redis",
+      "AWS",
+      "RabbitMQ",
+      "WhatsApp API",
+      "cognito",
+      "tusc"
+    ]
+  },
+  {
+    "id": "trading-plus",
+    "name": "Trading Plus",
+    "start": "2023-02",
+    "end": "2024-01",
+    "summary": "Trading Plus is a trading platform designed to perform simulations of multiple predefined and custom strategies using advance tools like strategy builder and options simulator under F&O segments.",
+    "url": "https://tradingplus.in/",
+    "thumbnail": "images/project/trading.jpg",
+    "technologies": [
+      "NodeJS/ExpressJS",
+      "MongoDB",
+      "ReactJS",
+      "Redis",
+      "AWS",
+      "BullMQ",
+      "Stripe/PhonePe",
+      "Sendgrid/Twilio",
+      "Puppeteer",
+      "Brokers-Shoonya/Zerodha/Angelone"
+    ]
+  },
+  {
+    "id": "varta",
+    "name": "Varta - A chat app",
+    "start": "2022-12",
+    "end": "2023-02",
+    "summary": "A one to one realtime chat application developed along with some basic feature like friend list, login/logout and persisting chat list.",
+    "url": "https://varta-app-fe.onrender.com/",
+    "thumbnail": "images/project/varta.jpg",
+    "technologies": [
+      "ExpressJS",
+      "Socket.IO",
+      "ReactJS",
+      "React-Redux",
+      "Bootstrap",
+      "Javascript"
+    ]
+  },
+  {
+    "id": "templafine",
+    "name": "Templafine",
+    "start": "2023-03",
+    "end": "2023-04",
+    "summary": "Templafine app is a drag & drop editor for designing mobile responsive emails and landing pages. Use it online or embed it in your application.",
+    "url": "https://templafine.web.app/",
+    "thumbnail": "images/project/templafine.jpg",
+    "technologies": [
+      "PHP",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Javascript"
+    ]
+  },
+  {
+    "id": "portfolio",
+    "name": "Portfolio",
+    "start": "2020-09",
+    "end": "2020-11",
+    "summary": "An e-portfolio is an online representation of work you have created, as well as your skills and experiences along with worked on projects.",
+    "url": "https://www.tezu.ernet.in/hostels/swh/",
+    "thumbnail": "images/project/portfolio.jpg",
+    "technologies": [
+      "ReactJS",
+      "MaterialUI",
+      "Javascript",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "id": "swh-hostel",
+    "name": "SWH Hostel",
+    "start": "2020-09",
+    "end": "2020-11",
+    "summary": "A web app developed for one of the Tezpur University's hostel to manage records of the boarders, hostel rooms and other managerial activity related to the hostel.",
+    "url": "https://www.tezu.ernet.in/hostels/swh/",
+    "thumbnail": "images/project/swh.jpg",
+    "technologies": [
+      "PHP",
+      "MySQL",
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "Javascript"
+    ]
+  }
+]

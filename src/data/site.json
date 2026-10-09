@@ -1,0 +1,61 @@
+{
+  "sections": [
+    {
+      "id": "about",
+      "label": "About",
+      "icon": "person",
+      "nav": false,
+      "visible": true
+    },
+    {
+      "id": "experience",
+      "label": "Experience",
+      "icon": "work",
+      "nav": true,
+      "visible": true
+    },
+    {
+      "id": "skills",
+      "label": "Skills",
+      "icon": "psychology",
+      "nav": true,
+      "visible": true
+    },
+    {
+      "id": "certifications",
+      "label": "Certifications",
+      "icon": "badge",
+      "nav": true,
+      "visible": true
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "icon": "school",
+      "nav": true,
+      "visible": true
+    },
+    {
+      "id": "projects",
+      "label": "Projects",
+      "icon": "code",
+      "nav": true,
+      "visible": true
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "icon": "email",
+      "nav": false,
+      "layout": "full-width",
+      "visible": true
+    }
+  ],
+  "navbar": [
+    "about",
+    "experience",
+    "projects",
+    "contact"
+  ],
+  "footer": "Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with **React.js** and **Material UI,** deployed on **firebase**. All text is set in the Roboto typeface."
+}

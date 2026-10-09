@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Backend",
+    "items": [
+      "NodeJs",
+      "ExpressJS",
+      "NestJS",
+      "Socket.IO"
+    ]
+  },
+  {
+    "category": "Events",
+    "items": [
+      "Kafka",
+      "Redis BullMQ",
+      "Rabbit MQ"
+    ]
+  },
+  {
+    "category": "Frontend",
+    "items": [
+      "ReactJS",
+      "Redux",
+      "Bootstrap5.0",
+      "MaterialUI 5.0",
+      "ANT Design"
+    ]
+  },
+  {
+    "category": "Database",
+    "items": [
+      "Mongo DB",
+      "Postgres",
+      "Elastic Search",
+      "Redis",
+      "MySQL/SQL",
+      "KV"
+    ]
+  },
+  {
+    "category": "Tools",
+    "items": [
+      "Git",
+      "Jira Board",
+      "VS Code",
+      "Vim Editor"
+    ]
+  },
+  {
+    "category": "Languages",
+    "items": [
+      "Javascript",
+      "Typescript",
+      "HTML/CSS",
+      "Python",
+      "C/C++"
+    ]
+  },
+  {
+    "category": "Technologies",
+    "items": [
+      "AWS-",
+      "S3",
+      "SES",
+      "SQS",
+      "SNS",
+      "Cognito",
+      "tus.io",
+      "Payment Gateways",
+      "WhatsApp API",
+      "OpenTelemetry"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "master-of-computer-application",
+    "degree": "Master Of Computer Application",
+    "institute": "Tezpur University, Napaam Assam India",
+    "start": "2019",
+    "end": "2022",
+    "summary": "I have completed my Masters from department of CSE Tezpur University, with computer application with an overall cgpa 7.09."
+  },
+  {
+    "id": "bachelor-of-computer-application",
+    "degree": "Bachelor Of Computer Application",
+    "institute": "Microtek College Of Management & Technology, Varanasi UP India",
+    "start": "2014",
+    "end": "2017",
+    "summary": "I have completed my BCA from Microtek College Of Management & Technology which is affiliated to VBSPU state University, with an overall percentage 74%."
+  },
+  {
+    "id": "intermediate",
+    "degree": "Intermediate",
+    "institute": "Govt. Queens Inter College, Varanasi UP India",
+    "start": "2012",
+    "end": "2013",
+    "summary": "I have done my schooling from Govt Queens Inter College Varanasi with PCM stream."
+  }
+]

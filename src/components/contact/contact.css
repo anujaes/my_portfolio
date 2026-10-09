@@ -1,0 +1,160 @@
+/* ---------- full-width band ---------- */
+/* monochrome palette taken from the page (header/cards grey-blue + black text) */
+.contact-band {
+    --ink: #1f2933;
+    --slate: #52606d;
+    --muted: #7b8794;
+    --mist: #dee4ea;
+    --mist-deep: #cbd4dd;
+    --paper: #f9fcff;
+    --accent: #ca292d;
+
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+    border-top: 1px solid #dee4ea;
+}
+
+/* ---------- form card (animated borders, as on anujelectronics) ---------- */
+.contact-form-card {
+    position: relative;
+    background-color: #ffffffb3;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form-card .edge {
+    position: absolute;
+    background-color: var(--ink);
+    transition: transform 700ms ease-out;
+}
+
+/* left edge grows from the middle */
+.contact-form-card .edge-left {
+    left: 0; top: 0; bottom: 0; width: 2px;
+    transform: scaleY(0);
+    transform-origin: center;
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in-out;
+}
+
+/* top and bottom edges grow from the left, after the left edge */
+.contact-form-card .edge-top,
+.contact-form-card .edge-bottom {
+    left: 0; right: 70%; height: 2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition-delay: 500ms;
+}
+.contact-form-card .edge-top    { top: 0; }
+.contact-form-card .edge-bottom { bottom: 0; }
+
+.contact-form-card.is-visible .edge-left,
+.contact-form-card:hover .edge-left,
+.contact-form-card:focus-within .edge-left { transform: scaleY(1); }
+
+.contact-form-card.is-visible .edge-top,
+.contact-form-card.is-visible .edge-bottom,
+.contact-form-card:hover .edge-top,
+.contact-form-card:hover .edge-bottom,
+.contact-form-card:focus-within .edge-top,
+.contact-form-card:focus-within .edge-bottom { transform: scaleX(1); }
+
+/* ---------- tech panel ---------- */
+.tech-panel {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    box-sizing: border-box;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.7), transparent 55%),
+        radial-gradient(circle at 10% 90%, rgba(82, 96, 109, 0.12), transparent 50%),
+        linear-gradient(160deg, var(--mist) 0%, var(--mist-deep) 100%);
+    border-left: 1px solid rgba(82, 96, 109, 0.15);
+}
+
+/* the global "* { Poppins !important }" rule hits every element, so set children too */
+.tech-panel .mono,
+.tech-panel .mono * {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+.tech-panel .prompt  { color: var(--muted); }
+.tech-panel .command { color: var(--ink); font-weight: 600; }
+.tech-panel .output  { color: var(--slate); }
+
+.tech-panel .caret {
+    display: inline-block;
+    width: 0.55em;
+    height: 1.05em;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    background-color: var(--accent);
+    animation: caret-blink 1s steps(1) infinite;
+}
+
+.tech-panel .window-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+}
+
+.tech-panel .window-dot { background-color: var(--muted); opacity: 0.5; }
+
+.tech-panel .panel-link {
+    color: var(--ink);
+    display: inline-flex;
+    transition: color 200ms, transform 200ms;
+}
+.tech-panel .panel-link:hover { color: var(--slate); transform: translateY(-2px); }
+
+@keyframes caret-blink { 50% { opacity: 0; } }
+
+/* ---------- event stream background ---------- */
+.event-stream {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.event-stream .track {
+    fill: none;
+    stroke: rgba(82, 96, 109, 0.14);
+    stroke-width: 1;
+}
+
+.event-stream .pulse {
+    fill: none;
+    stroke: var(--slate);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 6 94;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
+    animation: event-flow linear infinite;
+}
+
+.event-stream .node {
+    fill: var(--slate);
+    opacity: 0.35;
+    animation: node-glow 3s ease-in-out infinite;
+}
+
+@keyframes event-flow {
+    from { stroke-dashoffset: 100; }
+    to   { stroke-dashoffset: 0; }
+}
+
+@keyframes node-glow {
+    0%, 100% { opacity: 0.25; }
+    50%      { opacity: 0.8; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .event-stream .pulse,
+    .event-stream .node,
+    .tech-panel .caret { animation: none; }
+    .contact-form-card .edge { transition: none; }
+}

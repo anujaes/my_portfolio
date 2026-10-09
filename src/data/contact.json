@@ -1,0 +1,72 @@
+{
+  "form": {
+    "eyebrow": "Get In Touch",
+    "heading": "Send me a message",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Name",
+        "type": "text",
+        "placeholder": "Enter your Name",
+        "icon": "person",
+        "width": "half"
+      },
+      {
+        "name": "phone",
+        "label": "Phone Number",
+        "type": "tel",
+        "placeholder": "Enter your phone number",
+        "icon": "phone",
+        "width": "half"
+      },
+      {
+        "name": "reply_to",
+        "label": "Email Address",
+        "type": "email",
+        "placeholder": "Enter your email address",
+        "icon": "mail"
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea",
+        "rows": 5,
+        "placeholder": "Tell me about your project or opportunity...",
+        "icon": "message"
+      }
+    ],
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": {
+      "title": "Message sent successfully!",
+      "description": "Thank you for reaching out. I'll get back to you soon."
+    },
+    "error": {
+      "title": "Failed to send message",
+      "description": "Something went wrong. Please email me directly instead."
+    }
+  },
+  "terminal": [
+    {
+      "command": "whoami",
+      "output": "Backend engineer · Distributed systems · Consultant for tech & backend design"
+    },
+    {
+      "command": "expertise",
+      "output": "Meta Business / Cloud API specialist"
+    },
+    {
+      "command": "stack --core",
+      "output": "JavaScript/TypeScript · Kafka · RabbitMQ · Redis · Elasticsearch"
+    },
+    {
+      "command": "ai --tools",
+      "output": "AI enthusiast · Building with Claude Code & Cursor"
+    },
+    {
+      "command": "status",
+      "output": "Open to backend roles & collaborations"
+    }
+  ],
+  "location": "Nagpur, Maharashtra, India"
+}

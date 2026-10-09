@@ -1,13 +1,6 @@
 .vertical-navigation {
-    top     : 35px;
-    width   : 240px;
-    /* position    : -webkit-sticky !important; */
-    /* position    : sticky !important; */
+    width: 240px;
 }
-
-/* .vertical-navigation .nav-link { */
-/* color : black !important; */
-/* } */
 
 .vertical-navigation .nav-link::before {
     content             : "";
@@ -19,13 +12,13 @@
     margin-right        : 5px;
 }
 
-.vertical-navigation .nav-link.active:before,
-.vertical-navigation .nav-link:hover:before {
+.vertical-navigation .nav-link.active::before,
+.vertical-navigation .nav-link:hover::before {
     width       : 70px;
     transition  : 0.5s;
 }
 
-.menu-txt>span {
+.menu-txt > span {
     font-size   : 1rem;
     font-weight : 500;
 }
