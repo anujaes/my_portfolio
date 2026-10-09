@@ -6,12 +6,11 @@ import SocialLinks              from "../../components/socialLinks/socialLinks";
 import ProfilePicture           from "../../components/profilePicture/profilePicture";
 import FlyingPortrait           from "../../components/profilePicture/flyingPortrait";
 import PortraitDock             from "../../components/profilePicture/portraitDock";
-import RichText                 from "../../components/common/RichText";
-import Section                  from "./molecules/section";
+import Section, { FullWidthSection } from "./molecules/section";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { SLIDE_IN }             from "../../constants/animation";
 import { COLORS }               from "../../constants/theme";
-import { SCROLL_CONTAINER_ID, HERO_NAME_ID } from "../../constants/layout";
+import { SCROLL_CONTAINER_ID, HERO_NAME_ID, APPBAR_HEIGHT } from "../../constants/layout";
 import { usePortraitFlight }    from "../../hooks/usePortraitFlight";
 import { useScrollSpy }         from "../../hooks/useScrollSpy";
 import { useScrollToHash }      from "../../hooks/useScrollToHash";
@@ -19,16 +18,18 @@ import '../../css/home.css';
 
 function Home() {
     const profile  = usePortfolioStore((s) => s.profile);
-    const sections = usePortfolioStore((s) => s.sections);
-    const footer   = usePortfolioStore((s) => s.site.footer);
+    const columnSections    = usePortfolioStore((s) => s.columnSections);
+    const fullWidthSections = usePortfolioStore((s) => s.fullWidthSections);
     const flight   = usePortraitFlight();
     useScrollSpy();
     useScrollToHash();
 
     return (
-        <main className="about-container">
-            <Container maxWidth='lg' sx={{ height: '100%' }}>
-                <Grid container maxWidth='lg' className="details-container" id={SCROLL_CONTAINER_ID}>
+        // the whole page area scrolls; the two columns are one row inside it so the
+        // sticky left column stops where the full-width sections begin
+        <main className="about-container" id={SCROLL_CONTAINER_ID}>
+            <Container maxWidth='lg'>
+                <Grid container maxWidth='lg'>
                     <Grid
                         item
                         xlg             = {6}
@@ -40,8 +41,11 @@ function Home() {
                         display         = {"flex"}
                         justifyContent  = {"center"}
                         flexDirection   = {"column"}
-                        height          = "100%"
                         sx              = {{
+                                            height     : {
+                                                            xs: `calc(100dvh - ${APPBAR_HEIGHT.xs}px)`,
+                                                            sm: `calc(100dvh - ${APPBAR_HEIGHT.sm}px)`,
+                                                        },
                                             alignItems : { xs: "center", sm: "center", md: "flex-start" },
                                             textAlign  : { xs: "center", sm: "center", md: "left" },
                                             position   : { xs: "static !important", sm: "static !important", md: "sticky !important" },
@@ -75,19 +79,17 @@ function Home() {
                         <SocialLinks />
                     </Grid>
                     <Grid item xlg={6} lg={6} md={6} sm={12} xs={12} id="details-body">
-                        <Box>
-                            {sections.map((section) => (
+                        <Box paddingBottom={10}>
+                            {columnSections.map((section) => (
                                 <Section key={section.id} section={section} />
                             ))}
-                        </Box>
-                        <Box marginBottom={10} className="row-section">
-                            <Typography fontSize={15}>
-                                <RichText text={footer} />
-                            </Typography>
                         </Box>
                     </Grid>
                 </Grid>
             </Container>
+            {fullWidthSections.map((section) => (
+                <FullWidthSection key={section.id} section={section} />
+            ))}
             {flight && <FlyingPortrait />}
         </main>
     );

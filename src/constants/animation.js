@@ -24,9 +24,17 @@ export const REVEAL_AMOUNT = 0.5;
 
 // Portrait gliding from the right column to above the name (desktop only)
 export const PORTRAIT_FLIGHT = {
-    scrollDistance : 300,   // px of scrolling over which the portrait travels
+    scrollStart    : 0,     // px of scrolling before the portrait starts moving
+    scrollDistance : 400,   // px of scrolling over which it travels (0 -> 400)
     startSize      : 200,   // size on first load (right column)
     dockSize       : 140,   // size once docked above the name
     dockGap        : 8,     // space between the docked portrait and the name
-    spring         : { stiffness: 180, damping: 28, mass: 0.6 },
+    spring         : { stiffness: 90, damping: 24, mass: 0.8 },   // soft glide, no overshoot
+};
+
+// Contact panel terminal lines typing in
+export const TERMINAL_TYPING = {
+    charDelay  : 28,    // ms per character
+    lineDelay  : 350,   // pause before the next command
+    startDelay : 400,   // after the panel scrolls into view
 };

@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import { motion, useSpring, useTransform } from "motion/react";
+import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { asset }                from "../../utils/assets";
-import { clamp, lerp, easeInOutCubic, easeOutCubic } from "../../utils/math";
+import { clamp, lerp, easeInOutSine, easeOutSine } from "../../utils/math";
 import { PORTRAIT_STYLE }       from "./profilePicture";
 import { SPRING_IN, PORTRAIT_FLIGHT } from "../../constants/animation";
 import {
@@ -11,7 +11,7 @@ import {
     PORTRAIT_DOCK_ID,
     HERO_NAME_ID }              from "../../constants/layout";
 
-const { scrollDistance, startSize, dockSize, spring } = PORTRAIT_FLIGHT;
+const { scrollStart, scrollDistance, startSize, dockSize, spring } = PORTRAIT_FLIGHT;
 
 // Desktop only: the portrait starts in the right column and glides above the
 // name as the page scrolls (and back on scroll up). The landing space grows in
@@ -20,6 +20,7 @@ function FlyingPortrait() {
     const { portrait, name } = usePortfolioStore((s) => s.profile);
     const progress = usePortfolioStore((s) => s.portraitProgress);
     const smooth   = useSpring(progress, spring);
+    const scrollY  = useMotionValue(0); // re-evaluates the target while docked
     const start    = useRef(null);  // start position at scrollTop 0
     const [ready, setReady] = useState(false);
 
@@ -36,7 +37,8 @@ function FlyingPortrait() {
         // layout can shift (fonts, resize), so re-measure as we scroll
         const onScroll = () => {
             measureStart();
-            progress.set(clamp(container.scrollTop / scrollDistance, 0, 1));
+            progress.set(clamp((container.scrollTop - scrollStart) / scrollDistance, 0, 1));
+            scrollY.set(container.scrollTop);
         };
 
         onScroll();
@@ -47,7 +49,7 @@ function FlyingPortrait() {
             container.removeEventListener('scroll', onScroll);
             window.removeEventListener('resize', measureStart);
         };
-    }, [progress]);
+    }, [progress, scrollY]);
 
     const dockRect = () => document.getElementById(PORTRAIT_DOCK_ID)?.getBoundingClientRect();
 
@@ -61,15 +63,16 @@ function FlyingPortrait() {
         return r.left + r.width / 2;
     };
 
-    // x eases in-out, y eases out: the different curves give a slight arc
-    const x = useTransform(smooth, (p) => {
+    // x eases in-out, y eases out (gentle sine curves): the difference gives a slight arc
+    // both follow the dock, which scrolls away with the left column at the end of the page
+    const x = useTransform([smooth, scrollY], ([p]) => {
         // land centred above the name
         const center = nameCenter();
-        return start.current && center !== null ? lerp(start.current.x, center - dockSize / 2, easeInOutCubic(p)) : 0;
+        return start.current && center !== null ? lerp(start.current.x, center - dockSize / 2, easeInOutSine(p)) : 0;
     });
-    const y = useTransform(smooth, (p) => {
+    const y = useTransform([smooth, scrollY], ([p]) => {
         const dock = dockRect();
-        return start.current && dock ? lerp(start.current.y, dock.top, easeOutCubic(p)) : 0;
+        return start.current && dock ? lerp(start.current.y, dock.top, easeOutSine(p)) : 0;
     });
     const scale = useTransform(smooth, [0, 1], [1, dockSize / startSize]);
 

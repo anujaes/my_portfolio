@@ -7,6 +7,8 @@ import projects from '../data/projects.json';
 import skills from '../data/skills.json';
 import education from '../data/education.json';
 import certifications from '../data/certifications.json';
+import contact from '../data/contact.json';
+import { FULL_WIDTH_LAYOUT } from '../constants/layout';
 import { filterVisible, pickByIds } from '../utils/data';
 
 const sections = filterVisible(site.sections);
@@ -16,6 +18,8 @@ export const usePortfolioStore = create((set) => ({
     site,
     profile,
     sections,
+    columnSections: sections.filter((s) => s.layout !== FULL_WIDTH_LAYOUT),    // right column
+    fullWidthSections: sections.filter((s) => s.layout === FULL_WIDTH_LAYOUT), // below the columns
     navItems: sections.filter((s) => s.nav),          // side navigation
     navbarItems: pickByIds(sections, site.navbar), // top bar (desktop)
     experience: filterVisible(experience),
@@ -23,6 +27,7 @@ export const usePortfolioStore = create((set) => ({
     skills: filterVisible(skills),
     education: filterVisible(education),
     certifications: filterVisible(certifications),
+    contact,
 
     // shared UI state
     activeSection: null,
