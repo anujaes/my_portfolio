@@ -1,5 +1,4 @@
 import { Container, Grid, Typography, Box } from "@mui/material";
-import TypeWriterEffect         from 'react-typewriter-effect';
 import { motion }               from "motion/react";
 import VerticalNav              from "../../components/navbar/verticalNav";
 import SocialLinks              from "../../components/socialLinks/socialLinks";
@@ -7,9 +6,9 @@ import ProfilePicture           from "../../components/profilePicture/profilePic
 import FlyingPortrait           from "../../components/profilePicture/flyingPortrait";
 import PortraitDock             from "../../components/profilePicture/portraitDock";
 import Section, { FullWidthSection } from "./molecules/section";
+import TypewriterSentence       from "../../components/common/TypewriterSentence";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
-import { SLIDE_IN }             from "../../constants/animation";
-import { COLORS }               from "../../constants/theme";
+import { SLIDE_IN, TITLE_SEPARATOR } from "../../constants/animation";
 import { SCROLL_CONTAINER_ID, HERO_NAME_ID, APPBAR_HEIGHT } from "../../constants/layout";
 import { usePortraitFlight }    from "../../hooks/usePortraitFlight";
 import { useScrollSpy }         from "../../hooks/useScrollSpy";
@@ -62,18 +61,24 @@ function Home() {
                             <Typography variant="h6" fontWeight={500}>
                                 {profile.title}
                             </Typography>
-                            <Typography fontWeight={500} maxWidth={350} marginTop={3} display={"flex"} fontSize={15}>
-                                {profile.intro}
-                            </Typography>
-                            <TypeWriterEffect
-                                textStyle       = {{ fontSize: 15, fontWeight: 500, fontFamily: 'inherit', color: COLORS.accent }}
-                                startDelay      = {1000}
-                                cursorColor     = {COLORS.accent}
-                                multiTextLoop   = {true}
-                                multiText       = {profile.typewriter}
-                                multiTextDelay  = {1000}
-                                typeSpeed       = {150}
+                            {/* separator that draws itself in, filling the gap before the intro */}
+                            <Box
+                                component   = {motion.div}
+                                initial     = {{ scaleX: 0 }}
+                                animate     = {{ scaleX: 1 }}
+                                transition  = {TITLE_SEPARATOR.transition}
+                                aria-hidden = "true"
+                                width       = {TITLE_SEPARATOR.width}
+                                height      = {TITLE_SEPARATOR.height}
+                                bgcolor     = "black"
+                                marginY     = {1.5}
+                                marginX     = {{ xs: 'auto', md: 0 }}
+                                sx          = {{ transformOrigin: { xs: 'center', md: 'left' } }}
                             />
+                            {/* inline typewriter that reserves its tallest height, so the menu below doesn't jump */}
+                            <Typography fontWeight={500} maxWidth={350} fontSize={15}>
+                                <TypewriterSentence prefix={profile.intro} phrases={profile.typewriter} />
+                            </Typography>
                         </motion.div>
                         <VerticalNav />
                         <SocialLinks />

@@ -38,3 +38,18 @@ export const TERMINAL_TYPING = {
     lineDelay  : 350,   // pause before the next command
     startDelay : 400,   // after the panel scrolls into view
 };
+
+// Hero typewriter (types a phrase, pauses, erases, types the next)
+export const TYPEWRITER = {
+    startDelay  : 1000,  // ms before the first phrase starts
+    typeSpeed   : 110,   // ms per character typed
+    deleteSpeed : 45,    // ms per character erased
+    pause       : 1200,  // ms a finished phrase stays on screen
+};
+
+// Short line under the hero title that draws itself in after the title appears
+export const TITLE_SEPARATOR = {
+    width      : 56,     // px
+    height     : 2,      // px
+    transition : { duration: 0.6, delay: 0.5, ease: 'easeOut' },
+};
