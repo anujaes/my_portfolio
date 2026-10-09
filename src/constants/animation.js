@@ -21,3 +21,12 @@ export const SPRING_IN = {
 
 // Default share of an element that must be visible before it reveals
 export const REVEAL_AMOUNT = 0.5;
+
+// Portrait gliding from the right column to above the name (desktop only)
+export const PORTRAIT_FLIGHT = {
+    scrollDistance : 300,   // px of scrolling over which the portrait travels
+    startSize      : 200,   // size on first load (right column)
+    dockSize       : 140,   // size once docked above the name
+    dockGap        : 8,     // space between the docked portrait and the name
+    spring         : { stiffness: 180, damping: 28, mass: 0.6 },
+};

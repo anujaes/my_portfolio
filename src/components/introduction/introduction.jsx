@@ -3,13 +3,21 @@ import { motion }               from "motion/react";
 import ProfilePicture           from "../profilePicture/profilePicture";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { SLIDE_IN }             from "../../constants/animation";
+import { PORTRAIT_START_ID }    from "../../constants/layout";
+import { usePortraitFlight }    from "../../hooks/usePortraitFlight";
 
 function Introduction() {
     const paragraphs = usePortfolioStore((s) => s.profile.about);
+    const flight     = usePortraitFlight();
 
     return (
         <Box>
-            <ProfilePicture display={{ xs: 'none', sm: 'none', md: 'flex' }} />
+            {/* with the flight on, this only reserves the space the portrait starts from */}
+            <ProfilePicture
+                display = {{ xs: 'none', sm: 'none', md: 'flex' }}
+                imgId   = {flight ? PORTRAIT_START_ID : undefined}
+                hidden  = {flight}
+            />
             {paragraphs.map((text) => (
                 <motion.div
                     key         = {text}

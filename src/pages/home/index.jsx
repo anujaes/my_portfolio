@@ -4,12 +4,15 @@ import { motion }               from "motion/react";
 import VerticalNav              from "../../components/navbar/verticalNav";
 import SocialLinks              from "../../components/socialLinks/socialLinks";
 import ProfilePicture           from "../../components/profilePicture/profilePicture";
+import FlyingPortrait           from "../../components/profilePicture/flyingPortrait";
+import PortraitDock             from "../../components/profilePicture/portraitDock";
 import RichText                 from "../../components/common/RichText";
 import Section                  from "./molecules/section";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { SLIDE_IN }             from "../../constants/animation";
 import { COLORS }               from "../../constants/theme";
-import { SCROLL_CONTAINER_ID }  from "../../constants/layout";
+import { SCROLL_CONTAINER_ID, HERO_NAME_ID } from "../../constants/layout";
+import { usePortraitFlight }    from "../../hooks/usePortraitFlight";
 import { useScrollSpy }         from "../../hooks/useScrollSpy";
 import { useScrollToHash }      from "../../hooks/useScrollToHash";
 import '../../css/home.css';
@@ -18,6 +21,7 @@ function Home() {
     const profile  = usePortfolioStore((s) => s.profile);
     const sections = usePortfolioStore((s) => s.sections);
     const footer   = usePortfolioStore((s) => s.site.footer);
+    const flight   = usePortraitFlight();
     useScrollSpy();
     useScrollToHash();
 
@@ -45,8 +49,10 @@ function Home() {
                                         }}
                     >
                         <ProfilePicture display={{ xs: 'flex', sm: 'flex', md: 'none' }} />
+                        {/* space above the name that opens up as the portrait lands */}
+                        {flight && <PortraitDock />}
                         <motion.div {...SLIDE_IN}>
-                            <Typography variant="h3" fontWeight={700} marginTop={2}>
+                            <Typography id={HERO_NAME_ID} variant="h3" fontWeight={700} marginTop={2}>
                                 {profile.name}
                             </Typography>
                             <Typography variant="h6" fontWeight={500}>
@@ -82,6 +88,7 @@ function Home() {
                     </Grid>
                 </Grid>
             </Container>
+            {flight && <FlyingPortrait />}
         </main>
     );
 }

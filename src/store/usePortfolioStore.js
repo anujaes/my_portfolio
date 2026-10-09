@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { motionValue } from 'motion/react';
 import site from '../data/site.json';
 import profile from '../data/profile.json';
 import experience from '../data/experience.json';
@@ -25,5 +26,7 @@ export const usePortfolioStore = create((set) => ({
 
     // shared UI state
     activeSection: null,
+    // 0 -> 1 as the page scrolls; drives the flying portrait and its landing space
+    portraitProgress: motionValue(0),
     setActiveSection: (id) => set({ activeSection: id }),
 }));
