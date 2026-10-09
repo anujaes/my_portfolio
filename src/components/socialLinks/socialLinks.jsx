@@ -2,7 +2,7 @@ import React from "react";
 import { Facebook, GitHub, Google, LinkedIn } from "@mui/icons-material";
 import { Box } from "@mui/material";
 import './socialLinks.css';
-import { motion } from "framer-motion"; // Ensure you're using framer-motion
+import { motion } from "motion/react";
 
 function SocialLinks() {
     const links = [

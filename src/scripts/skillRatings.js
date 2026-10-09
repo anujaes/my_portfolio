@@ -1,4 +1,4 @@
-exports.skillRecords =
+export const skillRecords =
     {
         backend         : ['NodeJs', 'ExpressJS', 'NestJS', 'Socket.IO'],
         events          : ['Kafka', 'Redis BullMQ', 'Rabbit MQ'],

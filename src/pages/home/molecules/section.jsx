@@ -1,10 +1,10 @@
 import React                from "react";
-import AcademicRow          from "../../../components/academic/academicRow.js";
-import Experience           from "../../../components/experience/experience.js";
-import SkillsRow            from "../../../components/skills/skillsRow.js";
-import Certifications       from "../../../components/certifications/certifications.js";
-import Introduction         from "../../../components/introduction/introduction.js";
-import Projects             from "../../../components/projects/projects.js";
+import AcademicRow          from "../../../components/academic/academicRow";
+import Experience           from "../../../components/experience/experience";
+import SkillsRow            from "../../../components/skills/skillsRow";
+import Certifications       from "../../../components/certifications/certifications";
+import Introduction         from "../../../components/introduction/introduction";
+import Projects             from "../../../components/projects/projects";
 import { Box, Typography }  from "@mui/material";
 
 function Section(props) {

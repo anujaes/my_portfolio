@@ -1,4 +1,4 @@
-exports.educationRecords = [
+export const educationRecords = [
     {
         year            : '2019 - 2022',
         course          : 'Master Of Computer Application',

@@ -1,4 +1,4 @@
-exports.certificationRecords =[
+export const certificationRecords =[
     {
         date            : '7 FEB, 2022 - 5 AUG, 2022',
         certifiedFrom   : 'Antares Tech (Terracode Systems Private Limited)',
