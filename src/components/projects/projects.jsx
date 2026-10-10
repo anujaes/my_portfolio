@@ -38,7 +38,7 @@ function ProjectCard({ item }) {
                     xs  = {12}
                     sx  = {{ padding: { xs: '1rem', sm: '1rem', md: '0' } }}
                 >
-                    <Typography fontSize={16} fontWeight={500}>{item.name} <OpenInNew className="open-in-new" /></Typography>
+                    <Typography fontSize={16} fontWeight={500}>{item.name} <OpenInNew className="open-in-new" sx={{ fontSize: '1.2rem' }} /></Typography>
                     <Typography fontSize={12} fontWeight={600} marginRight={1}>{formatPeriod(item.start, item.end)}</Typography>
                     <Typography paddingRight={1} marginY={0.5} fontSize={13}>{item.summary}</Typography>
                     <TechChips items={item.technologies} sx={{ fontSize: 12 }} />

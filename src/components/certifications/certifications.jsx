@@ -23,7 +23,7 @@ function CertificationCard({ item }) {
                     </Typography>
                 </Grid>
                 <Grid item xlg={9} lg={9} md={8} sm={12} xs={12}>
-                    <Typography fontSize={16} fontWeight={500}>{item.name} <OpenInNew className="open-in-new" /></Typography>
+                    <Typography fontSize={16} fontWeight={500}>{item.name} <OpenInNew className="open-in-new" sx={{ fontSize: '1.2rem' }} /></Typography>
                     <Typography p={0} m={0} fontSize={15}>{item.issuer}</Typography>
                     <Typography p={0} marginY={1} fontSize={14}>{item.summary}</Typography>
                 </Grid>

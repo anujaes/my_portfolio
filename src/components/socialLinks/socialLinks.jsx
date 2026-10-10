@@ -24,7 +24,7 @@ function SocialLinks() {
                         title       = {link.label}
                         {...linkTargetProps(link.url)}
                     >
-                        <Icon name={link.icon} fontSize="large" className="social-links" />
+                        <Icon name={link.icon} className="social-links" sx={{ fontSize: '2rem' }} />
                     </a>
                 </motion.div>
             ))}

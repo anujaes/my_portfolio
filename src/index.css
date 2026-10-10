@@ -1,6 +1,21 @@
+/* base reset; colours live in css/theme.css */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: ease-in-out 1s;
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* form controls don't inherit the page font by default */
+button,
+input,
+textarea,
+select {
+    font: inherit;
 }

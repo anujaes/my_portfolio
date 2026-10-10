@@ -63,7 +63,7 @@ function ExperienceCard({ item }) {
                         {formatPeriod(item.start, item.end)}
                     </Typography>
                     <Typography display={"flex"} alignItems={"center"} fontSize={16} fontWeight={500}>
-                        {item.role} <OpenInNew className="open-in-new" />
+                        {item.role} <OpenInNew className="open-in-new" sx={{ fontSize: '1.2rem' }} />
                     </Typography>
                     <Typography p={0} m={0} fontSize={15}>
                         {organization.name}, {organization.location}

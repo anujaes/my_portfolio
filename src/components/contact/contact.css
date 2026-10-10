@@ -1,7 +1,6 @@
 /* ---------- full-width band ---------- */
 /* colours come from css/theme.css (light / dark) */
 .contact-band {
-
     background-color: var(--bg);
     background-image: linear-gradient(147deg, var(--bg) 0%, var(--bg-alt) 74%);
     border-top: 1px solid var(--mist);
@@ -14,7 +13,6 @@
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     height: 100%;
-    box-sizing: border-box;
 }
 
 .contact-form-card .edge {
@@ -59,7 +57,6 @@
     position: relative;
     overflow: hidden;
     height: 100%;
-    box-sizing: border-box;
     color: var(--ink);
     background:
         radial-gradient(circle at 85% 15%, var(--panel-glow), transparent 55%),
@@ -68,10 +65,9 @@
     border-left: 1px solid var(--track);
 }
 
-/* the global "* { Poppins !important }" rule hits every element, so set children too */
-.tech-panel .mono,
-.tech-panel .mono * {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !important;
+/* two classes deep so it outranks MUI Typography's own font-family */
+.tech-panel .mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 .tech-panel .prompt  { color: var(--muted); }
@@ -91,9 +87,9 @@
 .tech-panel .window-dot {
     width: 10px; height: 10px; border-radius: 50%;
     display: inline-block;
+    background-color: var(--muted);
+    opacity: 0.5;
 }
-
-.tech-panel .window-dot { background-color: var(--muted); opacity: 0.5; }
 
 .tech-panel .panel-link {
     color: var(--ink);
@@ -149,5 +145,6 @@
     .event-stream .pulse,
     .event-stream .node,
     .tech-panel .caret { animation: none; }
-    .contact-form-card .edge { transition: none; }
+    .contact-form-card .edge,
+    .tech-panel .panel-link { transition: none; }
 }

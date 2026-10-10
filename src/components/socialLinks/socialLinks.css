@@ -1,11 +1,14 @@
 .social-links {
     margin-right: 1rem;
     color: var(--line);
-    font-size: 2rem !important;
-    padding: 0.1rem;
+    transition: color 200ms, transform 200ms;
 }
 
 .social-links:hover {
     color: var(--accent);
-    padding: 0rem;
+    transform: scale(1.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-links { transition: none; }
 }
