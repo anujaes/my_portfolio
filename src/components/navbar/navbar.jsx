@@ -69,7 +69,7 @@ function NavigationBar() {
                                 href            = {`#${item.id}`}
                                 className       = {`nav-btn ${activeSection === item.id ? 'active' : ''}`}
                                 aria-current    = {activeSection === item.id ? 'true' : undefined}
-                                sx              = {{ display: 'block', px: 2, color: "text.primary", textDecoration: "none" }}
+                                sx              = {{ display: 'block', px: 2, color: "text.primary", fontWeight: 500, textDecoration: "none" }}
                             >
                                 {item.label}
                             </Link>

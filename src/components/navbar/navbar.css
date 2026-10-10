@@ -1,18 +1,18 @@
-.nav-btn {
-    font-weight: 500 !important;
-}
-
 .nav-btn::after {
-    content: " ";
+    content: "";
+    display: block;
     width: 0%;
     height: 2px;
-    display: block;
-    background-color: var(--accent);
     margin: auto;
+    background-color: var(--accent);
+    transition: width 0.5s;
 }
 
 .nav-btn.active::after,
 .nav-btn:hover::after {
     width: 100%;
-    transition: 0.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-btn::after { transition: none; }
 }

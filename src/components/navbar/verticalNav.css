@@ -10,15 +10,19 @@
     height              : 2px;
     vertical-align      : middle;
     margin-right        : 5px;
+    transition          : width 0.5s;
 }
 
 .vertical-navigation .nav-link.active::before,
 .vertical-navigation .nav-link:hover::before {
     width       : 70px;
-    transition  : 0.5s;
 }
 
 .menu-txt > span {
     font-size   : 1rem;
     font-weight : 500;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .vertical-navigation .nav-link::before { transition: none; }
 }
