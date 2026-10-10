@@ -54,8 +54,9 @@ function NavigationBar() {
                         <img alt="" src={asset(logo)} style={{ width: 35, filter: "var(--logo-filter)" }} />
                         <Typography
                             noWrap
-                            variant = "h6"
-                            sx      = {{ ml: 1.5, fontWeight: 700, letterSpacing: '.1rem' }}
+                            variant   = "h6"
+                            component = "span"
+                            sx        = {{ ml: 1.5, fontWeight: 700, letterSpacing: '.1rem' }}
                         >
                             PORTFOLIO
                         </Typography>
