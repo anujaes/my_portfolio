@@ -8,6 +8,7 @@ import Section, { FullWidthSection } from "./molecules/section";
 import TypewriterSentence       from "../../components/common/TypewriterSentence";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { SLIDE_IN, TITLE_SEPARATOR } from "../../constants/animation";
+import { COLORS }               from "../../constants/theme";
 import { SCROLL_CONTAINER_ID, HERO_NAME_ID, APPBAR_HEIGHT } from "../../constants/layout";
 import { usePortraitSwap }      from "../../hooks/usePortraitSwap";
 import { usePortraitScrollProgress } from "../../hooks/usePortraitScrollProgress";
@@ -71,7 +72,7 @@ function Home() {
                                 aria-hidden = "true"
                                 width       = {TITLE_SEPARATOR.width}
                                 height      = {TITLE_SEPARATOR.height}
-                                bgcolor     = "black"
+                                bgcolor     = {COLORS.line}
                                 marginY     = {1.5}
                                 marginX     = {{ xs: 'auto', md: 0 }}
                                 sx          = {{ transformOrigin: { xs: 'center', md: 'left' } }}

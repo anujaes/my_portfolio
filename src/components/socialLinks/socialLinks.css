@@ -1,11 +1,11 @@
 .social-links {
     margin-right: 1rem;
-    color: black;
+    color: var(--line);
     font-size: 2rem !important;
     padding: 0.1rem;
 }
 
 .social-links:hover {
-    color: #ca292d;
+    color: var(--accent);
     padding: 0rem;
 }

@@ -13,7 +13,7 @@ const INPUT_SX = {
     '& fieldset'        : { borderColor: COLORS.mist, transition: 'border-color 200ms' },
     '&:hover fieldset'  : { borderColor: `${COLORS.mistDeep} !important` },
     '& .field-icon'     : { color: COLORS.muted, transition: 'color 200ms' },
-    '&.Mui-focused'     : { backgroundColor: '#ffffff', boxShadow: '0 0 0 4px rgba(31, 41, 51, 0.08)' },
+    '&.Mui-focused'     : { backgroundColor: COLORS.surface, boxShadow: '0 0 0 4px var(--track)' },
     '&.Mui-focused fieldset': { borderColor: `${COLORS.ink} !important`, borderWidth: '1px !important' },
     '&.Mui-focused .field-icon': { color: COLORS.ink },
 };

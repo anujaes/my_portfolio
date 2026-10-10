@@ -18,11 +18,11 @@ function VerticalNav() {
                     key             = {item.id}
                     underline       = 'none'
                     href            = {`#${item.id}`}
-                    color           = {"black"}
+                    color           = "text.primary"
                     aria-current    = {activeSection === item.id ? 'true' : undefined}
                 >
                     <MenuItem className={`nav-link ${activeSection === item.id ? 'active' : ''}`}>
-                        <ListItemIcon sx={{ color: "black" }}><Icon name={item.icon} fontSize="medium" /></ListItemIcon>
+                        <ListItemIcon sx={{ color: "text.primary" }}><Icon name={item.icon} fontSize="medium" /></ListItemIcon>
                         <ListItemText className='menu-txt'>{item.label}</ListItemText>
                     </MenuItem>
                 </Link>

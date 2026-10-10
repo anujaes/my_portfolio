@@ -41,6 +41,12 @@
 </head>
 
 <body>
+  <script>
+    // apply the saved theme before the page paints; light by default (see src/utils/theme.js)
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem('portfolio-theme') === 'dark' ? 'dark' : 'light';
+    } catch (e) {}
+  </script>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>

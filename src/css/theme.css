@@ -1,0 +1,68 @@
+/* Colour tokens for the light and dark themes.
+   Light is the default; [data-theme="dark"] on <html> switches to dark
+   (set by the theme toggle, see utils/theme.js). */
+:root {
+    --bg             : #f9fcff;   /* page background (gradient end) */
+    --bg-alt         : #dee4ea;   /* page background (gradient start) */
+    --appbar-from    : #dee4ea;
+    --appbar-to      : #eff2f6;
+    --card           : #dee4ea54; /* glass cards */
+    --card-hover     : #dee4ea;
+    --text           : #000000;   /* body text */
+    --line           : #000000;   /* nav dashes, title separator, social icons */
+    --ink            : #1f2933;   /* dark accents: contact edges, button */
+    --ink-hover      : #3e4c59;
+    --on-ink         : #ffffff;   /* text on --ink */
+    --accent         : #ca292d;   /* red accent */
+    --slate          : #52606d;
+    --muted          : #7b8794;
+    --mist           : #dee4ea;
+    --mist-deep      : #cbd4dd;
+    --field          : #f3f6f9;   /* input background */
+    --surface        : #ffffffb3; /* contact form card */
+    --surface-solid  : #ffffff;   /* focused input */
+    --border-soft    : lightgrey; /* scrollbar thumb, project image border */
+    --shadow         : rgba(0, 0, 0, 0.24);
+    --panel-glow     : rgba(255, 255, 255, 0.7);
+    --panel-shade    : rgba(82, 96, 109, 0.12);
+    --track          : rgba(82, 96, 109, 0.14);
+    --pulse-glow     : rgba(255, 255, 255, 0.9);
+    --logo-filter    : none;
+    color-scheme: light;
+}
+
+[data-theme="dark"] {
+    --bg             : #10151c;
+    --bg-alt         : #1a222c;
+    --appbar-from    : #1a222c;
+    --appbar-to      : #141a22;
+    --card           : rgba(255, 255, 255, 0.04);
+    --card-hover     : rgba(255, 255, 255, 0.08);
+    --text           : #e4e9ef;
+    --line           : #e4e9ef;
+    --ink            : #e4e9ef;
+    --ink-hover      : #c3ccd6;
+    --on-ink         : #10151c;
+    --accent         : #ff6b6f;
+    --slate          : #aab6c3;
+    --muted          : #7d8a99;
+    --mist           : #253041;
+    --mist-deep      : #1b232e;
+    --field          : #18202a;
+    --surface        : rgba(22, 29, 38, 0.85);
+    --surface-solid  : #1c242e;
+    --border-soft    : #2c3644;
+    --shadow         : rgba(0, 0, 0, 0.5);
+    --panel-glow     : rgba(255, 255, 255, 0.05);
+    --panel-shade    : rgba(0, 0, 0, 0.25);
+    --track          : rgba(170, 182, 195, 0.12);
+    --pulse-glow     : rgba(170, 182, 195, 0.6);
+    /* navy logo -> light on dark backgrounds */
+    --logo-filter    : invert(1) hue-rotate(180deg) brightness(1.3);
+    color-scheme: dark;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}

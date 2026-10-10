@@ -1,8 +1,8 @@
 .about-container {
     flex: 1;
     min-height: 0;
-    background-color: #f9fcff;
-    background-image: linear-gradient(147deg, #dee4ea 0%, #f9fcff 74%);
+    background-color: var(--bg);
+    background-image: linear-gradient(147deg, var(--bg-alt) 0%, var(--bg) 74%);
     /* the page content scrolls inside this container, not the window */
     overflow-y: auto;
     -ms-overflow-style: none;   /* IE 10+ */
@@ -15,19 +15,19 @@
 }
 
 .about-container::-webkit-scrollbar-thumb {
-    background-color: lightgrey;
+    background-color: var(--border-soft);
     border-radius: 10px;
 }
 
 .glass-look {
-    background-color: #dee4ea54;
+    background-color: var(--card);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border-radius: 10px;
 }
 
 .glass-look-hover:hover {
-    background-color: #dee4ea;
+    background-color: var(--card-hover);
     cursor: pointer;
 }
 

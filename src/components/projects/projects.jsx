@@ -25,7 +25,7 @@ function ProjectCard({ item }) {
                             alt     = {item.name}
                             src     = {asset(item.thumbnail)}
                             loading = "lazy"
-                            style   = {{ border: "3px solid lightgrey", borderRadius: "7px" }}
+                            style   = {{ border: "3px solid var(--border-soft)", borderRadius: "7px" }}
                         />
                     </ImageListItem>
                 </Grid>
