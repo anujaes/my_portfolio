@@ -35,7 +35,8 @@ function Section({ section }) {
     if (!Content) return null;
 
     return (
-        <Box id={section.id} component="section" paddingTop={15}>
+        // relative: keeps the visually hidden heading inside the scroll area instead of overflowing the window
+        <Box id={section.id} component="section" paddingTop={15} position="relative">
             <Typography
                 variant     = "h5"
                 component   = "h2"
