@@ -7,13 +7,14 @@ export const SCROLL_SPY_ROOT_MARGIN = '-40% 0px -55% 0px';
 // Matches MUI's "md" breakpoint, where the two-column layout starts
 export const DESKTOP_MEDIA_QUERY = '(min-width:900px)';
 
-// Hides an element visually but keeps it for screen readers and search engines
+// Hides an element visually but keeps it for screen readers and search engines.
+// Sizes are px strings: in MUI's sx a bare 1 means 100% (width/height) or 8px (margin).
 export const VISUALLY_HIDDEN = {
     position    : 'absolute',
-    width       : 1,
-    height      : 1,
+    width       : '1px',
+    height      : '1px',
     padding     : 0,
-    margin      : -1,
+    margin      : '-1px',
     overflow    : 'hidden',
     clip        : 'rect(0 0 0 0)',
     whiteSpace  : 'nowrap',
