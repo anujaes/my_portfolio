@@ -7,6 +7,19 @@ export const SCROLL_SPY_ROOT_MARGIN = '-40% 0px -55% 0px';
 // Matches MUI's "md" breakpoint, where the two-column layout starts
 export const DESKTOP_MEDIA_QUERY = '(min-width:900px)';
 
+// Hides an element visually but keeps it for screen readers and search engines
+export const VISUALLY_HIDDEN = {
+    position    : 'absolute',
+    width       : 1,
+    height      : 1,
+    padding     : 0,
+    margin      : -1,
+    overflow    : 'hidden',
+    clip        : 'rect(0 0 0 0)',
+    whiteSpace  : 'nowrap',
+    border      : 0,
+};
+
 // The hero name; the left-side portrait is centred over its text
 export const HERO_NAME_ID = 'hero-name';
 

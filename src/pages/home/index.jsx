@@ -57,10 +57,10 @@ function Home() {
                         {/* portrait pops out above the name once the right-side one has shrunk away */}
                         {swap && <PortraitDock />}
                         <motion.div {...SLIDE_IN}>
-                            <Typography id={HERO_NAME_ID} variant="h3" fontWeight={700} marginTop={2}>
+                            <Typography id={HERO_NAME_ID} variant="h3" component="h1" fontWeight={700} marginTop={2}>
                                 {profile.name}
                             </Typography>
-                            <Typography variant="h6" fontWeight={500}>
+                            <Typography variant="h6" component="p" fontWeight={500}>
                                 {profile.title}
                             </Typography>
                             {/* separator that draws itself in, filling the gap before the intro */}
