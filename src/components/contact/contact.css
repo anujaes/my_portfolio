@@ -1,23 +1,16 @@
 /* ---------- full-width band ---------- */
-/* monochrome palette taken from the page (header/cards grey-blue + black text) */
+/* colours come from css/theme.css (light / dark) */
 .contact-band {
-    --ink: #1f2933;
-    --slate: #52606d;
-    --muted: #7b8794;
-    --mist: #dee4ea;
-    --mist-deep: #cbd4dd;
-    --paper: #f9fcff;
-    --accent: #ca292d;
 
-    background-color: #f9fcff;
-    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
-    border-top: 1px solid #dee4ea;
+    background-color: var(--bg);
+    background-image: linear-gradient(147deg, var(--bg) 0%, var(--bg-alt) 74%);
+    border-top: 1px solid var(--mist);
 }
 
 /* ---------- form card (animated borders, as on anujelectronics) ---------- */
 .contact-form-card {
     position: relative;
-    background-color: #ffffffb3;
+    background-color: var(--surface);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     height: 100%;
@@ -69,10 +62,10 @@
     box-sizing: border-box;
     color: var(--ink);
     background:
-        radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.7), transparent 55%),
-        radial-gradient(circle at 10% 90%, rgba(82, 96, 109, 0.12), transparent 50%),
+        radial-gradient(circle at 85% 15%, var(--panel-glow), transparent 55%),
+        radial-gradient(circle at 10% 90%, var(--panel-shade), transparent 50%),
         linear-gradient(160deg, var(--mist) 0%, var(--mist-deep) 100%);
-    border-left: 1px solid rgba(82, 96, 109, 0.15);
+    border-left: 1px solid var(--track);
 }
 
 /* the global "* { Poppins !important }" rule hits every element, so set children too */
@@ -122,7 +115,7 @@
 
 .event-stream .track {
     fill: none;
-    stroke: rgba(82, 96, 109, 0.14);
+    stroke: var(--track);
     stroke-width: 1;
 }
 
@@ -132,7 +125,7 @@
     stroke-width: 2;
     stroke-linecap: round;
     stroke-dasharray: 6 94;
-    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9));
+    filter: drop-shadow(0 0 3px var(--pulse-glow));
     animation: event-flow linear infinite;
 }
 

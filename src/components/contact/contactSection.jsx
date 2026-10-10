@@ -13,7 +13,7 @@ function ContactSection({ section }) {
     return (
         <Box component="section" id={section.id} aria-label={section.label} className="contact-band" paddingTop={{ xs: 8, md: 12 }} paddingBottom={4}>
             <Container maxWidth="lg">
-                <Grid container borderRadius={3} overflow="hidden" boxShadow="rgba(0, 0, 0, 0.08) 0px 10px 30px">
+                <Grid container borderRadius={3} overflow="hidden" boxShadow="var(--shadow) 0px 10px 30px -10px">
                     <Grid item xs={12} md={7}>
                         <ContactForm />
                     </Grid>
@@ -25,7 +25,7 @@ function ContactSection({ section }) {
                 <Box
                     marginTop       = {8}
                     paddingTop      = {3}
-                    borderTop       = "1px solid #dee4ea"
+                    borderTop       = "1px solid var(--mist)"
                     display         = "flex"
                     flexDirection   = {{ xs: 'column', md: 'row' }}
                     justifyContent  = "space-between"

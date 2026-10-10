@@ -6,7 +6,7 @@ import { SPRING_IN, PORTRAIT_SWAP } from "../../constants/animation";
 
 export const PORTRAIT_STYLE = {
     borderRadius : "1000px",
-    boxShadow    : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+    boxShadow    : "var(--shadow) 0px 3px 8px",
 };
 
 // fadeOnScroll: shrinks and fades away as the page scrolls (desktop portrait swap).

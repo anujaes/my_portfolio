@@ -6,7 +6,7 @@
     content             : "";
     width               : 20px;
     display             : inline-block;
-    background-color    : black;
+    background-color    : var(--line);
     height              : 2px;
     vertical-align      : middle;
     margin-right        : 5px;

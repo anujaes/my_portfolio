@@ -11,6 +11,7 @@ import {
     Typography }            from '@mui/material';
 import MenuIcon             from '@mui/icons-material/Menu';
 import { SaveAlt }          from '@mui/icons-material';
+import ThemeToggle          from './themeToggle';
 import { usePortfolioStore } from '../../store/usePortfolioStore';
 import { asset }            from '../../utils/assets';
 import { scrollToTop }      from '../../utils/scroll';
@@ -35,12 +36,12 @@ function NavigationBar() {
             position = "static"
             sx       = {{
                             boxShadow       : 'none',
-                            color           : "grey",
-                            backgroundImage : "linear-gradient(147deg, #dee4ea 0%, #eff2f6 74%)",
+                            color           : "text.primary",
+                            backgroundImage : "linear-gradient(147deg, var(--appbar-from) 0%, var(--appbar-to) 74%)",
                         }}
         >
             <Container maxWidth="lg">
-                <Toolbar sx={{ color: "black" }}>
+                <Toolbar sx={{ color: "text.primary" }}>
                     {/* logo with title, scrolls back to the top */}
                     <Link
                         href        = "#top"
@@ -50,7 +51,7 @@ function NavigationBar() {
                         aria-label  = {`${name}, back to top`}
                         sx          = {{ display: 'flex', alignItems: 'center', flexGrow: 2 }}
                     >
-                        <img alt="" src={asset(logo)} style={{ width: 35 }} />
+                        <img alt="" src={asset(logo)} style={{ width: 35, filter: "var(--logo-filter)" }} />
                         <Typography
                             noWrap
                             variant = "h6"
@@ -68,7 +69,7 @@ function NavigationBar() {
                                 href            = {`#${item.id}`}
                                 className       = {`nav-btn ${activeSection === item.id ? 'active' : ''}`}
                                 aria-current    = {activeSection === item.id ? 'true' : undefined}
-                                sx              = {{ display: 'block', px: 2, color: "black", textDecoration: "none" }}
+                                sx              = {{ display: 'block', px: 2, color: "text.primary", textDecoration: "none" }}
                             >
                                 {item.label}
                             </Link>
@@ -80,14 +81,17 @@ function NavigationBar() {
                             className   = 'nav-btn'
                             aria-label  = 'Download résumé'
                             title       = 'Download résumé'
-                            sx          = {{ display: 'flex', alignItems: 'center', pl: 2, color: "black" }}
+                            sx          = {{ display: 'flex', alignItems: 'center', pl: 2, color: "text.primary" }}
                         >
                             <SaveAlt />
                         </Link>
                     </Box>
 
+                    {/* light / dark theme switch (all screen sizes) */}
+                    <ThemeToggle />
+
                     {/* mobile menu: lists every section, since the side nav is hidden */}
-                    <Box sx={{ flexGrow: 3, justifyContent: "flex-end", display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ justifyContent: "flex-end", display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size            = "large"
                             aria-label      = "Open navigation menu"
@@ -114,7 +118,7 @@ function NavigationBar() {
                                     href        = {`#${item.id}`}
                                     onClick     = {closeMenu}
                                     selected    = {activeSection === item.id}
-                                    sx          = {{ fontSize: 'small', color: 'black' }}
+                                    sx          = {{ fontSize: 'small', color: 'text.primary' }}
                                 >
                                     {item.label}
                                 </MenuItem>
@@ -125,7 +129,7 @@ function NavigationBar() {
                                 target      = "_blank"
                                 rel         = "noreferrer"
                                 onClick     = {closeMenu}
-                                sx          = {{ fontSize: 'small', color: 'black' }}
+                                sx          = {{ fontSize: 'small', color: 'text.primary' }}
                             >
                                 Download résumé
                             </MenuItem>

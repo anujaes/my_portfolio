@@ -10,6 +10,8 @@ import certifications from '../data/certifications.json';
 import contact from '../data/contact.json';
 import { FULL_WIDTH_LAYOUT } from '../constants/layout';
 import { filterVisible, pickByIds } from '../utils/data';
+import { getInitialThemeMode } from '../utils/theme';
+import { THEME_MODES } from '../constants/theme';
 
 const sections = filterVisible(site.sections);
 
@@ -31,6 +33,10 @@ export const usePortfolioStore = create((set) => ({
 
     // shared UI state
     activeSection: null,
+    themeMode: getInitialThemeMode(),
+    toggleThemeMode: () => set((s) => ({
+        themeMode: s.themeMode === THEME_MODES.dark ? THEME_MODES.light : THEME_MODES.dark,
+    })),
     // 0 -> 1 as the page scrolls; drives the portrait swap (right shrinks away, left pops out)
     portraitProgress: motionValue(0),
     setActiveSection: (id) => set({ activeSection: id }),

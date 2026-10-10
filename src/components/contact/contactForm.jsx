@@ -77,22 +77,23 @@ function ContactForm() {
                     size        = "large"
                     disabled    = {sending}
                     endIcon     = {sending
-                                    ? <CircularProgress size={18} sx={{ color: '#ffffff' }} />
+                                    ? <CircularProgress size={18} sx={{ color: COLORS.onInk }} />
                                     : <ArrowForwardRounded className="send-arrow" />}
                     sx          = {{
                                     marginTop       : 0.5,
                                     height          : 50,
                                     borderRadius    : '10px',
                                     backgroundColor : COLORS.ink,
+                                    color           : COLORS.onInk,
                                     fontSize        : 15,
                                     fontWeight      : 600,
                                     letterSpacing   : '0.02em',
                                     textTransform   : 'none',
-                                    boxShadow       : '0 8px 20px -8px rgba(31, 41, 51, 0.6)',
+                                    boxShadow       : `0 8px 20px -8px ${COLORS.shadow}`,
                                     '& .send-arrow' : { transition: 'transform 200ms' },
-                                    '&:hover'       : { backgroundColor: COLORS.inkHover, boxShadow: '0 10px 24px -8px rgba(31, 41, 51, 0.7)' },
+                                    '&:hover'       : { backgroundColor: COLORS.inkHover, boxShadow: `0 10px 24px -8px ${COLORS.shadow}` },
                                     '&:hover .send-arrow': { transform: 'translateX(4px)' },
-                                    '&.Mui-disabled': { backgroundColor: COLORS.slate, color: '#ffffff' },
+                                    '&.Mui-disabled': { backgroundColor: COLORS.slate, color: COLORS.onInk },
                                 }}
                 >
                     {sending ? form.sending : form.submit}
