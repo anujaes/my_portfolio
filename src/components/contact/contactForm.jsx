@@ -59,7 +59,7 @@ function ContactForm() {
             >
                 {form.eyebrow}
             </Typography>
-            <Typography variant="h4" fontWeight={700} marginTop={1.5} marginBottom={3} fontSize={{ xs: 26, md: 32 }}>
+            <Typography variant="h4" component="h2" fontWeight={700} marginTop={1.5} marginBottom={3} fontSize={{ xs: 26, md: 32 }}>
                 {form.heading}
             </Typography>
 
