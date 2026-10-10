@@ -31,7 +31,7 @@ export const usePortfolioStore = create((set) => ({
 
     // shared UI state
     activeSection: null,
-    // 0 -> 1 as the page scrolls; drives the flying portrait and its landing space
+    // 0 -> 1 as the page scrolls; drives the portrait swap (right shrinks away, left pops out)
     portraitProgress: motionValue(0),
     setActiveSection: (id) => set({ activeSection: id }),
 }));

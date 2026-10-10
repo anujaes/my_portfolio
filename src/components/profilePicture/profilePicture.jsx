@@ -1,24 +1,24 @@
 import { Box, ImageListItem }   from "@mui/material";
-import { motion }               from "motion/react";
+import { motion, useSpring, useTransform } from "motion/react";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { asset }                from "../../utils/assets";
-import { SPRING_IN, PORTRAIT_FLIGHT } from "../../constants/animation";
+import { SPRING_IN, PORTRAIT_SWAP } from "../../constants/animation";
 
 export const PORTRAIT_STYLE = {
     borderRadius : "1000px",
     boxShadow    : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
 };
 
-// imgId + hidden: renders an invisible copy that only reserves the space
-// (used as the starting point of the flying portrait on desktop).
-function ProfilePicture({ display, imgId, hidden = false }) {
+// fadeOnScroll: shrinks and fades away as the page scrolls (desktop portrait swap).
+function ProfilePicture({ display, fadeOnScroll = false }) {
     const { portrait, name } = usePortfolioStore((s) => s.profile);
-    // the invisible placeholder must not animate, or its measured position is off
-    const Wrapper = hidden ? 'div' : motion.div;
-    const intro   = hidden ? {} : SPRING_IN;
+    const progress = usePortfolioStore((s) => s.portraitProgress);
+    const smooth   = useSpring(progress, PORTRAIT_SWAP.scrubSpring);
+    const scale    = useTransform(smooth, [0, 1], [1, 0]);
+    const opacity  = useTransform(smooth, [0, 0.85, 1], [1, 0.4, 0]);
 
     return (
-        <Wrapper {...intro}>
+        <motion.div {...SPRING_IN}>
             <Box
                 justifyContent  = {"center"}
                 alignItems      = {"center"}
@@ -26,21 +26,22 @@ function ProfilePicture({ display, imgId, hidden = false }) {
                 sx              = {{
                                     paddingTop      : { xs: 10, sm: 10, md: 0 },
                                     paddingBottom   : { xs: 3, sm: 10, md: 3 },
-                                    visibility      : hidden ? 'hidden' : 'visible',
                                     display,
                                 }}
             >
                 <ImageListItem>
-                    <img
-                        id          = {imgId}
-                        alt         = {hidden ? "" : name}
-                        aria-hidden = {hidden || undefined}
-                        src         = {asset(portrait)}
-                        style       = {{ ...PORTRAIT_STYLE, width: PORTRAIT_FLIGHT.startSize }}
+                    <motion.img
+                        alt     = {name}
+                        src     = {asset(portrait)}
+                        style   = {{
+                                    ...PORTRAIT_STYLE,
+                                    width : PORTRAIT_SWAP.size,
+                                    ...(fadeOnScroll && { scale, opacity }),
+                                }}
                     />
                 </ImageListItem>
             </Box>
-        </Wrapper>
+        </motion.div>
     );
 }
 

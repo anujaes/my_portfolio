@@ -3,14 +3,14 @@ import { motion }               from "motion/react";
 import VerticalNav              from "../../components/navbar/verticalNav";
 import SocialLinks              from "../../components/socialLinks/socialLinks";
 import ProfilePicture           from "../../components/profilePicture/profilePicture";
-import FlyingPortrait           from "../../components/profilePicture/flyingPortrait";
 import PortraitDock             from "../../components/profilePicture/portraitDock";
 import Section, { FullWidthSection } from "./molecules/section";
 import TypewriterSentence       from "../../components/common/TypewriterSentence";
 import { usePortfolioStore }    from "../../store/usePortfolioStore";
 import { SLIDE_IN, TITLE_SEPARATOR } from "../../constants/animation";
 import { SCROLL_CONTAINER_ID, HERO_NAME_ID, APPBAR_HEIGHT } from "../../constants/layout";
-import { usePortraitFlight }    from "../../hooks/usePortraitFlight";
+import { usePortraitSwap }      from "../../hooks/usePortraitSwap";
+import { usePortraitScrollProgress } from "../../hooks/usePortraitScrollProgress";
 import { useScrollSpy }         from "../../hooks/useScrollSpy";
 import { useScrollToHash }      from "../../hooks/useScrollToHash";
 import '../../css/home.css';
@@ -19,7 +19,8 @@ function Home() {
     const profile  = usePortfolioStore((s) => s.profile);
     const columnSections    = usePortfolioStore((s) => s.columnSections);
     const fullWidthSections = usePortfolioStore((s) => s.fullWidthSections);
-    const flight   = usePortraitFlight();
+    const swap     = usePortraitSwap();
+    usePortraitScrollProgress(swap);
     useScrollSpy();
     useScrollToHash();
 
@@ -52,8 +53,8 @@ function Home() {
                                         }}
                     >
                         <ProfilePicture display={{ xs: 'flex', sm: 'flex', md: 'none' }} />
-                        {/* space above the name that opens up as the portrait lands */}
-                        {flight && <PortraitDock />}
+                        {/* portrait pops out above the name once the right-side one has shrunk away */}
+                        {swap && <PortraitDock />}
                         <motion.div {...SLIDE_IN}>
                             <Typography id={HERO_NAME_ID} variant="h3" fontWeight={700} marginTop={2}>
                                 {profile.name}
@@ -95,7 +96,6 @@ function Home() {
             {fullWidthSections.map((section) => (
                 <FullWidthSection key={section.id} section={section} />
             ))}
-            {flight && <FlyingPortrait />}
         </main>
     );
 }
