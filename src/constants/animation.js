@@ -22,14 +22,17 @@ export const SPRING_IN = {
 // Default share of an element that must be visible before it reveals
 export const REVEAL_AMOUNT = 0.5;
 
-// Portrait gliding from the right column to above the name (desktop only)
-export const PORTRAIT_FLIGHT = {
-    scrollStart    : 0,     // px of scrolling before the portrait starts moving
-    scrollDistance : 400,   // px of scrolling over which it travels (0 -> 400)
-    startSize      : 200,   // size on first load (right column)
-    dockSize       : 140,   // size once docked above the name
-    dockGap        : 8,     // space between the docked portrait and the name
-    spring         : { stiffness: 90, damping: 24, mass: 0.8 },   // soft glide, no overshoot
+// Portrait swap (desktop): the right-side portrait shrinks away as the page
+// scrolls; once it's gone, it pops out above the name on the left.
+export const PORTRAIT_SWAP = {
+    size            : 200,   // right-side portrait on first view
+    dockSize        : 140,   // left-side portrait above the name
+    dockGap         : 8,     // space between the left portrait and the name
+    hideDistance    : 160,   // px of scrolling over which the right portrait shrinks away
+    scrubSpring     : { stiffness: 70, damping: 22, mass: 0.8 },     // smooths the scroll-driven shrink
+    // springs by duration: visualDuration = seconds to (visually) arrive, bounce = 0 (none) .. 1 (a lot)
+    popTransition   : { type: 'spring', visualDuration: 0.8, bounce: 0.2 }, // left portrait popping out / in
+    spaceTransition : { type: 'spring', visualDuration: 0.7, bounce: 0 },   // space opening above the name
 };
 
 // Contact panel terminal lines typing in
